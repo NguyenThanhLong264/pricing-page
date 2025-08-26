@@ -21,25 +21,24 @@ function autoScroll() {
     if (!paused) {
         if (isAnimatingClick) {
             offset += (targetOffset - offset) * 0.1;
-
             if (Math.abs(targetOffset - offset) < 0.5) {
                 offset = targetOffset;
                 isAnimatingClick = false;
             }
-        } else {
-            offset -= speed;
-            if (Math.abs(offset) >= galleryWidth) {
-                offset = 0;
-                targetOffset = 0;
-            }
+        } else { offset -= speed; }
+        if (offset <= -galleryWidth) {
+            offset += galleryWidth;
+            targetOffset += galleryWidth; // giữ đồng bộ với target
+        }
+        if (offset > 0) {
+            offset -= galleryWidth;
+            targetOffset -= galleryWidth; // giữ đồng bộ với target
         }
         gallery.style.transform = `translateX(${offset}px)`;
     }
     requestAnimationFrame(autoScroll);
 }
 
-
-// Nút prev
 prevBtn.addEventListener("click", () => {
     targetOffset = offset + step;
     if (targetOffset > 0) targetOffset -= galleryWidth;
@@ -48,9 +47,10 @@ prevBtn.addEventListener("click", () => {
 
 nextBtn.addEventListener("click", () => {
     targetOffset = offset - step;
-    if (Math.abs(targetOffset) >= galleryWidth) targetOffset = 0;
+    if (targetOffset <= -galleryWidth) targetOffset += galleryWidth;
     isAnimatingClick = true;
 });
+
 
 // Hover pause/resume
 gallery.addEventListener("mouseenter", () => { paused = true; });

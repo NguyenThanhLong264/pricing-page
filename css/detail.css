@@ -1190,17 +1190,16 @@ table svg,
     align-items: center;
     background-color: transparent;
     height: 100%;
-    width: max-content;
+    width: 100%;
 }
 
 
 .gallery img {
     height: 100%;
-    aspect-ratio: 3/2;
     background-color: transparent;
     padding-right: 8px;
-    min-width: 200px;
-    /* max-width: 200px; */
+    min-width: 150px;
+    max-width: 150px;
     object-fit: contain;
     flex-shrink: 0;
 }
