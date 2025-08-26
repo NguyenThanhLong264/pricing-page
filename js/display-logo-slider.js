@@ -9,6 +9,7 @@ let singleImgWidth = 150;
 
 let currentIndex = 13; // đã load 13 cái đầu
 let offset = 0; // vị trí dịch hiện tại
+let clickTimeOut = 500 //ms
 
 function generateImgSrc(total) {
     const arr = [];
@@ -62,7 +63,7 @@ carousel.addEventListener("mouseleave", startCarousel);
 
 let clickAble = true;
 function handleNext() {
-    gallery.style.animation = "scrollNext 0.2s ease 1";
+    gallery.style.animation = `scrollNext ${clickTimeOut}ms ease 1`;
     gallery.addEventListener("animationend", () => {
         gallery.style.animation = "none";
         imgQueue.shift();
@@ -76,7 +77,7 @@ function handleNext() {
 }
 
 function handlePrev() {
-    gallery.style.animation = "scrollPrev 0.2s ease 1";
+    gallery.style.animation = `scrollPrev ${clickTimeOut}ms ease 1`;
     gallery.addEventListener("animationend", () => {
         gallery.style.animation = "none";
         imgQueue.pop();
@@ -95,7 +96,7 @@ nextBtn.addEventListener("click", () => {
     handleNext();
     setTimeout(() => {
         clickAble = true;
-    }, 200);
+    }, clickTimeOut);
 });
 prevBtn.addEventListener("click", () => {
     if (!clickAble) return;
@@ -103,7 +104,7 @@ prevBtn.addEventListener("click", () => {
     handlePrev();
     setTimeout(() => {
         clickAble = true;
-    }, 200);
+    }, clickTimeOut);
 });
 
 initialQueue();

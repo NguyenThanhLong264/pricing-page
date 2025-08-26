@@ -1212,13 +1212,24 @@ table svg,
     flex-shrink: 0;
 }
 
-#gallery-prev,
-#gallery-next {
+.gallery-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     height: 100%;
     width: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s;
+}
+
+.gallery-btn:hover {
+    background-color: var(--primary-btn-initial-color);
+    color: white;
+}
+
+.gallery-btn:hover svg {
+    transition: all 0.3s;
+    transform: scale(1.5);
 }
 
 #gallery-prev {
@@ -1235,18 +1246,33 @@ table svg,
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-150px); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-150px);
+    }
 }
 
 @keyframes scrollNext {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-300px); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
 }
 
 @keyframes scrollPrev {
-  from { transform: translateX(0); }
-  to   { transform: translateX(300px); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(300px);
+    }
 }
 
 .mobile {
