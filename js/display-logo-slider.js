@@ -1,102 +1,110 @@
-const imageNames = generateImageNames('logo', 1, 24, ['png']);
-// const slider = document.getElementById('logo-slider');
-const imgList = [];
-
-const gallery = document.getElementById("logo-slider");
+const carousel = document.querySelector('.logo-gallery-wrapper');
+const gallery = document.getElementById('logo-slider');
 const prevBtn = document.getElementById("gallery-prev");
 const nextBtn = document.getElementById("gallery-next");
-const carousel = document.querySelector(".logo-gallery-wrapper");
 
-let loadedCount = 0;
-let offset = 0;              // vị trí hiện tại
-let speed = 2;             // px mỗi frame (auto chạy)
-let step = 300;              // số px nhảy khi click nút
-let paused = false;          // trạng thái pause
-let targetOffset = 0;       // vị trí cần đến khi click nút
-let isAnimatingClick = false; // đang chạy animation click
-let galleryWidth = gallery.scrollWidth / 2; // vì clone 2 lần
+const imgSrcList = generateImgSrc(15);
+const imgQueue = [];
+let singleImgWidth = 150;
 
-// Auto scroll loop
-function autoScroll() {
-    if (!paused) {
-        if (isAnimatingClick) {
-            offset += (targetOffset - offset) * 0.1;
-            if (Math.abs(targetOffset - offset) < 0.5) {
-                offset = targetOffset;
-                isAnimatingClick = false;
-            }
-        } else { offset -= speed; }
-        if (offset <= -galleryWidth) {
-            offset += galleryWidth;
-            targetOffset += galleryWidth; // giữ đồng bộ với target
-        }
-        if (offset > 0) {
-            offset -= galleryWidth;
-            targetOffset -= galleryWidth; // giữ đồng bộ với target
-        }
-        gallery.style.transform = `translateX(${offset}px)`;
+let currentIndex = 13; // đã load 13 cái đầu
+let offset = 0; // vị trí dịch hiện tại
+
+function generateImgSrc(total) {
+    const arr = [];
+    for (let i = 1; i <= total; i++) {
+        arr.push(`img/logos/logo (${i}).png`);
     }
-    requestAnimationFrame(autoScroll);
+    return arr;
 }
 
-prevBtn.addEventListener("click", () => {
-    targetOffset = offset + step;
-    if (targetOffset > 0) targetOffset -= galleryWidth;
-    isAnimatingClick = true;
-});
+function initialQueue() {
+    const first13 = imgSrcList.slice(0, 13);
+    imgQueue.push(...first13);
+    generateFristLoad();
+}
+
+function generateFristLoad() {
+    gallery.innerHTML = "";
+    imgQueue.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = src;
+        img.style.width = singleImgWidth + "px";
+        gallery.appendChild(img);
+    });
+}
+let carouselInterval = null;
+
+function startCarousel() {
+    if (carouselInterval) return; // nếu đang chạy thì không tạo mới
+    carouselInterval = setInterval(() => {
+        gallery.style.animation = "scroll 1s ease 1";
+        gallery.addEventListener("animationend", () => {
+            gallery.style.animation = "none";
+            imgQueue.shift();
+            imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
+            currentIndex++;
+            generateFristLoad();
+        }, { once: true });
+    }, 1500);
+}
+
+function stopCarousel() {
+    if (carouselInterval) {
+        clearInterval(carouselInterval);
+        carouselInterval = null;
+    }
+}
+
+carousel.addEventListener("mouseenter", stopCarousel);
+carousel.addEventListener("mouseleave", startCarousel);
+
+let clickAble = true;
+function handleNext() {
+    gallery.style.animation = "scrollNext 0.2s ease 1";
+    gallery.addEventListener("animationend", () => {
+        gallery.style.animation = "none";
+        imgQueue.shift();
+        imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
+        currentIndex++;
+        imgQueue.shift();
+        imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
+        currentIndex++;
+        generateFristLoad();
+    }, { once: true });
+}
+
+function handlePrev() {
+    gallery.style.animation = "scrollPrev 0.2s ease 1";
+    gallery.addEventListener("animationend", () => {
+        gallery.style.animation = "none";
+        imgQueue.pop();
+        imgQueue.pop();
+        currentIndex -= 2;
+        if (currentIndex < 0) currentIndex += imgSrcList.length;
+        imgQueue.unshift(imgSrcList[(currentIndex) % imgSrcList.length]);
+        imgQueue.unshift(imgSrcList[(currentIndex + 1) % imgSrcList.length]);
+        generateFristLoad();
+    }, { once: true });
+}
 
 nextBtn.addEventListener("click", () => {
-    targetOffset = offset - step;
-    if (targetOffset <= -galleryWidth) targetOffset += galleryWidth;
-    isAnimatingClick = true;
+    if (!clickAble) return;
+    clickAble = false;
+    handleNext();
+    setTimeout(() => {
+        clickAble = true;
+    }, 200);
+});
+prevBtn.addEventListener("click", () => {
+    if (!clickAble) return;
+    clickAble = false;
+    handlePrev();
+    setTimeout(() => {
+        clickAble = true;
+    }, 200);
 });
 
-
-// Hover pause/resume
-gallery.addEventListener("mouseenter", () => { paused = true; });
-gallery.addEventListener("mouseleave", () => { paused = false; });
-
-// function logo() {
-imageNames.forEach(name => {
-    const img = new Image();
-    img.src = `img/logos/${name}`;
-    img.alt = name;
-
-    img.onload = () => {
-        imgList.push(img.cloneNode());
-        loadedCount++;
-        checkDone();
-    };
-
-    img.onerror = () => {
-        loadedCount++;
-        checkDone();
-    };
-});
-
-function checkDone() {
-    if (loadedCount === imageNames.length) {
-        finalizeSlider();
-    }
-}
-
-function finalizeSlider() {
-    imgList.forEach(img => {
-        gallery.appendChild(img.cloneNode());
-    });
-    imgList.forEach(img => {
-        gallery.appendChild(img.cloneNode());
-    });
-    galleryWidth = gallery.scrollWidth / 2;
-    autoScroll();
-}
-
-function generateImageNames(prefix, start, end, extensions) {
-    const result = [];
-    for (let i = start; i <= end; i++) {
-        extensions.forEach(ext => {
-            result.push(`${prefix} (${i}).${ext}`);
-        });
-    }
-    return result;
-}
+initialQueue();
+startCarousel();
