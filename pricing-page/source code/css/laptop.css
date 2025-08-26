@@ -1,0 +1,71 @@
+@media (min-width:1120px) {
+    section {
+        padding-bottom: 88px;
+        padding-top: 88px;
+    }
+
+    .container {
+        padding-right: 24px;
+        padding-left: 24px;
+        max-width: 1120px;
+    }
+
+    .main-title {
+        font-size: 48px;
+    }
+
+    .text-wrapper .main-title {
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+    }
+
+    .col-title {
+        font-size: 24px;
+        min-height: auto;
+    }
+
+    .col-sub-title {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 32px;
+    }
+
+    .tag-text {
+        font-size: 14px;
+    }
+
+    .note-text {
+        font-size: 14px;
+    }
+
+    .cta-title {
+        font-size: 32px;
+    }
+
+    .part-wrapper {
+        margin-top: 64px;
+    }
+
+    .cta-wrapper {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .add-ons .feature-li {
+        columns: 2;
+    }
+
+    .desktop-header {
+        display: block;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .cta-btn {
+        flex-direction: row;
+    }
+}
