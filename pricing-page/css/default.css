@@ -1,0 +1,144 @@
+/* rgb(143, 136, 122) */
+/* rgb(222, 215, 202) */
+
+/* :root {
+    --main-bg-color: #F2FBE0;
+    --sec-bg-color: #E4F4CD;
+    --bg-hight-light-color: #C8E6A0;
+
+    --text-color: #1E352F;
+    --border-color: #A5C4A2;
+
+    --primary-btn-initial-color: #A0D468;
+    --primary-btn-after-color: #1E352F;
+
+    --secondary-btn-initial-color: #6ABD8D;
+    --secondary-btn-after-color: #1E352F;
+    --secondary-btn-text-color: #ffffff;
+
+    --sticker-color: #F8B84E;
+} */
+
+:root {
+    --main-bg-color: rgb(254, 250, 242);
+    --sec-bg-color: rgb(246, 240, 230);
+    --bg-hight-light-color: rgb(235, 227, 214);
+    /* rgb(143, 136, 122) rgb(222, 215, 202) */
+    --text-color: rgb(22, 20, 12);
+    --border-color: rgb(22, 20, 12);
+
+    --primary-btn-initial-color: rgb(154, 68, 151);
+    --primary-btn-after-color: rgb(22, 20, 12);
+    /* --primary-btn-initial-color: #A0D468;
+    --primary-btn-after-color: #1E352F; */
+
+    --secondary-btn-initial-color: ;
+    --secondary-btn-after-color: rgb(22, 20, 12);
+    --secondary-btn-text-color: rgb(255, 255, 255);
+
+    --sticker-color: rgb(212, 244, 121);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: no-common-ligatures;
+    background: rgb(22, 20, 12);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+section {
+    /* padding: 88px 0; */
+}
+
+.container {
+    padding: 0 24px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    height: .7rem;
+    width: .7rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg-hight-light-color);
+    border-radius: 6.1875rem;
+    background-clip: padding-box;
+    border: .125rem solid #0000;
+}
+
+@media (min-width:0px) {
+    section {
+        padding: 48px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .sub-hero-title {
+        margin-top: 12px;
+    }
+
+    .feature-wrapper {
+        display: flex;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+
+    .feature-p-wrapper {
+        width: 100%;
+    }
+
+    .part-wrapper {
+        margin-top: 48px;
+    }
+
+    .cta-wrapper {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .cta-btn {
+        flex-direction: column;
+        padding: 0;
+    }
+}

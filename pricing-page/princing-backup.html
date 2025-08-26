@@ -1,0 +1,3662 @@
+<?php /* Template Name: Pricing */ get_header(); ?>
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+<div id="pricing">
+	<div class="banner">
+		<div class="picture parallax-window" data-parallax="scroll"
+			data-image-src="<?php echo get_field('pricing_banner_img') ?>"></div>
+		<div class="container">
+			<div class="row">
+				<div class="content col-md-6">
+					<h2>
+						<?php echo get_field('pricing_banner_title') ?>
+					</h2>
+					<!-- <p>Start a free trial with any plan today, start seeing Talkdesk’s value tomorrow.</p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="compare">
+		<div class="container">
+			<div id="srv-list" class="head row sticky">
+				<div class="col-4"></div>
+				<!-- <div class="col">
+						<div class="icon">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icon-srv-1.svg" alt="">
+							<span class="prd-name">Voice API</span>
+							<span class="prd-price"><strong>50,000</strong> /user/tháng</span>
+						</div>
+					</div> -->
+				<!-- <div class="col">
+					 	<div class="icon">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icon-srv-2.svg" alt="">
+							<span class="prd-name">Cloud PBX</span>
+							<span class="prd-price"><strong>50,000</strong> /user/tháng</span>
+						</div>
+					</div>
+					<div class="col">
+						<div class="icon">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icon-srv-3.svg" alt="">
+							<span class="prd-name">Inbound Call Center</span>
+							<span class="prd-price"><strong>250,000</strong> /user/tháng</span>
+						</div>
+					</div>
+					<div class="col">
+						<div class="icon">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icon-srv-4.svg" alt="">
+							<span class="prd-name">Outbound Call Center</span>
+							<span class="prd-price"><strong>250,000</strong> /user/tháng</span>
+						</div>
+					</div> -->
+				<div class="col">
+					<div class="icon">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/icon-srv-5.svg" alt="">
+						<span class="prd-name">Call Center</span>
+						<span class="prd-price"><strong>400,000</strong> /user/tháng</span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="icon">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/icon-srv-6.svg" alt="">
+						<span class="prd-name">Smart Dialer</span>
+						<span class="prd-price"><strong>Liên hệ</strong></span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="icon">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/icon-srv-7.svg" alt="">
+						<span class="prd-name">Contact Center</span>
+						<span class="prd-price"><strong>660,000</strong> /user/tháng</span>
+					</div>
+				</div>
+			</div>
+			<div class="listing">
+				<div id="compare-table" role="tablist" aria-multiselectable="true">
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-1">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-1"
+								aria-expanded="true">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Khởi tạo, duy trì & tích hợp phần mềm</a>
+						</div>
+						<div id="compare-content-1" class="card-content collapse show" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chi phí khảo sát hạ tầng, triển khai, đào tạo
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Thu 1 lần đầu tiên</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>1,000,000</span></div> -->
+									<!-- <div class="col check"><span>1,000,000</span></div>
+										<div class="col check"><span>1,000,000</span></div>
+										<div class="col check"><span>1,000,000</span></div> -->
+									<div class="col check"><span>2,000,000</span></div>
+									<div class="col check"><span>Liên hệ</span></div>
+									<div class="col check"><span>2,000,000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Bổ sung user chỉ sử dụng ticket (/user/tháng)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">User chỉ sử dụng ticket trên máy tính và điện thoại,
+													không có quyền sử dụng các chức năng khác của Call Center, Contact
+													Center</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>100,000</span></div> -->
+									<!-- <div class="col check"><span>100,000</span></div>
+										<div class="col check"><span>100,000</span></div>
+										<div class="col check"><span>100,000</span></div> -->
+									<div class="col check"><span>125,000</span></div>
+									<div class="col check"><span>Liên hệ</span></div>
+									<div class="col check"><span>125,000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Bổ sung thêm máy nhánh - extension pbx (/máy
+											nhánh/tháng)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Bổ sung thêm máy lẻ ipphone/softphone chỉ nghe/gọi
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><span>50,000</span></div>
+									<div class="col check"><span>Liên hệ</span></div>
+									<div class="col check"><span>50,000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ dịch vụ
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Các hình thức hỗ trợ dịch vụ</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Self-service
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Khách hàng tự tra cứu cách sử dụng trên Help Center
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ qua Email: support@caresoft.vn
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Hỗ trợ qua support@caresoft.vn</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>8x5</span></div> -->
+									<!-- <div class="col check"><span>8x5</span></div>
+										<div class="col check"><span>8x5</span></div>
+										<div class="col check"><span>8x5</span></div> -->
+									<div class="col check"><span>8x5</span></div>
+									<div class="col check"><span>8x5</span></div>
+									<div class="col check"><span>8x5</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ qua Livechat
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Hỗ trợ qua in-app live chat</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>8x5</span></div> -->
+									<!-- <div class="col check"><span>8x5</span></div>
+										<div class="col check"><span>8x5</span></div>
+										<div class="col check"><span>8x5</span></div> -->
+									<div class="col check"><span>8x5</span></div>
+									<div class="col check"><span>8x5</span></div>
+									<div class="col check"><span>8x5</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ qua Tổng đài: 02473048222
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tổng đài: 02473048222</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>8x5</span></div> -->
+									<!-- <div class="col check"><span>8x5</span></div>
+										<div class="col check"><span>8x5</span></div>
+										<div class="col check"><span>8x5</span></div> -->
+									<div class="col check"><span>24x7</span></div>
+									<div class="col check"><span>24x7</span></div>
+									<div class="col check"><span>24x7</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">SLA dịch vụ
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Cam kết chất lượng dịch vụ</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>99%</span></div> -->
+									<!-- <div class="col check"><span>99%</span></div>
+										<div class="col check"><span>99%</span></div>
+										<div class="col check"><span>99%</span></div> -->
+									<div class="col check"><span>99.9%</span></div>
+									<div class="col check"><span>99.9%</span></div>
+									<div class="col check"><span>99.9%</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tích hợp phần mềm
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tích hợp caresoft với các phần mềm bên thứ 3</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>Liên hệ</span></div> -->
+									<!-- <div class="col check"><span>Không hỗ trợ</span></div>
+										<div class="col check"><span>Không hỗ trợ</span></div>
+										<div class="col check"><span>Không hỗ trợ</span></div> -->
+									<div class="col check"><span>Liên hệ</span></div>
+									<div class="col check"><span>Liên hệ</span></div>
+									<div class="col check"><span>Liên hệ</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Thời gian lưu trữ
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Thời gian lưu trữ lịch sử dữ liệu (Số tháng gần nhất)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Thời gian lưu trữ thông tin khách hàng, ticket...</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>3</span></div> -->
+									<!-- <div class="col check"><span>3</span></div>
+										<div class="col check"><span>6</span></div>
+										<div class="col check"><span>6</span></div> -->
+									<div class="col check"><span>12</span></div>
+									<div class="col check"><span>12</span></div>
+									<div class="col check"><span>12</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Mở rộng thời gian lưu trữ dữ liệu (/user/tháng)
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><span>10,000</span></div> -->
+									<!-- <div class="col check"><span>10,000</span></div>
+										<div class="col check"><span>10,000</span></div>
+										<div class="col check"><span>10,000</span></div> -->
+									<div class="col check"><span>10,000</span></div>
+									<div class="col check"><span></span></div>
+									<div class="col check"><span>10,000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Thời gian lưu trữ file ghi âm (Số tháng gần nhất)
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><span>3</span></div> -->
+									<!-- <div class="col check"><span>3</span></div>
+										<div class="col check"><span>6</span></div>
+										<div class="col check"><span>6</span></div> -->
+									<div class="col check"><span>12</span></div>
+									<div class="col check"><span>12</span></div>
+									<div class="col check"><span>12</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Mở rộng thời gian lưu trữ file ghi âm (/user/tháng)
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><span>5,000</span></div> -->
+									<!-- <div class="col check"><span>5,000</span></div>
+										<div class="col check"><span>5,000</span></div>
+										<div class="col check"><span>5,000</span></div> -->
+									<div class="col check"><span>5,000</span></div>
+									<div class="col check"><span></span></div>
+									<div class="col check"><span>5,000</span></div>
+								</div>
+								<!--									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Mở rộng thêm đầu số hotline (/đầu số/tháng)
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Đang giới hạn 2 đầu số cho các gói Voice API, Cloud PBX và CSKH đa kênh. Các gói cước khác là Không giới hạn</div>
+												</div>
+											</div>
+										</div>
+										 <div class="col check"><span>100,000</span></div> 
+										 <div class="col check"><span>100,000</span></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> 
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><span></span></div>
+										<div class="col check">100,000</div>
+									</div>-->
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Mở rộng thêm email (/đầu số/tháng)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Mở rộng thêm email so với số email mặc định</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><span>100,000</span></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><span>100,000</span></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><span></span></div>
+									<div class="col check"><span>100,000</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-2">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-2"
+								aria-expanded="false">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Live chat</a>
+						</div>
+						<div id="compare-content-2" class="card-content collapse" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Số lượng cuộc chat đồng thời
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Số lượng cuộc chat đồng thời</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><span>Không giới hạn</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chat Rating
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Cho phép khách hàng đánh giá chất lượng giải đáp chat
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Pre-Chat form
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Form hỏi thông tin khách hàng trước khi bắt đầu chat
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Offline form
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Cho phép khách hàng gửi tin nhắn offline khi không có
+													agent sẵn sàng phục vụ</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chuyển chat giữa các agents, phòng ban
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Chuyển chat giữa các agents, phòng ban</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Mẫu trả lời nhanh
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Mẫu trả lời nhanh</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">File Sending
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Gửi file trao đổi giữa agent và khách hàng</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><span>10MB</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chat nội bộ
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Chat nội bộ giữa các agent với nhau</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến tự động chat tới nhân viên: luật xoay
+											vòng, skill based, gặp gần nhất
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Định tuyến tự động chat tới nhân viên: luật xoay vòng,
+													skill based, gặp gần nhất</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Triggers
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Tự động tạo các hành động dựa trên điều kiện được
+													thiết lập</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Visitor list
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Giám sát tất cả các khách hàng đang vào website</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Real Time Monitoring
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Giám sát các chỉ số hàng đợi chat, năng suất trung
+													bình hàng đợi...</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tùy chỉnh box chat
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Admin tùy chỉnh các thông tin liên quan đến box chat
+													như màu sắc, tiêu đề, nội dung chào...</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo tổng quan
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo tổng quan các chỉ số liên quan đến chat</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo chi tiết
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo các chỉ số (số lượng chat, sỗ chat nhỡ, thời
+													gian trả lời trung bình....). Báo cáo trạng thái
+													online/offline//đăng nhập/đăng xuất của agent</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Conversation
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Khi khách hàng rời website, cuộc hội thoại tự động
+													chuyển thành email để tiếp tục trò chuyện</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chủ động liên hệ lại với khách hàng
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Agent có thể chủ động chat lại cho khách hàng khi
+													khách hàng còn online trên website</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Visitor list
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Cho phép thống kê được số lượng khách hàng đang online
+													trên website của khách hàng</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Cập nhât thông tin khách hàng khi đang xử lý
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Cho phép agent cập nhật thông tin khách hàng, phân
+													loại khách hàng theo thuộc tính động khi agent đang trao đổi với
+													khách hàng</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">In-app web chat
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Nhúng box chat vào giao diện web của các khách hàng sử
+													dụng dịch vụ phần mềm; in-app web chat phù hợp với doanh nghiệp cung
+													cấp phần mềm B2B </span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Visitor Tracking
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Lưu lại thông tin khách hàng vào website (GA id,
+													campaign id, các link truy cập...) </span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Multi - brand
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">1 domain tiếp nhận và xử lý chat cho nhiều website,
+													các website có các service phục vụ khác nhau </span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-3">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-3"
+								aria-expanded="false">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Tính năng quản lý Facebook Page</a>
+						</div>
+						<div id="compare-content-3" class="card-content collapse" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến tự động comment từ Page tới nhân viên xử
+											lý: luật xoay vòng, gặp gần nhất
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Các comment trên facebook page sẽ được lấy về tự động
+													chia cho nhân viên xử lý</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến tự động inbox message từ Page tới nhân
+											viên xử lý: luật xoay vòng, skill based, gặp gần nhất
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Các inbox message trên facebook page sẽ được lấy về tự
+													động chia cho nhân viên xử lý</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động ẩn comment chứa Email, số điện thoại
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tự động ẩn comment chứa Email, số điện thoại</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Cho phép like bài viết
+
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Mẫu trả lời nhanh
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Mẫu trả lời nhanh</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giao diện trả lời comment
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Giao diện web-based trong phần mềm</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giao diện trả lời inbox mesage
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Giao diện web-based trong phần mềm</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo tổng quan
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo số lượng, báo cáo miss chat, báo cáo AHT...
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo chi tiết
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo số lượng, báo cáo miss chat, báo cáo AHT...tới
+													từng nhân viên</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Cảnh báo Fanpage Facebook bị mất kết nối
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Thiết lập cảnh báo khi Fanpage bị mất kết nối sẽ gửi
+													thông báo về Email được cài đặt nhận cảnh báo</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Cập nhât thông tin khách hàng khi đang xử lý
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Cho phép agent cập nhật thông tin khách hàng, phân loại
+													khách hàng theo thuộc tính động khi agent đang trao đổi với khách
+													hàng</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chủ động liên hệ lại với khách hàng
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Agent có thể chủ động chat lại cho khách hàng khi khách
+													hàng còn online trên Facebook</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-11">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-11"
+								aria-expanded="false">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Tích hợp Zalo OA</a>
+						</div>
+						<div id="compare-content-11" class="card-content collapse" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tích hợp Zalo OA
+											<!-- <span class="tip">
+													<i class="ti-info-alt"></i>
+													<span class="txt"></span>
+												</span> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến tự động các zalo msg tới nhân viên xử lý:
+											luật xoay vòng, skill based, gặp gần nhất
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Các tín nhắn zalo trên Zalo OA sẽ được lấy về tự động
+													chia cho nhân viên xử lý</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động tạo user người dùng quan tâm OA
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Agent có thể gửi tin nhắn zalo tới các user này</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Mẫu trả lời nhanh
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Mẫu trả lời nhanh</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giao diện trả lời zalo msg
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Giao diện web-based trong phần mềm</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo tổng quan
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Báo cáo số lượng, báo cáo miss chat, báo cáo
+													AHT...</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Cập nhât thông tin khách hàng khi đang xử lý
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Cho phép agent cập nhật thông tin khách hàng, phân
+													loại khách hàng theo thuộc tính động khi agent đang trao đổi với
+													khách hàng</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chủ động liên hệ lại với khách hàng
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Agent có thể chủ động chat lại cho khách hàng</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo chi tiết
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Báo cáo số lượng, báo cáo miss chat, báo cáo AHT...tới
+													từng nhân viên</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-4">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-4"
+								aria-expanded="false">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Ticket - Case management</a>
+						</div>
+						<div id="compare-content-4" class="card-content collapse" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến tự động ticket tới nhân viên xử lý: luật
+											xoay vòng, luật gặp gần nhất
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Các ticket được tạo từ các nguồn sẽ được tự động chia
+													việc cho nhân viên</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động chuyển Live Chat thành ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Nội dung Live Chat tự động chuyển thành ticket sau khi
+													kết thúc phiên chat</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động chuyển facebook comment, inbox message thành
+											ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Nội dung tương tác qua facebook page sẽ tự động chuyển
+													thành ticket sau khi kết thúc phiên</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động chuyển voicemail thành ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Chuyển đổi các voicemail khách hàng để lại lời nhắn
+													thành ticket và chia cho nhân viên, ticket có gán sẵn file ghi âm...
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động chuyển cuộc gọi nhỡ thành ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Chuyển đổi các miss call thành ticket và chia cho nhân
+													viên</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động mở ticket khi agent tiếp nhận cuộc gọi
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tự động mở ticket khi agent tiếp nhận cuộc gọi</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động chuyển Email thành ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Nội dung tương tác qua Email sẽ tự động chuyển thành
+													ticket gắn với khách hàng, hỗ trợ plain-text và html</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tự động chuyển SMS thành ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Nội dung tương tác qua SMS sẽ tự động chuyển thành
+													ticket gắn với khách hàng</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tạo ticket từ web
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Agent tạo ticket trong giao diện phần mềm</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tạo ticket qua API
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tạo ticket qua API từ các phần mềm bên thứ 3</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><span>200 RPH</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>500 RPH</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chuyển đổi ticket giữa các các phòng ban, các agent
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Các agent, phòng ban có thể luân chuyển ticket cho nhau
+													để cùng xử lý 1 công việc</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Dynamic field
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Admin doanh nghiệp chủ động thay đổi các trường thông
+													tin liên quan đến ticket</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Customize view
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Admin doanh nghiệp tùy chỉnh các view hiển thị danh
+													sách ticket</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Business Rule
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Thiết lập cơ chế điều hành ticket doanh nghiệp linh
+													hoạt theo yêu cầu</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Business Hour
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Thiết lập lịch làm việc và lịch nghỉ</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">SLA
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Thiết lập thời gian cam kết xử lý của ticket</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Trigger
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tự động tạo các hành động dựa trên điều kiện được thiết
+													lập</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Automation
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tạo các trigger chạy theo lịch định trước</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Split / Merge
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tách/ hợp các nội dung tách biệt</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Survey
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tự động gửi khảo sát chất lượng xử lý qua email khi
+													ticket được đóng</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Macros
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Định nghĩa các mẫu trả lời sẵn</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Đánh giá chất lượng xử lý ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Nội bộ chủ động đánh giá và chấm điểm quá trình xử lý
+													ticket của agent</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Organization
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Gom nhóm các khách hàng liên hệ vào cùng 1 tổ chức
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">File đính kèm ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Kích thước tối đa file đính kèm</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><span>20 MB</span></div>
+										<div class="col check"><span>20 MB</span></div> -->
+									<div class="col check"><span>20 MB</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>20 MB</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo tổng hợp ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo phân quyền theo các role: admin, supervisor,
+													agent</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo chi tiết ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo chi tiết ticket: thời gian phản hồi lần đầu,
+													thời gian xử lý trung bình, báo cáo chi tiết theo nội dung...</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-5">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-5"
+								aria-expanded="false">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Tính năng Email</a>
+						</div>
+						<div id="compare-content-5" class="card-content collapse" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tích hợp Email (ví dụ cskh@doanhnghiep.com.vn)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tự động lấy các email trong hòm thư chung về hệ thống
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><span>2</span></div> -->
+									<div class="col check"><span>5</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>5</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến tự động Email tới nhân viên xử lý: luật
+											xoay vòng, luật gặp gần nhất
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt">Tự động chia các email lấy từ hòm thư chung tới nhân
+													viên</span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Gửi Email tới khách hàng
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Khách hàng nhận email từ địa chỉ email chung của doanh
+													nghiệp</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Email marketing (Số email MAX/tháng/agent)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Hỗ trợ cá nhân hóa nội dung Email, gửi theo chế độ thủ
+													công</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><span>10,000</span></div> -->
+									<div class="col check"><span>10,000</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>10,000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Email automation (Số email MAX/tháng/agent)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Hỗ trợ cá nhân hóa nội dung Email, gửi theo chế độ tự
+													động theo lịch</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><span>10,000</span></div> -->
+									<div class="col check"><span>10,000</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>10,000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo tổng hợp Email
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo số lượng email nhận vào, gửi ra, số email thành
+													công, số email đọc...</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo chi tiết Email
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo chi tiết theo nhóm, chuyên viên</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-6">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-6"
+								aria-expanded="false">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Tính năng SMS</a>
+						</div>
+						<div id="compare-content-6" class="card-content collapse" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tích hợp tin nhắn thương hiệu (SMS Brand Name)
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tích hợp đầu số ngắn SMS (Short Code SMS) để nhận SMS
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến tự động SMS tới nhân viên xử lý: luật xoay
+											vòng, luật gặp gần nhất
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">SMS Marketing (Số SMS Max/tháng/agent)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Hỗ trợ cá nhân hóa nội dung SMS, gửi theo chế độ thủ
+													công</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><span>1000</span></div> -->
+									<div class="col check"><span>1000</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>1000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">SMS Automation (Số SMS Max/tháng/agent)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Hỗ trợ cá nhân hóa nội dung SMS, gửi theo chế độ tự
+													động theo lịch</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><span>1000</span></div> -->
+									<div class="col check"><span>1000</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>1000</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo tổng hợp SMS
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo số lượng sms gửi ra theo ngày, tuần, quý ...
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo chi tiết SMS
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo chi tiết theo nhóm, chuyên viên</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab" id="compare-cate-7">
+							<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-7"
+								aria-expanded="false">
+								<span class="ti-plus color-theme"></span>
+								<span class="ti-minus color-theme"></span>
+								Tính năng tổng đài</a>
+						</div>
+						<div id="compare-content-7" class="card-content collapse" role="tabpanel">
+							<div class="card-block">
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tích hợp với số hotline các mạng FPT, CMC, Gtel
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Hoặc các nhà mạng khác hỗ trợ SIP Trunking</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tích hợp simbox
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<!--									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tích hợp số hotline mạng VNPT
+												 <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> 
+											</div>
+										</div>
+										 <div class="col check"><i class="ti-check"></i></div> 
+										 <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> 
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>-->
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến cơ bản: định tuyến tự động cuộc gọi tới
+											nhân viên xử lý: theo số gọi, xoay vòng
+											<!--												<span class="tip">
+													<i class="ti-info-alt"></i>
+													<span class="txt"></span>
+												</span>-->
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Định tuyến nâng cao: định tuyến tự động cuộc gọi tới
+											nhân viên xử lý: lịch làm việc, theo thời gian, xoay vòng, gặp gần nhất,
+											theo thuộc tính khách hàng (vip / blacklist / dynamic field)
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Cuộc gọi đồng thời
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><span>Không giới hạn</span></div> -->
+									<!-- <div class="col check"><span>Không giới hạn</span></div>
+										<div class="col check"><span>Không giới hạn</span></div>
+										<div class="col check"><span>Không giới hạn</span></div> -->
+									<div class="col check"><span>Không giới hạn</span></div>
+									<div class="col check"><span></span></div>
+									<div class="col check"><span>Không giới hạn</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Số lượng hotline
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><span>2</span></div> -->
+									<!-- <div class="col check"><span>2</span></div>
+										<div class="col check"><span>Không giới hạn</span></div>
+										<div class="col check"><span>Không giới hạn</span></div> -->
+									<div class="col check"><span>Không giới hạn</span></div>
+									<div class="col check"></div>
+									<div class="col check"><span>Không giới hạn</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ thiết bị đầu cuối SIP Phone
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ thiết bị đầu cuối IP Phone
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ thiết bị đầu cuối trình duyệt (WebRTC)
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Sử dụng trình duyệt làm thiết bị nghe gọi, không cần
+													plugin</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hỗ trợ thiết bị đầu cuối số là số di động cá nhân
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Ghi âm cuộc gọi
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giao diện Web tương tác cuộc gọi
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Popup thông tin cuộc gọi
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Popup thông tin khách hàng
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Popup ticket
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Tự động mở ticket khi có cuộc gọi điện đến, gọi đi
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tìm kiếm thông tin khách hàng
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Hold, Mute cuộc gọi
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Chuyển cuộc gọi
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tổng đài tự động IVR
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><span>1 cấp</span></div> -->
+									<!-- <div class="col check"><span>1 cấp</span></div>
+										<div class="col check"><span>2 cấp</span></div>
+										<div class="col check"><span>1 cấp</span></div> -->
+									<div class="col check"><span>Không giới hạn</span></div>
+									<div class="col check"><span></span></div>
+									<div class="col check"><span>Không giới hạn</span></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tổng đài nội bộ PBX
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Danh bạ nội bộ
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Voicemail
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giám sát cuộc gọi: nghe lén, cướp cuộc gọi, đàm thoại
+											nhóm, ngắt
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt"></span>
+											</span>
+										</div>
+										</span>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giám sát cuộc gọi vào, nghe lén, cướp cuộc gọi, đàm
+											thoại nhóm, ngắt cuộc gọi
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt"></span>
+											</span>
+										</div>
+										</span>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giám sát năng suất nhân viên
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Giám sát trạng thái làm việc, giám sát chỉ số online
+													trong ca, trong ngày</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giám sát hàng chờ cuộc gọi
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Giao diện admin quản trị nhân viên, quản trị máy
+											nhánh
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Post-call survey
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Gọi trực tiếp số máy lẻ
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Tìm kiếm và nghe lại cuộc gọi ghi âm (theo ngày, theo
+											nhân viên, theo số khách hàng …)
+											<span class="tip">
+												<i class="ti-info-alt"></i>
+												<span class="txt"></span>
+											</span>
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo thời gian login/logout/online/offline
+											<!-- <div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"></div>
+												</div> -->
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo tổng quan
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo số lượng, báo cáo miss call, báo cáo AHT...
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"><i class="ti-check"></i></div> -->
+									<!-- <div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Báo cáo chi tiết
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Báo cáo số lượng, báo cáo miss call, báo cáo AHT...tới
+													từng nhân viên</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+								<div class="item row">
+									<div class="col-4 txt">
+										<div class="feature-title">Ẩn số điện thoại khách hàng
+											<div class="tip">
+												<i class="ti-info-alt"></i>
+												<div class="txt">Agent chỉ xem được số điện thoại của khách sau khi ẩn
+													đi 1 phần</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="col check"></div> -->
+									<!-- <div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div> -->
+									<div class="col check"><i class="ti-check"></i></div>
+									<div class="col check"></div>
+									<div class="col check"><i class="ti-check"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="compare-cate-8">
+								<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-8"
+									aria-expanded="false">
+									<span class="ti-plus color-theme"></span>
+									<span class="ti-minus color-theme"></span>
+									Tính năng outbound</a>
+							</div>
+							<div id="compare-content-8" class="card-content collapse" role="tabpanel">
+								<div class="card-block">
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tạo chiến dịch
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tạo chiến dịch outbound: gọi điện, email, sms theo
+														2 chế độ manual / automated</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tạo bảng câu hỏi / câu trả lời cho chiến dịch gọi
+												điện
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Bảng hòi / trả lời sẽ hiển thị trong phiên gọi điện
+														của nhân viên</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Import / Export khách hàng vào chiến dịch từ file
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Import / Export khách hàng vào chiến dịch từ file
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Import khách hàng vào chiến dịch từ bộ lọc
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Các khách hàng lọc ở chức năng contact management
+														sẽ</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Do not call list
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Cho phép khách hàng từ chối nhận cuộc gọi từ doanh
+														nghiệp</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Unsubscriber SMS
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Cho phép khách hàng từ chối nhận SMS từ doanh
+														nghiệp</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Unsubscriber Email
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Cho phép khách hàng từ chối nhận Email từ doanh
+														nghiệp</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Báo cáo kết quả thực hiện chiến dịch
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Báo cáo kết quả thực hiện chiến dịch</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Báo cáo kết quả câu hỏi / câu trả lời cho chiến
+												dịch gọi điện
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Báo cáo kết quả câu hỏi / câu trả lời cho chiến
+														dịch gọi điện</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="compare-cate-9">
+								<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-9"
+									aria-expanded="false">
+									<span class="ti-plus color-theme"></span>
+									<span class="ti-minus color-theme"></span>
+									CRM</a>
+							</div>
+							<div id="compare-content-9" class="card-content collapse" role="tabpanel">
+								<div class="card-block">
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Quản lý khách hàng cá nhân
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Mỗi khách hàng là 1 contact</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Quản lý khách hàng tổ chức
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Nhóm các user riêng lẻ của tổ chức vào 1 khách hàng
+														tổ chức</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Công cụ làm Segment khách hàng cá nhân
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Công cụ phân lớp, phân tích khách hàng</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Công cụ làm Segment khách hàng tổ chức
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Công cụ phân lớp, phân tích khách hàng là tổ chức
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Công cụ làm Segment ticket
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Công cụ phân lớp, phân tích các thuộc tính của
+														ticket</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Dynamic field (user)
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Admin tự thêm được các trường thông tin vào user
+														phù hợp với doanh nghiệp</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Dynamic field (tổ chức)
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Admin tự thêm được các trường thông tin vào tổ chức
+														phù hợp với doanh nghiệp</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Dynamic view (ticket)
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Hiển thị thông tin tùy biến tại các giao diện view
+														thông tin, customize theo từng doanh nghiệp</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Merge Contact
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Ghép các thông tin liên hệ rời rạc của 1 khách hàng
+														vào chung 1 view</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Hợp nhất thông tin, lịch sử tương tác khách hàng
+												đa kênh
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tất cả thông tin KH đến từ các kênh</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Import / Export dữ liệu khách hàng
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Import / Export dữ liệu khách hàng</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Contacts & ticket history
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Lịch sử tương tác khách hàng</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"><i class="ti-check"></i></div>
+											<div class="col check"><i class="ti-check"></i></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="compare-cate-10">
+								<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-10"
+									aria-expanded="false">
+									<span class="ti-plus color-theme"></span>
+									<span class="ti-minus color-theme"></span>
+									Cơ sở tri thức</a>
+							</div>
+							<div id="compare-content-10" class="card-content collapse" role="tabpanel">
+								<div class="card-block">
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tùy chỉnh trang Help Center
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Doanh nghiệp tùy chỉnh được các thông tin trên
+														trang KB như màu sắc, logo, banner...</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Công cụ soạn thảo articles
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">WYSIWUG, hỗ trợ soạn thảo theo mã HTML, hỗ trợ link
+														Video, ảnh, bảng biểu</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Import nội dung
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Import theo template excel được cung cấp sẵn</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Public help center
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tạo các Help center cho khách hàng của doanh nghiệp
+														vào tra cứu thông tin</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Private help center
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Hỗ trợ nhân viên đăng nhập để xem các thông tin,
+														tra cứu nội bộ công ty</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Collections
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Hỗ trợ phân loại bài viết thành nhiều collection
+														khác nhau tùy theo nội dung bài viết</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tìm kiếm
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tìm kiếm linh hoạt nội dung theo từ, theo cụm từ
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Phản hồi
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Cho phép khách hàng để lại phản hồi trên bài viết
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Báo cáo KB
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Báo cáo số lượng view, số lượng phản hồi, tỉ lệ đáp
+														ứng</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="compare-cate-14">
+								<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-14"
+									aria-expanded="false">
+									<span class="ti-plus color-theme"></span>
+									<span class="ti-minus color-theme"></span>
+									Quality Assurance (QA)</a>
+							</div>
+							<div id="compare-content-14" class="card-content collapse" role="tabpanel">
+								<div class="card-block">
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tạo kịch bản chấm điểm
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tạo kịch bản chấm điểm (tiêu chí chấm điểm )</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Phân công chấm điểm
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Phân công cho bộ phận hoặc từng QA thực hiện chấm
+														điểm </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Phê duyệt chấm điểm
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Chuyên viên thực hiện khiếu nại lại với các nội
+														dung chấm điểm chưa chính xác và QA Lead có quyền quyết định
+														thông tin khiếu nại là đúng hay sai và đưa phương án giải quyết
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Báo cáo chấm điểm
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Báo cáo tổng hợp và chi tiết liên quan đến quản lý
+														chất lượng</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="compare-cate-15">
+								<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-15"
+									aria-expanded="false">
+									<span class="ti-plus color-theme"></span>
+									<span class="ti-minus color-theme"></span>
+									Mobile App</a>
+							</div>
+							<div id="compare-content-15" class="card-content collapse" role="tabpanel">
+								<div class="card-block">
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Ứng dụng hỗ trợ 2 hệ điều hành iOS, Android
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Ứng dụng hỗ trợ 2 hệ điều hành iOS, Android</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Notification
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Cho phép có thông báo khi có ticket mới, ticket
+														được cập nhật </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Xử lý ticket
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Phản hồi ticket cho khách hàng hoặc tương tác nội
+														bộ</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Xem, cập nhật thông tin khách hàng
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Xem chi tiết và cập nhật thông tin khách hàng</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Lịch sử tương tác khách hàng
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Xem chi tiết lịch sử tương tác khách hàng </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tìm kiếm phiếu ghi, khách hàng
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tìm kiếm nhanh, tìm kiếm nâng cao phiếu ghi và
+														khách hàng </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="compare-cate-16">
+								<a data-toggle="collapse" data-parent="#compare-table" href="#compare-content-16"
+									aria-expanded="false">
+									<span class="ti-plus color-theme"></span>
+									<span class="ti-minus color-theme"></span>
+									Smart Dialer</a>
+							</div>
+							<div id="compare-content-16" class="card-content collapse" role="tabpanel">
+								<div class="card-block">
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Tích hợp các công nghệ quay số với hệ thống Call
+												Center/ Contact Center
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Liên kết phần smart dialer với giao diện xử lý của
+														agent</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"><i class="ti-check"></i></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Automatic Call
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Thiết lập gọi ra tự động theo file ghi âm, kịch bản
+														IVR tự động, Text to Speech (TTS): chuyển văn bản thành giọng
+														nói</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Predictive Call
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"> Hỗ trợ quay số tự động khi gọi ra, giúp lọc bỏ các
+														khách hàng không nghe máy & tăng tương tác của tư vấn viên
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Preview Call
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"> chiến dịch tương tác ra thủ công cho phép agent
+														chủ động thực hiện gọi ra</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Import khách hàng vào chiến dịch từ bộ lọc
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"> Import data khách hàng vào hệ thống sau đó nhóm
+														lại (tạo bộ lọc) hoặc lọc tìm trong data khách hàng có sẵn trên
+														hệ thống của các lần tương tác trước </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Import khách hàng không muốn tương tác
+												(Blacklist)
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"> Import khách hàng không muốn tương tác từ file
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Thiết lập thực hiên chiến dịch theo kịch bản
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"> Thiết lập thực hiên chiến dịch theo kịch bản
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Thiết lập quay số tự động
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"> Quản trị viên thiết lập quay số cho chiến dịch: Số
+														cuộc gọi đồng thời, Số lần gọi lại, thời gian chờ gọi lại </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Kiểm duyệt chiến dịch
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt"> Kiểm duyệt đảm bảo nội dung phù hợp </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Lowest cost routing
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Định tuyến tối ưu chi phí </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">Random number routing
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tự động đảo số gọi ra </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+									<div class="item row">
+										<div class="col-4 txt">
+											<div class="feature-title">API Integration
+												<div class="tip">
+													<i class="ti-info-alt"></i>
+													<div class="txt">Tạo các chiến dịch gọi ra thông qua các phần mềm
+														bên thứ 3 hoặc phần mềm có sẵn </div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="col check"></div> -->
+										<!-- <div class="col check"></div>
+											<div class="col check"></div>
+											<div class="col check"></div> -->
+										<div class="col check"></div>
+										<div class="col check"><i class="ti-check"></i></div>
+										<div class="col check"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="guarantee">
+				<div class="container">
+					<h3 class="align-center color-theme">Caresoft cam kết về giải pháp</h3>
+					<div class="row">
+						<div class="offset-md-1 col-md-10 row">
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Maecenas faucibus mollis interdum</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Cras justo odio, dapibus ac facilisis</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Fringilla Mattis</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Vestibulum id ligula porta felis euismod</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Duis mollis, est non commodo luctus</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Integer posuere</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Nulla vitae elit libero, a pharetra augue</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Curabitur blandit tempus porttitor</span>
+							</div>
+							<div class="item col-md-4 row">
+								<i class="ti-check color-theme"></i>
+								<span class="col">Nullam quis risus eget urna mollis</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+	<!-- <div class="faq">
+				<div class="picture" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/faq-bg.jpg);"></div>
+				<div class="container">
+					<div class="section-header align-center">
+						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-faq.png" alt=""></div>
+						<h3>Câu hỏi thường gặp</h3>
+					</div>
+					<div class="row">
+						<div class="offset-md-1 col-md-5">
+						<?php $i=0; $loop = new WP_Query(array('post_type' => 'faq','posts_per_page'=> -1)); ?>
+	            		<?php while ( $loop->have_posts() ) : $loop->the_post(); $i++; ?>
+	            		<?php if( ($i%2) == 1 ): ?>	
+							<div class="item row">
+								<i class="ti-help"></i>
+								<div class="col">
+									<span><?php the_title(); ?></span>
+									<?php the_content(); ?>
+								</div>
+							</div>
+						<?php endif; endwhile; wp_reset_query();?>
+						</div>
+						<div class="col-md-5">
+						<?php $i=0; $loop = new WP_Query(array('post_type' => 'faq','posts_per_page'=> -1)); ?>
+	            		<?php while ( $loop->have_posts() ) : $loop->the_post(); $i++; ?>
+	            		<?php if( ($i%2) == 0 ): ?>	
+							<div class="item row">
+								<i class="ti-help"></i>
+								<div class="col">
+									<span><?php the_title(); ?></span>
+									<?php the_content(); ?>
+								</div>
+							</div>
+						<?php endif; endwhile; wp_reset_query();?>
+						</div>
+					</div>
+				</div>
+			</div> -->
+	<?php get_template_part('partials/partial-support'); ?>
+</div>
+</div>
+
+<?php endwhile; endif; ?>
+<?php get_footer(); ?>
