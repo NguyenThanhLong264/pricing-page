@@ -35,23 +35,6 @@ function finalizeSlider() {
     imgList.forEach(img => {
         slider.appendChild(img.cloneNode());
     });
-
-    const imgCount = imgList.length * 2;
-    const totalShiftPercent = (imgCount) * 100;
-    const duration = imgList.length * 2; // mỗi ảnh 2s
-
-    const style = document.createElement('style');
-    style.innerHTML = `
-    @keyframes slide {
-        to {
-            transform: translateX(-${totalShiftPercent / 2}%);
-        }
-    }
-    #logo-slider > img {
-        animation: slide ${duration}s linear infinite;
-    }
-    `;
-    document.head.appendChild(style);
 }
 
 function generateImageNames(prefix, start, end, extensions) {
