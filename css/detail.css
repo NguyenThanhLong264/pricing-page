@@ -1175,12 +1175,27 @@ table svg,
     text-align: center;
 }
 
+.logo-gallery-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
 .gallery {
     display: flex;
     align-items: center;
     background-color: transparent;
     height: 100%;
+    animation-name: scroll;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
 
 .gallery>img {
     height: 100%;
@@ -1189,15 +1204,39 @@ table svg,
     background-color: transparent;
     padding-right: 8px;
     min-width: 150px;
+    max-width: 150px;
 }
 
-.logo-gallery-wrapper {
-    overflow: hidden;
-    width: 100%;
-    height: 100px;
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
+#gallery-prev,
+#gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+
+}
+
+#gallery-prev {
+    left: 0;
+}
+
+
+#gallery-next {
+    right: 0;
+}
+
+/* .logo-gallery-wrapper:hover .gallery {
+    animation-play-state: paused;
+} */
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .mobile {
