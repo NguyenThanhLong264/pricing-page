@@ -3,7 +3,7 @@ const gallery = document.getElementById('logo-slider');
 const prevBtn = document.getElementById("gallery-prev");
 const nextBtn = document.getElementById("gallery-next");
 
-const imgSrcList = generateImgSrc(15);
+const imgSrcList = generateImgSrc(48);
 const imgQueue = [];
 let singleImgWidth = 150;
 
