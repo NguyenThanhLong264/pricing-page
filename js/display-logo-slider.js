@@ -7,7 +7,8 @@ const imgSrcList = generateImgSrc(48);
 const imgQueue = [];
 let singleImgWidth = 150;
 
-let currentIndex = 13; // đã load 13 cái đầu
+const startIdx = 10
+let currentIndex = startIdx; // đã load 13 cái đầu
 let offset = 0; // vị trí dịch hiện tại
 let clickTimeOut = 500 //ms
 
@@ -20,13 +21,14 @@ function generateImgSrc(total) {
 }
 
 function initialQueue() {
-    const first13 = imgSrcList.slice(0, 13);
+    const first13 = imgSrcList.slice(0, startIdx);
     imgQueue.push(...first13);
     generateFristLoad();
 }
 
 function generateFristLoad() {
     gallery.innerHTML = "";
+    console.log("Length:", imgQueue.length);
     imgQueue.forEach(src => {
         const img = document.createElement("img");
         img.src = src;
@@ -62,34 +64,72 @@ carousel.addEventListener("mouseenter", stopCarousel);
 carousel.addEventListener("mouseleave", startCarousel);
 
 let clickAble = true;
-function handleNext() {
+
+let isAnimating = false;
+
+function waitAnimationEnd(element) {
+    return new Promise(resolve => {
+        element.addEventListener("animationend", () => resolve(), { once: true });
+    });
+}
+
+async function handleNext() {
+    if (isAnimating) return;
+    isAnimating = true;
+
     gallery.style.animation = `scrollNext ${clickTimeOut}ms ease 1`;
-    gallery.addEventListener("animationend", () => {
-        gallery.style.animation = "none";
-        imgQueue.shift();
-        imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
-        currentIndex++;
-        imgQueue.shift();
-        imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
-        currentIndex++;
-        generateFristLoad();
-    }, { once: true });
+    await waitAnimationEnd(gallery);
+
+    gallery.style.animation = "none";
+    imgQueue.shift();
+    imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
+    currentIndex++;
+    imgQueue.shift();
+    imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
+    currentIndex++;
+    generateFristLoad();
+
+    isAnimating = false;
 }
 
-function handlePrev() {
+async function handlePrev() {
+    if (isAnimating) return;
+    isAnimating = true;
+
     gallery.style.animation = `scrollPrev ${clickTimeOut}ms ease 1`;
-    gallery.addEventListener("animationend", () => {
-        gallery.style.animation = "none";
-        imgQueue.pop();
-        imgQueue.pop();
-        currentIndex -= 2;
-        if (currentIndex < 0) currentIndex += imgSrcList.length;
-        imgQueue.unshift(imgSrcList[(currentIndex) % imgSrcList.length]);
-        imgQueue.unshift(imgSrcList[(currentIndex + 1) % imgSrcList.length]);
-        generateFristLoad();
-    }, { once: true });
+    await waitAnimationEnd(gallery);
+
+    gallery.style.animation = "none";
+    imgQueue.pop();
+    imgQueue.pop();
+    currentIndex -= 2;
+    if (currentIndex < 0) currentIndex += imgSrcList.length;
+    imgQueue.unshift(imgSrcList[(currentIndex) % imgSrcList.length]);
+    imgQueue.unshift(imgSrcList[(currentIndex + 1) % imgSrcList.length]);
+    generateFristLoad();
+
+    isAnimating = false;
 }
 
+// Sửa startCarousel để dùng cùng flag
+function startCarousel() {
+    if (carouselInterval) return;
+    carouselInterval = setInterval(async () => {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        gallery.style.animation = "scroll 1s ease 1";
+        await waitAnimationEnd(gallery);
+
+        gallery.style.animation = "none";
+        imgQueue.shift();
+        imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
+        currentIndex++;
+        generateFristLoad();
+
+        isAnimating = false;
+    }, 1500);
+}
 nextBtn.addEventListener("click", () => {
     if (!clickAble) return;
     clickAble = false;
