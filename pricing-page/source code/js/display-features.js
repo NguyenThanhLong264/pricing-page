@@ -3,7 +3,7 @@ const featuresArea = document.getElementById('features')
 function featureDesktopLayout() {
     featuresArea.innerHTML = ``;
     const contentFlex = document.createElement('div');
-    contentFlex.className = 'content-flex card';
+    contentFlex.className = 'content-flex custom-pricing-card';
 
     featuresArea.appendChild(contentFlex);
 
@@ -35,7 +35,7 @@ function featureDesktopLayout() {
                         </button>
                         <a href="#table-plans" class="click-link col-feature">
                             <span class="click-link-text features">Tìm hiểu thêm</span>
-                            <span class="icon">
+                            <span class="custom-pricing-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" viewBox="0 0 16 16" style="padding-left:6px">
                                     <path fill="currentColor" fill-rule="evenodd"
@@ -107,7 +107,7 @@ function featureMobileLayout() {
         <div class="slide-nav">
             <nav class="slide-nav-wrapper">
                 <button class="nav-btn" id='left-nav'>
-                    <div class="icon">
+                    <div class="custom-pricing-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -117,7 +117,7 @@ function featureMobileLayout() {
                     </div>
                 </button>
                 <button class="nav-btn" id='right-nav'>
-                    <div class="icon">
+                    <div class="custom-pricing-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -131,8 +131,8 @@ function featureMobileLayout() {
         <div class="feature-m-li"></div>
         `;
 
-    const card = document.querySelector('.slick-track');
-    card.style.width = `${features.length * 100}%`;
+    const custom-pricing-card = document.querySelector('.slick-track');
+    custom-pricing-card.style.width = `${features.length * 100}%`;
     const featureLi = document.querySelector('.feature-m-li');
 
     const liContents = [];
@@ -141,7 +141,7 @@ function featureMobileLayout() {
     const firstNavBtn = navButtons[1];
 
     features.forEach((fea, index) => {
-        const cardContent = `
+        const custom-pricing-cardContent = `
             <div class="feature-m-col" id=${fea.title.replace(' ', '-').toLowerCase()}>
                 <div>
                     <div class="tab">
@@ -166,7 +166,7 @@ function featureMobileLayout() {
                                     </div>
                                     <a href="#table-plans" class="click-link col-feature">
                                         <span class="click-link-text features">Tìm hiểu thêm</span>
-                                        <span class="icon">
+                                        <span class="custom-pricing-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" viewBox="0 0 16 16" style="padding-left:6px">
                                                 <path fill="currentColor" fill-rule="evenodd"
@@ -182,7 +182,7 @@ function featureMobileLayout() {
                 </div>
             </div>
         `;
-        card.insertAdjacentHTML('beforeend', cardContent);
+        custom-pricing-card.insertAdjacentHTML('beforeend', custom-pricing-cardContent);
 
         const dot = document.createElement('button');
         dot.className = 'small-nav-btn';
@@ -191,7 +191,7 @@ function featureMobileLayout() {
 
         liContents.push(`
             <div class="slick-list">
-                <div class="li-wrapper card">
+                <div class="li-wrapper custom-pricing-card">
                     <h4 class="col-title">${fea.title}</h4>
                     <ul class="feature-li">
                     ${fea.keys.map(f => `
