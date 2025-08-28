@@ -2674,10 +2674,7 @@
 						<div class="cta-content card">
 							<div class="cta-img">
 								<span class="img-span">
-									<picture>
-										<source srcset="img/cta-img-1.webp" type="image/webp">
-										<img src="img/cta-img-1.png" alt="ảnh CTA băt đầu" loading="lazy">
-									</picture>
+									<img src="img/cta-img-1.png" alt="ảnh CTA băt đầu" loading="lazy">
 								</span>
 							</div>
 							<div class="cta-text">
@@ -2743,12 +2740,9 @@
 							<div class="cta-content card bg-2">
 								<div class="cta-img">
 									<span class="img-span">
-										<picture>
-											<source srcset="img/cta-img-2.webp" type="image/webp">
-											<img src="img/cta-img-2.png"
-												alt="Success, Growth, goals, achievement, target, trophy, reward, award, excercise"
-												loading="lazy">
-										</picture>
+										<img src="img/cta-img-2.png"
+											alt="Success, Growth, goals, achievement, target, trophy, reward, award, excercise"
+											loading="lazy">
 									</span>
 								</div>
 								<div class="cta-text">
@@ -3009,6 +3003,7 @@
 			</div>
 		</div>
 	</main>
+
 	<?php get_template_part('partials/partial-support'); ?>
 </div>
 
@@ -3023,7 +3018,7 @@
 			buy_btn_text: 'Mua ngay',
 			key_feature: 'Key feature',
 			keys: [
-				{ title: 'Tích hợp kênh thoại và email', description: 'Các ticket được tạo từ các nguồn sẽ được tự động chia việc cho nhân viên. Các agent, phòng ban có thể luân chuyển ticket cho nhau để cùng xử lý 1 công việc.Báo cáo chi tiết ticket: thời gian phản hồi lần đầu, thời gian xử lý trung bình, báo cáo chi tiết theo nội dung', imgUrl: 'assets/imgs/gg-logo.png' },
+				{ title: 'Tích hợp kênh thoại và email', description: 'Các ticket được tạo từ các nguồn sẽ được tự động chia việc cho nhân viên. Các agent, phòng ban có thể luân chuyển ticket cho nhau để cùng xử lý 1 công việc.Báo cáo chi tiết ticket: thời gian phản hồi lần đầu, thời gian xử lý trung bình, báo cáo chi tiết theo nội dung' },
 				{ title: 'Quản lý thông tin khách hàng - customer 360°', description: 'Nothing', },
 				{ title: 'Quản lý phiếu ghi', description: 'Nothing' },
 				{ title: 'Khảo sát khách hàng', description: 'Nothing' },
@@ -3044,7 +3039,7 @@
 			buy_btn_text: 'Mua ngay',
 			key_feature: 'Key feature',
 			keys: [
-				{ title: 'Tích hợp các kênh tương tác với khách hàng (customer engagement)', description: 'Các ticket được tạo từ các nguồn sẽ được tự động chia việc cho nhân viên. Các agent, phòng ban có thể luân chuyển ticket cho nhau để cùng xử lý 1 công việc.Báo cáo chi tiết ticket: thời gian phản hồi lần đầu, thời gian xử lý trung bình, báo cáo chi tiết theo nội dung', imgUrl: 'assets/imgs/gg-logo.png' },
+				{ title: 'Tích hợp các kênh tương tác với khách hàng (customer engagement)', description: 'Các ticket được tạo từ các nguồn sẽ được tự động chia việc cho nhân viên. Các agent, phòng ban có thể luân chuyển ticket cho nhau để cùng xử lý 1 công việc.Báo cáo chi tiết ticket: thời gian phản hồi lần đầu, thời gian xử lý trung bình, báo cáo chi tiết theo nội dung' },
 				{ title: 'Quản lý thông tin khách hàng - customer 360°', description: 'Nothing', },
 				{ title: 'Quản lý phiếu ghi', description: 'Nothing' },
 				{ title: 'Quản lý khách hàng tiềm năng (Lead management)', description: 'Nothing' },
@@ -3068,7 +3063,7 @@
 			buy_btn_text: 'Mua ngay',
 			key_feature: 'Key feature',
 			keys: [
-				{ title: 'Tích hợp các kênh tương tác với khách hàng (customer engagement)', description: 'Các ticket được tạo từ các nguồn sẽ được tự động chia việc cho nhân viên. Các agent, phòng ban có thể luân chuyển ticket cho nhau để cùng xử lý 1 công việc.Báo cáo chi tiết ticket: thời gian phản hồi lần đầu, thời gian xử lý trung bình, báo cáo chi tiết theo nội dung', imgUrl: 'assets/imgs/gg-logo.png' },
+				{ title: 'Tích hợp các kênh tương tác với khách hàng (customer engagement)', description: 'Các ticket được tạo từ các nguồn sẽ được tự động chia việc cho nhân viên. Các agent, phòng ban có thể luân chuyển ticket cho nhau để cùng xử lý 1 công việc.Báo cáo chi tiết ticket: thời gian phản hồi lần đầu, thời gian xử lý trung bình, báo cáo chi tiết theo nội dung' },
 				{ title: 'Quản lý thông tin khách hàng - customer 360°', description: 'Nothing', },
 				{ title: 'Quản lý phiếu ghi', description: 'Nothing' },
 				{ title: 'Khảo sát khách hàng', description: 'Nothing' },
@@ -3401,7 +3396,6 @@
 	const planContainer = planSection.querySelector('.container')
 
 
-	// function displayAddOns() {
 	const addOnsArray = []
 	document.querySelectorAll('part-wrapper', 'add-ons').innerHTML = "";
 	add_ons.forEach((addOn, addOnIndex) => {
@@ -3483,7 +3477,6 @@
 	});
 	const faqSection = document.querySelector('.ques-section')
 
-	// function displayFaq() {
 	questions.forEach((question, i) => {
 		const wrapper = document.createElement('div');
 		wrapper.classList.add('ques-sec-wrapper');
@@ -3525,7 +3518,6 @@
 
 		featuresArea.appendChild(contentFlex);
 
-		// Render từng feature-col
 		features.forEach((fea) => {
 			const featureCol = document.createElement('div');
 			featureCol.className = 'feature-col';
@@ -3804,14 +3796,14 @@
 	let singleImgWidth = 150;
 
 	const startIdx = 10
-	let currentIndex = startIdx; // đã load 13 cái đầu
-	let offset = 0; // vị trí dịch hiện tại
-	let clickTimeOut = 500 //ms
+	let currentIndex = startIdx;
+	let offset = 0;
+	let clickTimeOut = 500
 
 	function generateImgSrc(total) {
 		const arr = [];
 		for (let i = 1; i <= total; i++) {
-			arr.push(`img/logos/logo (${i}).png`);
+			arr.push(`img/cs-customer-logo-${i}.png`);
 		}
 		return arr;
 	}
@@ -3836,7 +3828,7 @@
 	let carouselInterval = null;
 
 	function startCarousel() {
-		if (carouselInterval) return; // nếu đang chạy thì không tạo mới
+		if (carouselInterval) return;
 		carouselInterval = setInterval(() => {
 			gallery.style.animation = "scroll 1s ease 1";
 			gallery.addEventListener("animationend", () => {
@@ -3907,7 +3899,6 @@
 		isAnimating = false;
 	}
 
-	// Sửa startCarousel để dùng cùng flag
 	function startCarousel() {
 		if (carouselInterval) return;
 		carouselInterval = setInterval(async () => {
@@ -4059,7 +4050,7 @@
 		renderTableByIndex(currentPlanIdx + 1)
 		tableHead.classList.add('mobile');
 		const th = document.createElement('th');
-		const selectedText = mainTableRows[currentPlanIdx].title ?? 'Chọn gói'; // fallback nếu rỗng
+		const selectedText = mainTableRows[currentPlanIdx].title ?? 'Chọn gói';
 		th.innerHTML = `
     <div class="mobile-thead">
       <h3>Plans</h3>
@@ -4235,7 +4226,7 @@
 
 	function changeWidthByCols() {
 		const colWidth = `${65 / mainTableRows.length}%`;
-		const ths = headRow.querySelectorAll(':scope > th'); // chỉ th con trực tiếp
+		const ths = headRow.querySelectorAll(':scope > th');
 		const tds = document.querySelectorAll('.main-td')
 
 		tds.forEach(td => {
@@ -4264,7 +4255,7 @@
 	const form = document.getElementById('contact-form')
 	const submitModal = document.querySelector('.form-submited-wrapper')
 	const formElements = form.querySelectorAll('input, textarea, select');
-	// 👉 gom validate vào 1 hàm chung
+
 	function validateInput(inp) {
 		if (inp.dataset.req !== 'false') {
 			const regexPattern = inp.dataset.regex
@@ -4437,7 +4428,6 @@
 		});
 	};
 
-	// function toggleFaq() {
 	const faqToggles = document.querySelectorAll('.ques-heading');
 	faqToggles.forEach(row => {
 		row.addEventListener('click', () => {
@@ -4449,7 +4439,6 @@
 	});
 
 
-	// function toggleMobileNav() {
 	const toggleBtn = document.querySelector('.m-nav-toggle-menu');
 	const menu = document.getElementById('menu')
 	toggleBtn.addEventListener('click', () => {
