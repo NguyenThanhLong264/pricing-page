@@ -31,12 +31,12 @@
 		width: 100%;
 	}
 
-	.form-content::-webkit-scrollbar {
+	.pricing-form-content::-webkit-scrollbar {
 		height: .7rem;
 		width: .7rem;
 	}
 
-	.form-content::-webkit-scrollbar-thumb {
+	.pricing-form-content::-webkit-scrollbar-thumb {
 		background-color: rgb(235, 227, 214);
 		border-radius: 6.1875rem;
 		background-clip: padding-box;
@@ -1368,7 +1368,7 @@
 		max-width: calc(100% - 16px);
 	}
 
-	.form-submited-wrapper {
+	.pricing-form-submited-wrapper {
 		display: none;
 		width: 500px;
 		position: fixed;
@@ -1379,7 +1379,7 @@
 		max-width: calc(100% - 16px);
 	}
 
-	.form-content {
+	.pricing-form-content {
 		display: block;
 		padding: 32px;
 		margin: 0px auto;
@@ -1391,11 +1391,11 @@
 		font-size: 16px;
 	}
 
-	.form-title>* {
+	.pricing-form-title>* {
 		text-align: center;
 	}
 
-	.form-title-text {
+	.pricing-form-title-text {
 		color: rgb(22, 20, 12);
 		margin: 0px 0px 24px;
 		font-family: 'Inter';
@@ -1406,17 +1406,17 @@
 		letter-spacing: 0.75px;
 	}
 
-	.form-input {
+	.pricing-form-input {
 		display: grid;
 		gap: 24px;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.form-input .full {
+	.pricing-form-input .pricing-full {
 		grid-column: span 2;
 	}
 
-	.form-input .lap-50 {
+	.pricing-form-input .pricing-lap-50 {
 		grid-column: span 2;
 	}
 
@@ -1558,7 +1558,7 @@
 		width: 100%;
 	}
 
-	.form-content .pricing-normal-text:not(:last-child) {
+	.pricing-form-content .pricing-normal-text:not(:last-child) {
 		margin-bottom: 0;
 	}
 
@@ -1795,7 +1795,7 @@
 			columns: 2;
 		}
 
-		.form-content {
+		.pricing-form-content {
 			padding: 48px;
 		}
 
@@ -1904,7 +1904,7 @@
 			max-width: 33.3333%;
 		}
 
-		.form-input .lap-50 {
+		.pricing-form-input .pricing-lap-50 {
 			grid-column: span 1;
 		}
 
@@ -2572,17 +2572,17 @@
 						<path stroke="currentColor" stroke-linecap="round" d="M3 13L13 3m0 10L3 3"></path>
 					</svg>
 				</button>
-				<div class="form-content">
+				<div class="pricing-form-content">
 					<form id="contact-form">
-						<div class="form-title">
-							<h3 class="form-title-text">Đăng ký tư vấn ngay</h3>
+						<div class="pricing-form-title">
+							<h3 class="pricing-form-title-text">Đăng ký tư vấn ngay</h3>
 							<p class="pricing-normal-text">Chúng tôi sẵn sàng tư vấn giải pháp phù hợp nhất với mô hình
 								hoạt
 								động của doanh nghiệp bạn.
 							</p>
 						</div>
-						<div class="form-input">
-							<div class="input-wrapper lap-50">
+						<div class="pricing-form-input">
+							<div class="input-wrapper pricing-lap-50">
 								<div class="input-content">
 									<label class="input-label" for="name">Họ Tên</label>
 									<div class="input-detail">
@@ -2610,7 +2610,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="input-wrapper lap-50">
+							<div class="input-wrapper pricing-lap-50">
 								<div class="input-content">
 									<label class="input-label" for="company">Công ty/ Doanh nghiệp</label>
 									<div class="input-detail">
@@ -2637,7 +2637,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="input-wrapper lap-50">
+							<div class="input-wrapper pricing-lap-50">
 								<div class="input-content">
 									<label class="input-label" for="email">Email</label>
 									<div class="input-detail">
@@ -2665,7 +2665,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="input-wrapper lap-50">
+							<div class="input-wrapper pricing-lap-50">
 								<div class="input-content">
 									<label class="input-label" for="phone">SĐT</label>
 									<div class="input-detail">
@@ -2693,7 +2693,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="input-wrapper full">
+							<div class="input-wrapper pricing-full">
 								<div class="input-content">
 									<label class="input-label" for="message">Ghi chú</label>
 									<div class="input-detail">
@@ -2721,7 +2721,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="input-wrapper full">
+							<div class="input-wrapper pricing-full">
 								<div class="input-content">
 									<div class="check-box-wrapper">
 										<input type="checkbox" name="agree" id="agree">
@@ -2733,7 +2733,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="input-wrapper full">
+							<div class="input-wrapper pricing-full">
 								<div class="input-content">
 									<div class="pricing-normal-text">
 										Khi gửi thông tin cá nhân, tôi đồng ý để CareSoft thu thập, xử lý và lưu trữ
@@ -2756,7 +2756,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="form-submited-wrapper">
+			<div class="pricing-form-submited-wrapper">
 				<button class="close-btn" onclick="toggleOverlay()">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
 						aria-hidden="true">
@@ -4033,7 +4033,7 @@
 	}
 
 	const form = document.getElementById('contact-form')
-	const submitModal = document.querySelector('.form-submited-wrapper')
+	const submitModal = document.querySelector('.pricing-form-submited-wrapper')
 	const formElements = form.querySelectorAll('input, textarea, select');
 
 	function validateInput(inp) {
