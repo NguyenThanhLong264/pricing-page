@@ -2183,7 +2183,9 @@ input[data-input-stage="cons"]~.input-icon {
     }
 
     .part-wrapper {
+        margin: auto;
         margin-top: 64px;
+        max-width: 1120px;
     }
 
     .cta-wrapper {
