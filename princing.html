@@ -12,13 +12,11 @@
 		box-sizing: border-box;
 	}
 
-	html,
 	body {
-		padding: 0;
 		margin: 0;
 	}
 
-	body.no-scroll {
+	.no-scroll {
 		overflow: hidden;
 	}
 
@@ -26,33 +24,6 @@
 		padding: 0 24px;
 		margin: 0 auto;
 		width: 100%;
-	}
-
-	a {
-		text-decoration: none;
-		color: black;
-	}
-
-	.mt-40 {
-		margin-top: 40px;
-	}
-
-	button {
-		outline: none;
-		border: none;
-		cursor: pointer;
-	}
-
-	::-webkit-scrollbar {
-		height: .7rem;
-		width: .7rem;
-	}
-
-	::-webkit-scrollbar-thumb {
-		background-color: rgb(235, 227, 214);
-		border-radius: 6.1875rem;
-		background-clip: padding-box;
-		border: .125rem solid #0000;
 	}
 
 	section {
@@ -379,12 +350,12 @@
 	}
 
 	.primary-btn {
-		min-height: calc(1.25em + 8px);
-		font-size: 18px;
-		border-radius: 99px;
 		cursor: pointer;
 		display: inline-block;
 		gap: 8px;
+		font-size: 18px;
+		min-height: calc(1.25em + 8px);
+		border-radius: 99px;
 		overflow: visible;
 		position: relative;
 		text-decoration: none;
@@ -1282,12 +1253,14 @@
 	}
 
 	.gallery-btn {
+		outline: transparent;
+		border: transparent;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		height: 100%;
 		width: 50px;
-		background-color: rgba(255, 255, 255, 0.4);
+		background-color: rgba(255, 255, 255, 0.8);
 		transition: all 0.3s;
 	}
 
@@ -3521,13 +3494,13 @@
                                     </svg>
                                 </div>
                                 <div class="li-content">
-                                    <a class="li-a">
+                                    <div class="li-a">
                                         <span class="li-text">${f.title}</span>
                                         ${f.tag ? `<span class="tag"><span class="tag-text">${f.tag}</span></span>` : ''}
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="search-icon-li">
                                             <path d="m0 14.098 1.509 1.509 3.771-3.772-1.508-1.508zM9.741 0a5.867 5.867 0 1 0 0 11.735A5.867 5.867 0 0 0 9.742 0m0 1.067c2.647 0 4.8 2.154 4.8 4.8s-2.153 4.8-4.8 4.8-4.8-2.154-4.8-4.8 2.153-4.8 4.8-4.8"></path>
                                         </svg>
-                                    </a>
+                                    </div>
                                 </div>
                             </li>
                         `).join('')}
