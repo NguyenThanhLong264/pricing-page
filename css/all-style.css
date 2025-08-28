@@ -2271,6 +2271,7 @@ input[data-input-stage="cons"]~.input-icon {
     }
 
     .part-wrapper {
+        width: 100%;
         margin-top: 72px;
     }
 
