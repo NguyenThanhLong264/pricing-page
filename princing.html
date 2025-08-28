@@ -2463,7 +2463,7 @@
 					<div class="sub-hero-title">
 						<span class="sticker">Đa dạng</span>
 						<h3 class="small-title">Tùy chỉnh gói dịch vụ, phù hợp cho mọi doanh nghiệp</h3>
-						<a href="" class="click-link">
+						<div class="click-link">
 							<span class="click-link-text ">Chọn gói phù hợp cho bạn</span>
 							<span class="pricing-custom-icon">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -2473,7 +2473,7 @@
 										clip-rule="evenodd"></path>
 								</svg>
 							</span>
-						</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -4165,6 +4165,7 @@
 			highlightMainHeader(2);
 			highlightPopularColumn(3);
 		}
+		toggletoDetailBtn()
 		displayForm()
 	}
 
@@ -4263,20 +4264,21 @@
 		});
 	});
 
-	const toDetailBtn = document.querySelectorAll(".to-detail");
-	toDetailBtn.forEach(btn => {
-		btn.addEventListener("click", () => {
-			const targetId = "table-plans";
-			const target = document.getElementById(targetId);
-
-			if (target) {
-				target.scrollIntoView({
-					behavior: "smooth",
-					block: "start"
-				});
-			}
+	function toggletoDetailBtn() {
+		const toDetailBtn = document.querySelectorAll(".to-detail");
+		toDetailBtn.forEach(btn => {
+			btn.onclick = () => {
+				const targetId = "table-plans";
+				const target = document.getElementById(targetId);
+				if (target) {
+					target.scrollIntoView({
+						behavior: "smooth",
+						block: "start"
+					});
+				}
+			};
 		});
-	});
+	}
 </script>
 
 <?php endwhile; endif; ?>
