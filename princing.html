@@ -2379,11 +2379,10 @@
 			width: 50%;
 		}
 
-		.custom-select {
+		.pricing-custom-select {
 			position: relative;
 			width: 100%;
-			/* max-width: 320px; */
-			font-family: 'Inter', ;
+			font-family: 'Inter';
 			font-size: 16px;
 			user-select: none;
 		}
@@ -2434,7 +2433,7 @@
 			background-color: #f2f2f2;
 		}
 
-		.custom-select.open .options {
+		.pricing-custom-select.open .options {
 			display: block;
 		}
 
@@ -3891,7 +3890,7 @@
 		th.innerHTML = `
     <div class="mobile-thead">
       <h3>Plans</h3>
-      <div class="custom-select" id="customSelect">
+      <div class="pricing-custom-select" id="customSelect">
         <div class="select-trigger">
           <span class="selected">${selectedText}</span>
           <span class="arrow">▾</span>
@@ -3899,7 +3898,7 @@
       </div>
     </div>
   `;
-		const selectBox = th.querySelector('.custom-select');
+		const selectBox = th.querySelector('.pricing-custom-select');
 		const optionsDiv = document.createElement('div');
 		optionsDiv.className = 'options';
 		mainTableRows.forEach((text, index) => {
