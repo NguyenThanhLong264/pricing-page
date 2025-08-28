@@ -964,12 +964,12 @@
 		vertical-align: top;
 	}
 
-	.pricing-main-tr.no-ex {
+	.pricing-main-tr.pricing-no-ex {
 		padding-bottom: 8px;
 	}
 
-	.no-ex-td,
-	.open-td {
+	.pricing-no-ex-td,
+	.pricing-open-td {
 		position: relative;
 		margin-bottom: 0px;
 		padding: 0px;
@@ -980,7 +980,7 @@
 		text-align: left;
 	}
 
-	.main-td {
+	.pricing-main-td {
 		flex: 0 0 16.67%;
 		padding: 12px 16px;
 		position: relative;
@@ -990,7 +990,7 @@
 		justify-content: center;
 	}
 
-	.main-td:first-of-type {
+	.pricing-main-td:first-of-type {
 		flex-grow: 1;
 		justify-content: flex-start;
 		text-align: left;
@@ -1000,8 +1000,8 @@
 		margin: 0;
 	}
 
-	table svg,
-	.ques-li svg {
+	#pricing table svg,
+	.pricing-ques-li svg {
 		fill: currentcolor;
 		transition: all 0.2s cubic-bezier(0.7, 0, 0.3, 1);
 	}
@@ -1014,7 +1014,7 @@
 		background: rgb(246, 240, 230);
 	}
 
-	.open-text {
+	.pricing-open-text {
 		font-size: 18px;
 		font-family: 'Inter';
 		color: rgb(22, 20, 12);
@@ -1024,14 +1024,14 @@
 		margin: 0;
 	}
 
-	.td-open-content {
+	.pricing-td-open-content {
 		box-sizing: inherit;
 		padding: 0px;
 		display: block;
 		width: 100%;
 	}
 
-	.tr-header {
+	.pricing-tr-header {
 		display: flex;
 		box-sizing: border-box;
 		align-items: center;
@@ -1044,19 +1044,19 @@
 		transition: all 100ms linear;
 	}
 
-	.tr-header:hover {
+	.pricing-tr-header:hover {
 		cursor: pointer;
 		background-color: #dfd8cb;
 	}
 
-	.tr-header:focus-within,
-	.tr-header:focus {
+	.pricing-tr-header:focus-within,
+	.pricing-tr-header:focus {
 		outline: #d4ccc1 solid 2px;
 		outline-offset: 3px;
 		box-shadow: rgb(235, 227, 214) 0px 0px 0px 2px inset;
 	}
 
-	.open-table-btn {
+	.pricing-open-table-btn {
 		background: transparent;
 		width: 100%;
 		text-align: left;
@@ -1067,12 +1067,12 @@
 		transition: all 100ms linear;
 	}
 
-	.open .tr-header svg,
-	.open .ques-heading svg {
+	.open .pricing-tr-header svg,
+	.open .pricing-ques-heading svg {
 		transform: rotate(180deg);
 	}
 
-	.tr-content {
+	.pricing-tr-content {
 		display: grid;
 		transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
 		overflow: hidden;
@@ -1081,17 +1081,12 @@
 		padding-bottom: 0;
 	}
 
-	.td-open-content.open .tr-content {
+	.pricing-td-open-content.open .pricing-tr-content {
 		grid-template-rows: 1fr;
 		padding: 8px 0;
 	}
 
-	.main-td.notes {
-		padding: 0;
-		justify-content: center;
-	}
-
-	.note-text {
+	.pricing-note-text {
 		color: rgb(22, 20, 12);
 		font-family: 'Inter';
 		text-align: center;
@@ -1101,36 +1096,36 @@
 		margin: 0px 0px 16px;
 	}
 
-	.no-pad {
+	.pricing-no-pad {
 		padding: 0;
 	}
 
-	.bg-2 {
+	.pricing-bg-2 {
 		background-color: rgb(246, 240, 230);
 	}
 
-	.faq-title-wrapper {
+	.pricing-faq-title-wrapper {
 		width: 100%;
 	}
 
-	.text-wrapper {
+	.pricing-text-wrapper {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 	}
 
-	.text-wrapper .pricing-main-title {
+	.pricing-text-wrapper .pricing-main-title {
 		padding-left: 12px;
 		padding-right: 12px;
 	}
 
-	.faq-wrapper {
+	.pricing-faq-wrapper {
 		width: 100%;
 		margin-top: 64px;
 	}
 
-	.ques-section {
+	.pricing-ques-section {
 		width: 100%;
 		flex-basis: 0px;
 		flex-grow: 1;
@@ -1142,11 +1137,11 @@
 		max-width: 100%;
 	}
 
-	.ques-li {
+	.pricing-ques-li {
 		border-top: 1px solid #dfd8cb;
 	}
 
-	.ques-heading {
+	.pricing-ques-heading {
 		display: flex;
 		align-items: center;
 		font-size: 16px;
@@ -1155,7 +1150,7 @@
 		overflow: hidden;
 	}
 
-	.ques-heading .open-table-btn {
+	.pricing-ques-heading .pricing-open-table-btn {
 		color: rgb(22, 20, 12);
 		padding: 20px 0px;
 		font-size: 16px;
@@ -1165,7 +1160,7 @@
 		transition-duration: 100ms;
 	}
 
-	.ques-content {
+	.pricing-ques-content {
 		display: grid;
 		overflow: hidden;
 		transition: padding 0.25s ease-in-out, grid-template-rows 0.25s ease-in-out;
@@ -1180,16 +1175,16 @@
 		opacity: 0;
 	}
 
-	.ques-content .pricing-normal-text {
+	.pricing-ques-content .pricing-normal-text {
 		margin-bottom: 16px;
 	}
 
-	.open .ques-content {
+	.open .pricing-ques-content {
 		grid-template-rows: 1fr;
 		padding-bottom: 24px;
 	}
 
-	.ques-li.open {
+	.pricing-ques-li.open {
 		border-top: 1px solid transparent;
 		box-shadow: rgb(22, 20, 12) 0px 2px 0px 0px inset;
 	}
@@ -1198,11 +1193,11 @@
 		opacity: 1;
 	}
 
-	.ques-heading:hover {
+	.pricing-ques-heading:hover {
 		background-color: rgb(246, 240, 230);
 	}
 
-	.open .ques-heading:hover {
+	.open .pricing-ques-heading:hover {
 		background-color: transparent;
 	}
 
@@ -1210,12 +1205,12 @@
 		margin-top: 64px;
 	}
 
-	.main-td.pricing-popular {
+	.pricing-main-td.pricing-popular {
 		border-left: 1px solid rgb(22, 20, 12);
 		border-right: 1px solid rgb(22, 20, 12);
 	}
 
-	.main-td.popular-bottom {
+	.pricing-main-td.popular-bottom {
 		border-bottom: 1px solid rgb(22, 20, 12);
 	}
 
@@ -1232,7 +1227,7 @@
 		text-align: center;
 	}
 
-	.logo-gallery-wrapper {
+	.pricing-logo-gallery-wrapper {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
@@ -1242,7 +1237,7 @@
 		align-items: center;
 	}
 
-	.gallery {
+	.pricing-gallery {
 		display: flex;
 		align-items: center;
 		background-color: transparent;
@@ -1253,7 +1248,7 @@
 	}
 
 
-	.gallery img {
+	.pricing-gallery img {
 		height: 100%;
 		background-color: transparent;
 		padding: 0 12px;
@@ -1263,7 +1258,7 @@
 		flex-shrink: 0;
 	}
 
-	.gallery-btn {
+	.pricing-gallery-btn {
 		outline: transparent;
 		border: transparent;
 		position: absolute;
@@ -1275,26 +1270,26 @@
 		transition: all 0.3s;
 	}
 
-	.gallery-btn:hover {
+	.pricing-gallery-btn:hover {
 		background-color: rgb(154, 68, 151);
 		color: white;
 	}
 
-	.gallery-btn:hover svg {
+	.pricing-gallery-btn:hover svg {
 		transition: all 0.3s;
 		transform: scale(1.5);
 	}
 
-	#gallery-prev {
+	#pricing-gallery-prev {
 		left: 0;
 	}
 
 
-	#gallery-next {
+	#pricing-gallery-next {
 		right: 0;
 	}
 
-	.logo-gallery-wrapper:hover .gallery {
+	.pricing-logo-gallery-wrapper:hover .pricing-gallery {
 		animation-play-state: paused;
 	}
 
@@ -1332,7 +1327,7 @@
 		display: none;
 	}
 
-	.overlay {
+	.pricing-overlay {
 		position: fixed;
 		width: 100%;
 		height: 100%;
@@ -1346,7 +1341,7 @@
 		animation: 0.15s ease-in 0s 1 normal none running lbWRkT;
 	}
 
-	.overlay.open {
+	.pricing-overlay.open {
 		z-index: 1001;
 		overflow: hidden;
 	}
@@ -1361,7 +1356,7 @@
 		}
 	}
 
-	.form-wrapper {
+	.pricing-form-wrapper {
 		display: none;
 		width: 700px;
 		position: fixed;
@@ -1829,7 +1824,7 @@
 			font-size: 40px;
 		}
 
-		.text-wrapper .pricing-main-title {
+		.pricing-text-wrapper .pricing-main-title {
 			flex: 0 0 66.6667%;
 			max-width: 66.6667%;
 		}
@@ -1877,11 +1872,11 @@
 			margin-bottom: 16px;
 		}
 
-		.open-text {
+		.pricing-open-text {
 			font-size: 20px;
 		}
 
-		.note-text {
+		.pricing-note-text {
 			margin-bottom: 16px;
 		}
 
@@ -1939,7 +1934,7 @@
 			font-size: 48px;
 		}
 
-		.text-wrapper .pricing-main-title {
+		.pricing-text-wrapper .pricing-main-title {
 			flex: 0 0 66.6667%;
 			max-width: 66.6667%;
 		}
@@ -1961,7 +1956,7 @@
 			font-size: 14px;
 		}
 
-		.note-text {
+		.pricing-note-text {
 			font-size: 14px;
 		}
 
@@ -2088,11 +2083,11 @@
 			font-size: 16px;
 		}
 
-		.open-text {
+		.pricing-open-text {
 			font-size: 24px;
 		}
 
-		.note-text {
+		.pricing-note-text {
 			font-size: 16px;
 			line-height: 22px;
 		}
@@ -2386,11 +2381,11 @@
 			width: 100%;
 		}
 
-		.main-td {
+		.pricing-main-td {
 			flex: 0 0 50%;
 		}
 
-		.ques-content {
+		.pricing-ques-content {
 			padding: 0 16px;
 		}
 
@@ -2485,13 +2480,14 @@
 						<tbody class="pricing-main-body" id="mainBody">
 						</tbody>
 					</table>
-					<p class="note-text">*Chúng tôi cung cấp hỗ trợ qua hotline 24/7. Hỗ trợ qua email và live chat được
+					<p class="pricing-note-text">*Chúng tôi cung cấp hỗ trợ qua hotline 24/7. Hỗ trợ qua email và live
+						chat được
 						áp dụng trong giờ làm việc tiêu chuẩn (8 giờ/ngày, 5 ngày/tuần).
 					</p>
 				</div>
 			</div>
 		</div>
-		<div class="pricing-customer no-pad pricing-c-section">
+		<div class="pricing-customer pricing-no-pad pricing-c-section">
 			<div class="pricing-custom-container">
 				<div class="custome-pricing-cta-wrapper">
 					<div class="pricing-customer">
@@ -2500,17 +2496,17 @@
 								300
 								Doanh nghiệp thông qua nền tảng của Caresoft</p>
 						</div>
-						<div class="logo-gallery-wrapper">
-							<div class="gallery" id="logo-slider">
+						<div class="pricing-logo-gallery-wrapper">
+							<div class="pricing-gallery" id="logo-slider">
 							</div>
 
-							<button class="gallery-btn" id="gallery-prev">
+							<button class="pricing-gallery-btn" id="pricing-gallery-prev">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
 									<path fill="currentColor"
 										d="m10.8 12l3.9 3.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-4.6-4.6q-.15-.15-.212-.325T8.425 12t.063-.375t.212-.325l4.6-4.6q.275-.275.7-.275t.7.275t.275.7t-.275.7z" />
 								</svg>
 							</button>
-							<button class="gallery-btn" id="gallery-next">
+							<button class="pricing-gallery-btn" id="pricing-gallery-next">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
 									<path fill="currentColor"
 										d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
@@ -2520,7 +2516,7 @@
 					</div>
 					<div class="pricing-part-wrapper cta non-flex">
 						<div class="pricing-cta-wrapper">
-							<div class="pricing-cta-content pricing-custom-card bg-2">
+							<div class="pricing-cta-content pricing-custom-card pricing-bg-2">
 								<div class="pricing-cta-img">
 									<span class="pricing-img-span">
 										<img src="/wp-content/uploads/2025/08/cta-img-2.png"
@@ -2557,19 +2553,19 @@
 		</div>
 		<div class="pricing-faq-section pricing-c-section">
 			<div class="pricing-custom-container">
-				<div class="faq-title-wrapper">
-					<div class="text-wrapper">
+				<div class="pricing-faq-title-wrapper">
+					<div class="pricing-text-wrapper">
 						<h2 class="pricing-main-title">Giải đáp thắc mắc thường gặp.</h2>
 					</div>
 				</div>
-				<div class="faq-wrapper">
-					<div class="ques-section">
+				<div class="pricing-faq-wrapper">
+					<div class="pricing-ques-section">
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="overlay">
-			<div class="form-wrapper">
+		<div class="pricing-overlay">
+			<div class="pricing-form-wrapper">
 				<button class="close-btn" onclick="toggleOverlay()">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
 						aria-hidden="true">
@@ -3260,7 +3256,7 @@
 			}
 		}
 	});
-	const faqSection = document.querySelector('.ques-section')
+	const faqSection = document.querySelector('.pricing-ques-section')
 
 	questions.forEach((question, i) => {
 		const wrapper = document.createElement('div');
@@ -3268,12 +3264,12 @@
 
 		wrapper.innerHTML = `
             <h3 class="pricing-small-title">${question.topic}</h3>
-            <div class="ques-li-wrapper">
+            <div class="pricing-ques-li-wrapper">
                 ${question.questions.map(ques => `
-                    <div class="ques-li">
-                        <div class="ques-heading">
-                            <div class="open-table-btn">
-                                <h3 class="open-text">${ques.ques}</h3>
+                    <div class="pricing-ques-li">
+                        <div class="pricing-ques-heading">
+                            <div class="pricing-open-table-btn">
+                                <h3 class="pricing-open-text">${ques.ques}</h3>
 							</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 fill="currentColor" viewBox="0 0 24 24">
@@ -3282,7 +3278,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </div>
-                        <div class="ques-content">
+                        <div class="pricing-ques-content">
                             <div class="q-content-wrapper">
                                 <p class="pricing-normal-text">${ques.ans}</p>
                             </div>
@@ -3571,10 +3567,10 @@
 				featureLi.innerHTML = liContents[index];
 			}
 		});
-	} const carousel = document.querySelector('.logo-gallery-wrapper');
+	} const carousel = document.querySelector('.pricing-logo-gallery-wrapper');
 	const gallery = document.getElementById('logo-slider');
-	const prevBtn = document.getElementById("gallery-prev");
-	const nextBtn = document.getElementById("gallery-next");
+	const prevBtn = document.getElementById("pricing-gallery-prev");
+	const nextBtn = document.getElementById("pricing-gallery-next");
 
 	const imgSrcList = generateImgSrc(48);
 	const imgQueue = [];
@@ -3745,9 +3741,9 @@
 
 		const nonOpen = plans.filter(plan => plan.title === null);
 		const noOpenRow = document.createElement('tr')
-		noOpenRow.classList.add('pricing-main-tr', 'no-ex');
+		noOpenRow.classList.add('pricing-main-tr', 'pricing-no-ex');
 		noOpenRow.innerHTML = ` 
-    <td class="no-ex-td">
+    <td class="pricing-no-ex-td">
         <table class="pricing-compare-table">
             <tbody class="pricing-main-body"></tbody>
         </table>
@@ -3757,7 +3753,7 @@
 			noOpenRowTable.innerHTML = '';
 			item.rows.forEach((row) => {
 				const tds = row.map(cell => `
-            <td class="main-td">
+            <td class="pricing-main-td">
                 <p class="pricing-normal-text">${cell}</p>
             </td>
         `).join('');
@@ -3780,7 +3776,7 @@
 
 				row.forEach(cell => {
 					const td = document.createElement('td');
-					td.className = 'main-td';
+					td.className = 'pricing-main-td';
 
 					const p = document.createElement('p');
 					p.className = 'pricing-normal-text';
@@ -3797,12 +3793,12 @@
 			tr.className = 'pricing-main-tr';
 
 			const td = document.createElement('td');
-			td.classList.add('open-td', 'open');
+			td.classList.add('pricing-open-td', 'open');
 			td.innerHTML = `
-        <div class="td-open-content">
-            <div class="tr-header">
-                <div class="open-table-btn">
-                    <h3 class="open-text">${plan.title}</h3>
+        <div class="pricing-td-open-content">
+            <div class="pricing-tr-header">
+                <div class="pricing-open-table-btn">
+                    <h3 class="pricing-open-text">${plan.title}</h3>
 				</div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     viewBox="0 0 24 24">
@@ -3811,10 +3807,10 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </div>
-            <div class="tr-content"></div>
+            <div class="pricing-tr-content"></div>
         </div>
     `;
-			const trContent = td.querySelector('.tr-content');
+			const trContent = td.querySelector('.pricing-tr-content');
 			trContent.appendChild(smallTable);
 
 			tr.appendChild(td);
@@ -3892,9 +3888,9 @@
 		mainBody.innerHTML = '';
 		const nonOpen = plans.filter(plan => plan.title === null);
 		const noOpenRow = document.createElement('tr')
-		noOpenRow.classList.add('pricing-main-tr', 'no-ex');
+		noOpenRow.classList.add('pricing-main-tr', 'pricing-no-ex');
 		noOpenRow.innerHTML = ` 
-    <td class="no-ex-td">
+    <td class="pricing-no-ex-td">
         <table class="pricing-compare-table">
             <tbody class="pricing-main-body"></tbody>
         </table>
@@ -3906,10 +3902,10 @@
 				const labelCell = row[0] ?? '';
 				const valueCell = row[index] ?? '-';
 				const tds = `
-                <td class="main-td">
+                <td class="pricing-main-td">
                     <p class="pricing-normal-text">${labelCell}</p>
                 </td>
-                <td class="main-td">
+                <td class="pricing-main-td">
                     <p class="pricing-normal-text">${valueCell}</p>
                 </td>
             `;
@@ -3933,7 +3929,7 @@
 				[0, index].forEach(i => {
 					const cell = row[i];
 					const td = document.createElement('td');
-					td.className = 'main-td';
+					td.className = 'pricing-main-td';
 
 					const p = document.createElement('p');
 					p.className = 'pricing-normal-text';
@@ -3950,13 +3946,13 @@
 			tr.className = 'pricing-main-tr';
 
 			const td = document.createElement('td');
-			td.className = 'open-td';
+			td.className = 'pricing-open-td';
 
 			td.innerHTML = `
-        <div class="td-open-content">
-            <div class="tr-header">
-                <div class="open-table-btn">
-                    <h3 class="open-text">${plan.title}</h3>
+        <div class="pricing-td-open-content">
+            <div class="pricing-tr-header">
+                <div class="pricing-open-table-btn">
+                    <h3 class="pricing-open-text">${plan.title}</h3>
 				</div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     viewBox="0 0 24 24">
@@ -3965,10 +3961,10 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </div>
-            <div class="tr-content"></div>
+            <div class="pricing-tr-content"></div>
         </div>
     `;
-			const trContent = td.querySelector('.tr-content');
+			const trContent = td.querySelector('.pricing-tr-content');
 			trContent.appendChild(smallTable);
 
 			tr.appendChild(td);
@@ -3996,7 +3992,7 @@
                                                     d="m2.098 1.998 12.02 12.021" vector-effect="non-scaling-stroke">
                                                 </path>
                                             </svg>`;
-		document.querySelectorAll('.main-td .pricing-normal-text').forEach(p => {
+		document.querySelectorAll('.pricing-main-td .pricing-normal-text').forEach(p => {
 			const text = p.textContent.trim().toLowerCase();
 
 			if (text === 'true') {
@@ -4011,7 +4007,7 @@
 	function changeWidthByCols() {
 		const colWidth = `${65 / mainTableRows.length}%`;
 		const ths = headRow.querySelectorAll(':scope > th');
-		const tds = document.querySelectorAll('.main-td')
+		const tds = document.querySelectorAll('.pricing-main-td')
 
 		tds.forEach(td => {
 			const currentFlexGrow = parseFloat(getComputedStyle(td).flexGrow);
@@ -4028,7 +4024,7 @@
 		openFormBtns.forEach((btn) => {
 			btn.onclick = () => {
 				toggleOverlay()
-				const formWrapper = overlay.querySelector('.form-wrapper');
+				const formWrapper = overlay.querySelector('.pricing-form-wrapper');
 				if (formWrapper && formWrapper.style.display !== 'flex') {
 					formWrapper.style.display = 'flex';
 				}
@@ -4100,7 +4096,7 @@
 			return;
 		}
 
-		overlay.querySelector('.form-wrapper').style.display = 'none';
+		overlay.querySelector('.pricing-form-wrapper').style.display = 'none';
 		submitModal.style.display = 'block'
 		const data = {
 			name: form.name.value.trim(),
@@ -4142,7 +4138,7 @@
 			applyResponsiveLayout(mode);
 		}
 	});
-	const overlay = document.querySelector('.overlay');
+	const overlay = document.querySelector('.pricing-overlay');
 
 	overlay.addEventListener('click', (e) => {
 		if (e.target === overlay) {
@@ -4203,10 +4199,10 @@
 	}
 	{/* < span class="marker" ><span class="pricing-marker-text">Khuyên dùng</span></span > */ }
 	function toggleTable() {
-		const tableToggles = document.querySelectorAll('.tr-header');
+		const tableToggles = document.querySelectorAll('.pricing-tr-header');
 		tableToggles.forEach(row => {
 			row.addEventListener('click', () => {
-				const parentRow = row.closest('.td-open-content');
+				const parentRow = row.closest('.pricing-td-open-content');
 				if (parentRow) {
 					parentRow.classList.toggle('open');
 				}
@@ -4214,10 +4210,10 @@
 		});
 	};
 
-	const faqToggles = document.querySelectorAll('.ques-heading');
+	const faqToggles = document.querySelectorAll('.pricing-ques-heading');
 	faqToggles.forEach(row => {
 		row.addEventListener('click', () => {
-			const parentRow = row.closest('.ques-li');
+			const parentRow = row.closest('.pricing-ques-li');
 			if (parentRow) {
 				parentRow.classList.toggle('open');
 			}
