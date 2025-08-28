@@ -796,7 +796,7 @@ let clickTimeOut = 500 //ms
 function generateImgSrc(total) {
     const arr = [];
     for (let i = 1; i <= total; i++) {
-        arr.push(`img/logos/cs-customer-logo-${i}.png`);
+        arr.push(`img/cs-customer-logo-${i}.png`);
     }
     return arr;
 }
