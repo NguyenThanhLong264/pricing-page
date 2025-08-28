@@ -2019,9 +2019,8 @@ input[data-input-stage="cons"]~.input-icon {
 }
 
 @media (min-width:768px) {
-
     .plans .container {
-        max-width: 90%;
+        max-width: 85%;
     }
 
     section {
