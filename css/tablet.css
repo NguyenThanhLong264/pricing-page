@@ -1,6 +1,6 @@
 @media (min-width:768px) {
 
-    .plans .container {
+    .plans .pricing-custom-container {
         max-width: 90%;
     }
 
@@ -9,7 +9,7 @@
         padding-top: 64px;
     }
 
-    .container {
+    .pricing-custom-container {
         padding-right: 24px;
         padding-left: 24px;
     }

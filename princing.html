@@ -40,7 +40,6 @@
 	body {
 		-webkit-font-smoothing: antialiased;
 		font-variant-ligatures: no-common-ligatures;
-		background: rgb(22, 20, 12);
 		font-family: 'Inter';
 		font-size: 16px;
 		font-style: normal;
@@ -51,7 +50,7 @@
 		overflow: hidden;
 	}
 
-	.container {
+	.pricing-custom-container {
 		padding: 0 24px;
 		margin: 0 auto;
 		width: 100%;
@@ -88,7 +87,7 @@
 		padding: 48px 0;
 	}
 
-	.container {
+	.pricing-custom-container {
 		padding: 0 16px;
 	}
 
@@ -1996,7 +1995,7 @@
 			padding-top: 56px;
 		}
 
-		.container {
+		.pricing-custom-container {
 			padding-right: 16px;
 			padding-left: 16px;
 		}
@@ -2034,7 +2033,7 @@
 			padding-top: 64px;
 		}
 
-		.container {
+		.pricing-custom-container {
 			padding-right: 24px;
 			padding-left: 24px;
 		}
@@ -2147,7 +2146,7 @@
 			padding-top: 88px;
 		}
 
-		.container {
+		.pricing-custom-container {
 			padding-right: 24px;
 			padding-left: 24px;
 			max-width: 1120px;
@@ -2195,7 +2194,7 @@
 			min-width: 1248px;
 		}
 
-		.plans .container {
+		.plans .pricing-custom-container {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -2229,7 +2228,7 @@
 			padding-top: 104px;
 		}
 
-		.container {
+		.pricing-custom-container {
 			padding-right: 40px;
 			padding-left: 40px;
 			max-width: 1600px;
@@ -2626,7 +2625,7 @@
 <div id="pricing">
 	<main>
 		<section class="hero">
-			<div class="container">
+			<div class="pricing-custom-container">
 				<div class="hero-content-wrapper">
 					<div class="main-hero-title">
 						<h1 class="small-title">Gói và báo giá</h1>
@@ -2655,7 +2654,7 @@
 			</div>
 		</section>
 		<section class="plans">
-			<div class="container">
+			<div class="pricing-custom-container">
 				<div class="plan-content-wrapper">
 					<div class="feature-content" id="features"></div>
 					<div class="feature-btn">
@@ -2674,7 +2673,8 @@
 						<div class="cta-content card">
 							<div class="cta-img">
 								<span class="img-span">
-									<img src="/wp-content/uploads/2025/08/cta-img-1.png" alt="ảnh CTA băt đầu" loading="lazy">
+									<img src="/wp-content/uploads/2025/08/cta-img-1.png" alt="ảnh CTA băt đầu"
+										loading="lazy">
 								</span>
 							</div>
 							<div class="cta-text">
@@ -2696,7 +2696,7 @@
 			</div>
 		</section>
 		<section class="table-section" id="table-plans">
-			<div class="container">
+			<div class="pricing-custom-container">
 				<div class="table-wrapper">
 					<h2 class="main-title">Tổng quan các dịch vụ</h2>
 					<table class="compare-table" id="main">
@@ -2710,7 +2710,7 @@
 			</div>
 		</section>
 		<section class="customer no-pad">
-			<div class="container">
+			<div class="pricing-custom-container">
 				<div class="custome-cta-wrapper">
 					<div class="customer">
 						<div class="text">
@@ -2773,7 +2773,7 @@
 			</div>
 		</section>
 		<section class="faq-section">
-			<div class="container">
+			<div class="pricing-custom-container">
 				<div class="faq-title-wrapper">
 					<div class="text-wrapper">
 						<h2 class="main-title">Giải đáp thắc mắc thường gặp.</h2>
@@ -3393,7 +3393,7 @@
 		}
 	];
 	const planSection = document.querySelector('.plans')
-	const planContainer = planSection.querySelector('.container')
+	const planContainer = planSection.querySelector('.pricing-custom-container')
 
 
 	const addOnsArray = []

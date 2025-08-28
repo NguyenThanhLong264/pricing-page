@@ -1,5 +1,5 @@
 const planSection = document.querySelector('.plans')
-const planContainer = planSection.querySelector('.container')
+const planContainer = planSection.querySelector('.pricing-custom-container')
 
 
 // function displayAddOns() {

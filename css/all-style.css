@@ -41,7 +41,7 @@ body.no-scroll {
     overflow: hidden;
 }
 
-.container {
+.pricing-custom-container {
     padding: 0 24px;
     margin: 0 auto;
     width: 100%;
@@ -78,7 +78,7 @@ section {
     padding: 48px 0;
 }
 
-.container {
+.pricing-custom-container {
     padding: 0 16px;
 }
 
@@ -1986,7 +1986,7 @@ input[data-input-stage="cons"]~.input-icon {
         padding-top: 56px;
     }
 
-    .container {
+    .pricing-custom-container {
         padding-right: 16px;
         padding-left: 16px;
     }
@@ -2024,7 +2024,7 @@ input[data-input-stage="cons"]~.input-icon {
         padding-top: 64px;
     }
 
-    .container {
+    .pricing-custom-container {
         padding-right: 24px;
         padding-left: 24px;
     }
@@ -2137,7 +2137,7 @@ input[data-input-stage="cons"]~.input-icon {
         padding-top: 88px;
     }
 
-    .container {
+    .pricing-custom-container {
         padding-right: 24px;
         padding-left: 24px;
         max-width: 1120px;
@@ -2185,7 +2185,7 @@ input[data-input-stage="cons"]~.input-icon {
         min-width: 1248px;
     }
 
-    .plans .container {
+    .plans .pricing-custom-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2219,7 +2219,7 @@ input[data-input-stage="cons"]~.input-icon {
         padding-top: 104px;
     }
 
-    .container {
+    .pricing-custom-container {
         padding-right: 40px;
         padding-left: 40px;
         max-width: 1600px;
