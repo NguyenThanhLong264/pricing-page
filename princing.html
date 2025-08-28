@@ -2483,14 +2483,14 @@
 				<div class="plan-content-wrapper">
 					<div class="feature-content" id="features"></div>
 					<div class="feature-btn">
-						<a href="#table-plans" class="primary-btn">
+						<button class="primary-btn to-detail">
 							<span class="btn-text-bg">
 								<span class="btn-span">
 									<span class="i-text">Chi tiết tính năng</span>
 									<span class="af-text">Chi tiết tính năng</span>
 								</span>
 							</span>
-						</a>
+						</button>
 					</div>
 				</div>
 				<div class="part-wrapper cta">
@@ -3368,7 +3368,7 @@
                                 </span>
                             </span>
                         </button>
-                        <a href="#table-plans" class="click-link col-feature">
+                        <button class="click-link col-feature to-detail">
                             <span class="click-link-text features">Tìm hiểu thêm</span>
                             <span class="pricing-custom-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -3378,7 +3378,7 @@
                                         clip-rule="evenodd"></path>
                                 </svg>
                             </span>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <ul class="feature-li">
@@ -3499,7 +3499,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <a href="#table-plans" class="click-link col-feature">
+                                    <button class="click-link col-feature to-detail">
                                         <span class="click-link-text features">Tìm hiểu thêm</span>
                                         <span class="pricing-custom-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -3509,7 +3509,7 @@
                                                     clip-rule="evenodd"></path>
                                             </svg>
                                         </span>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -4259,6 +4259,21 @@
 			const parentRow = row.closest('.ques-li');
 			if (parentRow) {
 				parentRow.classList.toggle('open');
+			}
+		});
+	});
+
+	const toDetailBtn = document.querySelectorAll(".to-detail");
+	toDetailBtn.forEach(btn => {
+		btn.addEventListener("click", () => {
+			const targetId = "table-plans";
+			const target = document.getElementById(targetId);
+
+			if (target) {
+				target.scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				});
 			}
 		});
 	});
