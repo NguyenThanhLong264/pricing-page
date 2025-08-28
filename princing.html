@@ -937,7 +937,7 @@
 		background: var(--main-bg-color);
 		border-bottom: 1px solid var(--bg-hight-light-color);
 		padding-top: 10px;
-		top: 60px;
+		top: 0;
 	}
 
 	.table-header.mobile {
@@ -1092,7 +1092,8 @@
 		background-color: #dfd8cb;
 	}
 
-	.tr-header:focus-within {
+	.tr-header:focus-within,
+	.tr-header:focus {
 		outline: #d4ccc1 solid 2px;
 		outline-offset: 3px;
 		box-shadow: var(--bg-hight-light-color) 0px 0px 0px 2px inset;
@@ -3487,9 +3488,9 @@
                 ${question.questions.map(ques => `
                     <div class="ques-li">
                         <div class="ques-heading">
-                            <button class="open-table-btn">
+                            <div class="open-table-btn">
                                 <h3 class="open-text">${ques.ques}</h3>
-                            </button>
+							</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 fill="currentColor" viewBox="0 0 24 24">
                                 <path fill="currentColor" fill-rule="evenodd"
@@ -4017,9 +4018,9 @@
 			td.innerHTML = `
         <div class="td-open-content">
             <div class="tr-header">
-                <button class="open-table-btn">
+                <div class="open-table-btn">
                     <h3 class="open-text">${plan.title}</h3>
-                </button>
+				</div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd"
@@ -4171,9 +4172,9 @@
 			td.innerHTML = `
         <div class="td-open-content">
             <div class="tr-header">
-                <button class="open-table-btn">
+                <div class="open-table-btn">
                     <h3 class="open-text">${plan.title}</h3>
-                </button>
+				</div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd"
