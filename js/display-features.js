@@ -35,7 +35,7 @@ function featureDesktopLayout() {
                         </button>
                         <a href="#table-plans" class="click-link col-feature">
                             <span class="click-link-text features">Tìm hiểu thêm</span>
-                            <span class="icon">
+                            <span class="pricing-custom-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" viewBox="0 0 16 16" style="padding-left:6px">
                                     <path fill="currentColor" fill-rule="evenodd"
@@ -107,7 +107,7 @@ function featureMobileLayout() {
         <div class="slide-nav">
             <nav class="slide-nav-wrapper">
                 <button class="nav-btn" id='left-nav'>
-                    <div class="icon">
+                    <div class="pricing-custom-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -117,7 +117,7 @@ function featureMobileLayout() {
                     </div>
                 </button>
                 <button class="nav-btn" id='right-nav'>
-                    <div class="icon">
+                    <div class="pricing-custom-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -166,7 +166,7 @@ function featureMobileLayout() {
                                     </div>
                                     <a href="#table-plans" class="click-link col-feature">
                                         <span class="click-link-text features">Tìm hiểu thêm</span>
-                                        <span class="icon">
+                                        <span class="pricing-custom-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" viewBox="0 0 16 16" style="padding-left:6px">
                                                 <path fill="currentColor" fill-rule="evenodd"

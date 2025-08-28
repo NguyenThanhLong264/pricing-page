@@ -255,7 +255,7 @@ section {
     background-position: 0 100%;
 }
 
-.icon {
+.pricing-custom-icon {
     font-style: normal;
     cursor: pointer;
     color: var(--text-color);
@@ -274,7 +274,7 @@ section {
     vertical-align: middle;
 }
 
-.icon svg {
+.pricing-custom-icon svg {
     display: block;
     fill: currentcolor;
     box-sizing: inherit;
@@ -1877,7 +1877,7 @@ input[data-input-stage="cons"]~.input-icon {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.submited-content .icon {
+.submited-content .pricing-custom-icon {
     color: #22c55e;
     margin-bottom: 16px;
     max-width: 48px;
@@ -1974,7 +1974,7 @@ input[data-input-stage="cons"]~.input-icon {
     background-color: var(--bg-hight-light-color);
 }
 
-.list-item .icon {
+.list-item .pricing-custom-icon {
     margin: 0;
     width: 18px;
     height: 18px;
@@ -2424,7 +2424,7 @@ input[data-input-stage="cons"]~.input-icon {
         padding: 16px;
     }
 
-    .nav-btn .icon {
+    .nav-btn .pricing-custom-icon {
         width: 24px;
         height: 24px;
         margin: 0;
