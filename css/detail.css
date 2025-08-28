@@ -173,7 +173,7 @@
     width: 100%;
 }
 
-.card {
+.pricing-custom-card {
     background: var(--main-bg-color);
     box-shadow: none;
     border-bottom: 1px solid var(--text-color);

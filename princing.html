@@ -296,7 +296,7 @@
 		width: 100%;
 	}
 
-	.card {
+	.pricing-custom-card {
 		background: var(--main-bg-color);
 		box-shadow: none;
 		border-bottom: 1px solid var(--text-color);
@@ -2670,7 +2670,7 @@
 				</div>
 				<div class="part-wrapper cta">
 					<div class="cta-wrapper">
-						<div class="cta-content card">
+						<div class="cta-content pricing-custom-card">
 							<div class="cta-img">
 								<span class="img-span">
 									<img src="/wp-content/uploads/2025/08/cta-img-1.png" alt="ảnh CTA băt đầu"
@@ -2737,7 +2737,7 @@
 					</div>
 					<div class="part-wrapper cta non-flex">
 						<div class="cta-wrapper">
-							<div class="cta-content card bg-2">
+							<div class="cta-content pricing-custom-card bg-2">
 								<div class="cta-img">
 									<span class="img-span">
 										<img src="/wp-content/uploads/2025/08/cta-img-2.png"
@@ -3514,7 +3514,7 @@
 	function featureDesktopLayout() {
 		featuresArea.innerHTML = ``;
 		const contentFlex = document.createElement('div');
-		contentFlex.className = 'content-flex card';
+		contentFlex.className = 'content-flex pricing-custom-card';
 
 		featuresArea.appendChild(contentFlex);
 
@@ -3701,7 +3701,7 @@
 
 			liContents.push(`
             <div class="slick-list">
-                <div class="li-wrapper card">
+                <div class="li-wrapper pricing-custom-card">
                     <h4 class="col-title">${fea.title}</h4>
                     <ul class="feature-li">
                     ${fea.keys.map(f => `

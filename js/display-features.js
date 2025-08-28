@@ -3,7 +3,7 @@ const featuresArea = document.getElementById('features')
 function featureDesktopLayout() {
     featuresArea.innerHTML = ``;
     const contentFlex = document.createElement('div');
-    contentFlex.className = 'content-flex card';
+    contentFlex.className = 'content-flex pricing-custom-card';
 
     featuresArea.appendChild(contentFlex);
 
@@ -131,8 +131,8 @@ function featureMobileLayout() {
         <div class="feature-m-li"></div>
         `;
 
-    const card = document.querySelector('.slick-track');
-    card.style.width = `${features.length * 100}%`;
+    const pricing-custom-card = document.querySelector('.slick-track');
+    pricing-custom-card.style.width = `${features.length * 100}%`;
     const featureLi = document.querySelector('.feature-m-li');
 
     const liContents = [];
@@ -141,7 +141,7 @@ function featureMobileLayout() {
     const firstNavBtn = navButtons[1];
 
     features.forEach((fea, index) => {
-        const cardContent = `
+        const pricing-custom-cardContent = `
             <div class="feature-m-col" id=${fea.title.replace(' ', '-').toLowerCase()}>
                 <div>
                     <div class="tab">
@@ -182,7 +182,7 @@ function featureMobileLayout() {
                 </div>
             </div>
         `;
-        card.insertAdjacentHTML('beforeend', cardContent);
+        pricing-custom-card.insertAdjacentHTML('beforeend', pricing-custom-cardContent);
 
         const dot = document.createElement('button');
         dot.className = 'small-nav-btn';
@@ -191,7 +191,7 @@ function featureMobileLayout() {
 
         liContents.push(`
             <div class="slick-list">
-                <div class="li-wrapper card">
+                <div class="li-wrapper pricing-custom-card">
                     <h4 class="col-title">${fea.title}</h4>
                     <ul class="feature-li">
                     ${fea.keys.map(f => `

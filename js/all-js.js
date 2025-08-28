@@ -504,7 +504,7 @@ const featuresArea = document.getElementById('features')
 function featureDesktopLayout() {
     featuresArea.innerHTML = ``;
     const contentFlex = document.createElement('div');
-    contentFlex.className = 'content-flex card';
+    contentFlex.className = 'content-flex pricing-custom-card';
 
     featuresArea.appendChild(contentFlex);
 
@@ -691,7 +691,7 @@ function featureMobileLayout() {
 
         liContents.push(`
             <div class="slick-list">
-                <div class="li-wrapper card">
+                <div class="li-wrapper pricing-custom-card">
                     <h4 class="col-title">${fea.title}</h4>
                     <ul class="feature-li">
                     ${fea.keys.map(f => `
