@@ -386,7 +386,6 @@ const planSection = document.querySelector('.plans')
 const planContainer = planSection.querySelector('.container')
 
 
-// function displayAddOns() {
 const addOnsArray = []
 document.querySelectorAll('part-wrapper', 'add-ons').innerHTML = "";
 add_ons.forEach((addOn, addOnIndex) => {
@@ -468,7 +467,6 @@ addOnsArray.forEach((addOn, index) => {
 });
 const faqSection = document.querySelector('.ques-section')
 
-// function displayFaq() {
 questions.forEach((question, i) => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('ques-sec-wrapper');
@@ -510,7 +508,6 @@ function featureDesktopLayout() {
 
     featuresArea.appendChild(contentFlex);
 
-    // Render từng feature-col
     features.forEach((fea) => {
         const featureCol = document.createElement('div');
         featureCol.className = 'feature-col';
@@ -789,9 +786,9 @@ const imgQueue = [];
 let singleImgWidth = 150;
 
 const startIdx = 10
-let currentIndex = startIdx; // đã load 13 cái đầu
-let offset = 0; // vị trí dịch hiện tại
-let clickTimeOut = 500 //ms
+let currentIndex = startIdx;
+let offset = 0;
+let clickTimeOut = 500
 
 function generateImgSrc(total) {
     const arr = [];
@@ -821,7 +818,7 @@ function generateFristLoad() {
 let carouselInterval = null;
 
 function startCarousel() {
-    if (carouselInterval) return; // nếu đang chạy thì không tạo mới
+    if (carouselInterval) return;
     carouselInterval = setInterval(() => {
         gallery.style.animation = "scroll 1s ease 1";
         gallery.addEventListener("animationend", () => {
@@ -892,7 +889,6 @@ async function handlePrev() {
     isAnimating = false;
 }
 
-// Sửa startCarousel để dùng cùng flag
 function startCarousel() {
     if (carouselInterval) return;
     carouselInterval = setInterval(async () => {
@@ -1044,7 +1040,7 @@ function mobileTable() {
     renderTableByIndex(currentPlanIdx + 1)
     tableHead.classList.add('mobile');
     const th = document.createElement('th');
-    const selectedText = mainTableRows[currentPlanIdx].title ?? 'Chọn gói'; // fallback nếu rỗng
+    const selectedText = mainTableRows[currentPlanIdx].title ?? 'Chọn gói';
     th.innerHTML = `
     <div class="mobile-thead">
       <h3>Plans</h3>
@@ -1220,7 +1216,7 @@ function replaceIcon() {
 
 function changeWidthByCols() {
     const colWidth = `${65 / mainTableRows.length}%`;
-    const ths = headRow.querySelectorAll(':scope > th'); // chỉ th con trực tiếp
+    const ths = headRow.querySelectorAll(':scope > th');
     const tds = document.querySelectorAll('.main-td')
 
     tds.forEach(td => {
@@ -1249,7 +1245,7 @@ function changeWidthByCols() {
 const form = document.getElementById('contact-form')
 const submitModal = document.querySelector('.form-submited-wrapper')
 const formElements = form.querySelectorAll('input, textarea, select');
-// 👉 gom validate vào 1 hàm chung
+
 function validateInput(inp) {
     if (inp.dataset.req !== 'false') {
         const regexPattern = inp.dataset.regex
@@ -1422,7 +1418,6 @@ function toggleTable() {
     });
 };
 
-// function toggleFaq() {
 const faqToggles = document.querySelectorAll('.ques-heading');
 faqToggles.forEach(row => {
     row.addEventListener('click', () => {
@@ -1434,7 +1429,6 @@ faqToggles.forEach(row => {
 });
 
 
-// function toggleMobileNav() {
 const toggleBtn = document.querySelector('.m-nav-toggle-menu');
 const menu = document.getElementById('menu')
 toggleBtn.addEventListener('click', () => {
