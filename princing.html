@@ -2121,12 +2121,12 @@
 			margin: 0;
 		}
 
-		thead th {
+		.pricing-table-header th {
 			vertical-align: middle;
 			padding: 12px;
 		}
 
-		thead th:not(:first-child),
+		.pricing-table-header th:not(:first-child),
 		tbody td:not(:first-child) {
 			width: 50%;
 		}
@@ -2139,7 +2139,7 @@
 			user-select: none;
 		}
 
-		.select-trigger {
+		.pricing-select-trigger {
 			padding: 0 12px;
 			padding-right: 40px;
 			height: 48px;
@@ -2152,7 +2152,7 @@
 			cursor: pointer;
 		}
 
-		.arrow {
+		.pricing-arrow {
 			position: absolute;
 			right: 16px;
 			pointer-events: none;
@@ -2160,7 +2160,7 @@
 			color: #555;
 		}
 
-		.options {
+		.pricing-options {
 			position: absolute;
 			top: 100%;
 			left: 0;
@@ -2175,17 +2175,17 @@
 			overflow: hidden;
 		}
 
-		.option {
+		.pricing-option {
 			padding: 12px;
 			cursor: pointer;
 			transition: background-color 0.2s;
 		}
 
-		.option:hover {
+		.pricing-option:hover {
 			background-color: #f2f2f2;
 		}
 
-		.pricing-custom-select.open .options {
+		.pricing-custom-select.open .pricing-options {
 			display: block;
 		}
 
@@ -3647,19 +3647,19 @@
     <div class="pricing-mobile-thead">
       <h3>Plans</h3>
       <div class="pricing-custom-select" id="customSelect">
-        <div class="select-trigger">
+        <div class="pricing-select-trigger">
           <span class="selected">${selectedText}</span>
-          <span class="arrow">▾</span>
+          <span class="pricing-arrow">▾</span>
         </div>
       </div>
     </div>
   `;
 		const selectBox = th.querySelector('.pricing-custom-select');
 		const optionsDiv = document.createElement('div');
-		optionsDiv.className = 'options';
+		optionsDiv.className = 'pricing-options';
 		mainTableRows.forEach((text, index) => {
 			const option = document.createElement('div');
-			option.className = 'option';
+			option.className = 'pricing-option';
 			option.dataset.value = index;
 			option.textContent = text.title;
 			optionsDiv.appendChild(option);
@@ -3670,10 +3670,10 @@
 		mainTable.insertBefore(tableHead, mainTable.firstChild);
 
 		const selected = selectBox.querySelector('.selected');
-		const selectTrigger = selectBox.querySelector('.select-trigger');
+		const selectTrigger = selectBox.querySelector('.pricing-select-trigger');
 
 		optionsDiv.addEventListener('click', (e) => {
-			if (e.target.classList.contains('option')) {
+			if (e.target.classList.contains('pricing-option')) {
 				const index = Number(e.target.dataset.value);
 				currentPlanIdx = index;
 				selected.textContent = e.target.textContent;
