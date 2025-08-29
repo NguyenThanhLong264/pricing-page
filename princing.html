@@ -2454,7 +2454,6 @@
 
 	const pricing_planSection = document.querySelector('.pricing-plans')
 	const pricing_planContainer = pricing_planSection.querySelector('.pricing-custom-container')
-	const pricing_overlay = document.querySelector('.pricing-overlay');
 	const pricing_logo_carousel = document.querySelector('.pricing-logo-gallery-wrapper');
 	const pricing_logo_gallery = document.getElementById('logo-slider');
 	const pricing_logo_prev_btn = document.getElementById("pricing-gallery-prev");
@@ -3296,95 +3295,6 @@
 			th.style.width = colWidth;
 		});
 	}
-	function displayForm() {
-		const openFormBtns = document.querySelectorAll('.openForm')
-		openFormBtns.forEach((btn) => {
-			btn.onclick = () => {
-				toggleOverlay()
-				const formWrapper = pricing_overlay.querySelector('.pricing-form-wrapper');
-				if (formWrapper && formWrapper.style.display !== 'flex') {
-					formWrapper.style.display = 'flex';
-				}
-			}
-		})
-	}
-
-	const form = document.getElementById('contact-form')
-	const submitModal = document.querySelector('.pricing-form-submited-wrapper')
-	const formElements = form.querySelectorAll('input, textarea, select');
-
-	function validateInput(inp) {
-		if (inp.dataset.req !== 'false') {
-			const regexPattern = inp.dataset.regex
-			const regex = new RegExp(regexPattern)
-			const warnEl = inp.parentElement.querySelector('.warn-text')
-
-			if (inp.value.length === 0) {
-				inp.dataset.inputStage = 'blank'
-				if (warnEl) warnEl.textContent = inp.dataset.blankMess
-			}
-			else if (!regex.test(inp.value) && regexPattern !== 'none') {
-				inp.dataset.inputStage = 'cons'
-				if (warnEl) warnEl.textContent = inp.dataset.consMess
-			}
-			else {
-				inp.dataset.inputStage = 'normal'
-				if (warnEl) warnEl.textContent = ''
-			}
-		}
-	}
-
-	formElements.forEach((inp) => {
-		inp.addEventListener('blur', () => {
-			if (inp.dataset.initial === 'true') {
-				inp.dataset.initial = 'false'
-			}
-			validateInput(inp)
-		})
-
-		inp.addEventListener('input', () => {
-			if (inp.dataset.initial !== 'true') {
-				validateInput(inp)
-			}
-		})
-	})
-
-	form.addEventListener('submit', (e) => {
-		e.preventDefault();
-
-		Array.from(formElements).forEach(inp => {
-			inp.dataset.initial = 'false';
-			validateInput(inp)
-		});
-
-		const isValid = Array.from(formElements).every(item => item.dataset.inputStage === 'normal');
-		if (!isValid) {
-			console.warn("Form chưa hợp lệ!");
-
-			const firstInvalid = Array.from(formElements).find(inp =>
-				inp.dataset.inputStage === 'blank' || inp.dataset.inputStage === 'cons'
-			);
-
-			if (firstInvalid) {
-				firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
-				firstInvalid.focus({ preventScroll: true });
-			}
-
-			return;
-		}
-
-		pricing_overlay.querySelector('.pricing-form-wrapper').style.display = 'none';
-		submitModal.style.display = 'block'
-		const data = {
-			name: form.name.value.trim(),
-			company: form.company.value.trim(),
-			email: form.email.value.trim(),
-			phone: form.phone.value.trim(),
-			message: form.message.value.trim(),
-			agree: form.agree.checked
-		};
-		console.log(data);
-	})
 
 	function applyResponsiveLayout(mode) {
 		if (mode === 'pricing-mobileMode') {
@@ -3396,8 +3306,8 @@
 			highlightMainHeader(2);
 			highlightPopularColumn(3);
 		}
+		toggletoFeatureBtn()
 		toggletoDetailBtn()
-		displayForm()
 	}
 
 	window.addEventListener('load', () => {
@@ -3413,24 +3323,6 @@
 			applyResponsiveLayout(mode);
 		}
 	});
-
-	pricing_overlay.addEventListener('click', (e) => {
-		if (e.target === pricing_overlay) {
-			toggleOverlay();
-		}
-	})
-
-	function toggleOverlay() {
-		pricing_overlay.classList.toggle('open');
-		if (pricing_overlay.classList.contains('open')) {
-			document.body.classList.add('pricing-no-scroll');
-		} else {
-			Array.from(pricing_overlay.children).forEach(child => {
-				child.style.display = 'none';
-			});
-			document.body.classList.remove('pricing-no-scroll');
-		}
-	}
 
 	function highlightPopularColumn(index) {
 		const tables = Array.from(document.querySelectorAll('table.pricing-compare-table'))
@@ -3509,20 +3401,21 @@
 			};
 		});
 	}
-
-	const pricing_toFeatureBtns = document.querySelectorAll(".to-feature")
-	pricing_toFeatureBtns.forEach(btn => {
-		btn.onclick = () => {
-			const targetId = "pricing-features";
-			const target = document.getElementById(targetId);
-			if (target) {
-				target.scrollIntoView({
-					behavior: "smooth",
-					block: "start"
-				});
+	function toggletoFeatureBtn() {
+		const pricing_toFeatureBtns = document.querySelectorAll(".to-feature")
+		pricing_toFeatureBtns.forEach(btn => {
+			btn.onclick = () => {
+				const targetId = "pricing-features";
+				const target = document.getElementById(targetId);
+				if (target) {
+					target.scrollIntoView({
+						behavior: "smooth",
+						block: "start"
+					});
+				}
 			}
-		}
-	})
+		})
+	}
 </script>
 
 <?php endwhile; endif; ?>
