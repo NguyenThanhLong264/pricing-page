@@ -16,12 +16,7 @@
 		margin: 0;
 	}
 
-	#pricing button {
-		outline: none;
-		border: none;
-	}
-
-	.no-scroll {
+	.pricing-no-scroll {
 		overflow: hidden;
 	}
 
@@ -56,7 +51,7 @@
 		margin-top: 12px;
 	}
 
-	.feature-wrapper {
+	.pricing-feature-wrapper {
 		display: flex;
 		box-sizing: border-box;
 		flex-wrap: wrap;
@@ -64,7 +59,7 @@
 		margin-left: -8px;
 	}
 
-	.feature-p-wrapper {
+	.pricing-feature-p-wrapper {
 		width: 100%;
 	}
 
@@ -2208,69 +2203,146 @@
 </style>
 
 <div id="pricing">
-	<main>
-		<div class="pricing-hero pricing-c-section">
-			<div class="pricing-custom-container">
-				<div class="pricing-hero-wrapper">
-					<div class="pricing-hero-title">
-						<h1 class="pricing-small-title">Gói và báo giá</h1>
-						<h2 class="pricing-main-title">Các gói dịch vụ của CareSoft</h2>
-						<p class="pricing-head-text">Nền tảng trải nghiệm khách hàng toàn diện, tích hợp AI với hệ thống
-							tổng đài,
-							live chat, quản lý ticket, email, Facebook, Zalo và nhiều kênh khác. Tự động hóa quy trình,
-							hỗ trợ 24/7, tối ưu hiệu suất và chi phí vận hành.</p>
+	<div class="pricing-hero pricing-c-section">
+		<div class="pricing-custom-container">
+			<div class="pricing-hero-wrapper">
+				<div class="pricing-hero-title">
+					<h1 class="pricing-small-title">Gói và báo giá</h1>
+					<h2 class="pricing-main-title">Các gói dịch vụ của CareSoft</h2>
+					<p class="pricing-head-text">Nền tảng trải nghiệm khách hàng toàn diện, tích hợp AI với hệ thống
+						tổng đài,
+						live chat, quản lý ticket, email, Facebook, Zalo và nhiều kênh khác. Tự động hóa quy trình,
+						hỗ trợ 24/7, tối ưu hiệu suất và chi phí vận hành.</p>
+				</div>
+				<div class="pricing-sub-hero-title">
+					<span class="pricing-sticker">Đa dạng</span>
+					<h3 class="pricing-small-title">Tùy chỉnh gói dịch vụ, phù hợp cho mọi doanh nghiệp</h3>
+					<div class="pricing-click-link">
+						<span class="pricing-click-link-text ">Chọn gói phù hợp cho bạn</span>
+						<span class="pricing-custom-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								viewBox="0 0 16 16" style="padding-left:6px">
+								<path fill="currentColor" fill-rule="evenodd"
+									d="M11.948 8.85H1v-1.7h10.948L9.399 4.6l1.202-1.202L15.202 8l-4.601 4.602-1.202-1.203z"
+									clip-rule="evenodd"></path>
+							</svg>
+						</span>
 					</div>
-					<div class="pricing-sub-hero-title">
-						<span class="pricing-sticker">Đa dạng</span>
-						<h3 class="pricing-small-title">Tùy chỉnh gói dịch vụ, phù hợp cho mọi doanh nghiệp</h3>
-						<div class="pricing-click-link">
-							<span class="pricing-click-link-text ">Chọn gói phù hợp cho bạn</span>
-							<span class="pricing-custom-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-									viewBox="0 0 16 16" style="padding-left:6px">
-									<path fill="currentColor" fill-rule="evenodd"
-										d="M11.948 8.85H1v-1.7h10.948L9.399 4.6l1.202-1.202L15.202 8l-4.601 4.602-1.202-1.203z"
-										clip-rule="evenodd"></path>
-								</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pricing-plans pricing-c-section">
+		<div class="pricing-custom-container">
+			<div class="pricing-plan-content-wrapper">
+				<div class="pricing-feature-content" id="features"></div>
+				<div class="pricing-feature-btn">
+					<button class="pricing-primary-btn to-detail">
+						<span class="pricing-btn-text-bg">
+							<span class="pricing-btn-span">
+								<span class="pricing-i-text">Chi tiết tính năng</span>
+								<span class="pricing-af-text">Chi tiết tính năng</span>
 							</span>
+						</span>
+					</button>
+				</div>
+			</div>
+			<div class="pricing-part-wrapper cta">
+				<div class="pricing-cta-wrapper">
+					<div class="pricing-cta-content pricing-custom-card">
+						<div class="pricing-cta-img">
+							<span class="pricing-img-span">
+								<img src="/wp-content/uploads/2025/08/cta-img-1.png" alt="ảnh CTA băt đầu"
+									loading="lazy">
+							</span>
+						</div>
+						<div class="pricing-cta-text">
+							<h3 class="pricing-cta-title">Bắt đầu sử dụng CareSoft ngay hôm nay</h3>
+						</div>
+						<div class="pricing-cta-btn">
+							<button class="pricing-primary-btn openForm">
+								<span class="pricing-btn-text-bg">
+									<span class="pricing-btn-span">
+										<span class="pricing-i-text">Đăng ký</span>
+										<span class="pricing-af-text">Đăng ký</span>
+									</span>
+								</span>
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="pricing-plans pricing-c-section">
-			<div class="pricing-custom-container">
-				<div class="pricing-plan-content-wrapper">
-					<div class="pricing-feature-content" id="features"></div>
-					<div class="pricing-feature-btn">
-						<button class="pricing-primary-btn to-detail">
-							<span class="pricing-btn-text-bg">
-								<span class="pricing-btn-span">
-									<span class="pricing-i-text">Chi tiết tính năng</span>
-									<span class="pricing-af-text">Chi tiết tính năng</span>
-								</span>
-							</span>
+	</div>
+	<div class="pricing-table-section pricing-c-section" id="table-plans">
+		<div class="pricing-custom-container">
+			<div class="pricing-table-wrapper">
+				<h2 class="pricing-main-title">Tổng quan các dịch vụ</h2>
+				<table class="pricing-compare-table" id="main">
+					<tbody class="pricing-main-body" id="mainBody">
+					</tbody>
+				</table>
+				<p class="pricing-note-text">*Chúng tôi cung cấp hỗ trợ qua hotline 24/7. Hỗ trợ qua email và live
+					chat được
+					áp dụng trong giờ làm việc tiêu chuẩn (8 giờ/ngày, 5 ngày/tuần).
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="pricing-customer pricing-no-pad pricing-c-section">
+		<div class="pricing-custom-container">
+			<div class="custome-pricing-cta-wrapper">
+				<div class="pricing-customer">
+					<div class="text">
+						<p class="pricing-small-title">Hơn 10.000.000 khách hàng đã được hỗ trợ & chăm sóc bởi trên
+							300
+							Doanh nghiệp thông qua nền tảng của Caresoft</p>
+					</div>
+					<div class="pricing-logo-gallery-wrapper">
+						<div class="pricing-gallery" id="logo-slider">
+						</div>
+
+						<button class="pricing-gallery-btn" id="pricing-gallery-prev">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+								<path fill="currentColor"
+									d="m10.8 12l3.9 3.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-4.6-4.6q-.15-.15-.212-.325T8.425 12t.063-.375t.212-.325l4.6-4.6q.275-.275.7-.275t.7.275t.275.7t-.275.7z" />
+							</svg>
+						</button>
+						<button class="pricing-gallery-btn" id="pricing-gallery-next">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+								<path fill="currentColor"
+									d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
+							</svg>
 						</button>
 					</div>
 				</div>
-				<div class="pricing-part-wrapper cta">
+				<div class="pricing-part-wrapper cta non-flex">
 					<div class="pricing-cta-wrapper">
-						<div class="pricing-cta-content pricing-custom-card">
+						<div class="pricing-cta-content pricing-custom-card pricing-bg-2">
 							<div class="pricing-cta-img">
 								<span class="pricing-img-span">
-									<img src="/wp-content/uploads/2025/08/cta-img-1.png" alt="ảnh CTA băt đầu"
+									<img src="/wp-content/uploads/2025/08/cta-img-2.png"
+										alt="Success, Growth, goals, achievement, target, trophy, reward, award, excercise"
 										loading="lazy">
 								</span>
 							</div>
 							<div class="pricing-cta-text">
-								<h3 class="pricing-cta-title">Bắt đầu sử dụng CareSoft ngay hôm nay</h3>
+								<h3 class="pricing-cta-title">Trải nghiệm trọn bộ tính năng của CareSoft</h3>
 							</div>
 							<div class="pricing-cta-btn">
 								<button class="pricing-primary-btn openForm">
 									<span class="pricing-btn-text-bg">
 										<span class="pricing-btn-span">
-											<span class="pricing-i-text">Đăng ký</span>
-											<span class="pricing-af-text">Đăng ký</span>
+											<span class="pricing-i-text">Trải nghiệm</span>
+											<span class="pricing-af-text">Trải nghiệm</span>
+										</span>
+									</span>
+								</button>
+								<button class="pricing-secondary-btn openForm">
+									<span class="pricing-btn-text-bg">
+										<span class="pricing-btn-span">
+											<span class="pricing-i-text">Xem Demo</span>
+											<span class="pricing-af-text">Xem Demo</span>
 										</span>
 									</span>
 								</button>
@@ -2280,318 +2352,239 @@
 				</div>
 			</div>
 		</div>
-		<div class="pricing-table-section pricing-c-section" id="table-plans">
-			<div class="pricing-custom-container">
-				<div class="pricing-table-wrapper">
-					<h2 class="pricing-main-title">Tổng quan các dịch vụ</h2>
-					<table class="pricing-compare-table" id="main">
-						<tbody class="pricing-main-body" id="mainBody">
-						</tbody>
-					</table>
-					<p class="pricing-note-text">*Chúng tôi cung cấp hỗ trợ qua hotline 24/7. Hỗ trợ qua email và live
-						chat được
-						áp dụng trong giờ làm việc tiêu chuẩn (8 giờ/ngày, 5 ngày/tuần).
-					</p>
+	</div>
+	<div class="pricing-faq-section pricing-c-section">
+		<div class="pricing-custom-container">
+			<div class="pricing-faq-title-wrapper">
+				<div class="pricing-text-wrapper">
+					<h2 class="pricing-main-title">Giải đáp thắc mắc thường gặp.</h2>
+				</div>
+			</div>
+			<div class="pricing-faq-wrapper">
+				<div class="pricing-ques-section">
 				</div>
 			</div>
 		</div>
-		<div class="pricing-customer pricing-no-pad pricing-c-section">
-			<div class="pricing-custom-container">
-				<div class="custome-pricing-cta-wrapper">
-					<div class="pricing-customer">
-						<div class="text">
-							<p class="pricing-small-title">Hơn 10.000.000 khách hàng đã được hỗ trợ & chăm sóc bởi trên
-								300
-								Doanh nghiệp thông qua nền tảng của Caresoft</p>
-						</div>
-						<div class="pricing-logo-gallery-wrapper">
-							<div class="pricing-gallery" id="logo-slider">
+	</div>
+	<div class="pricing-overlay">
+		<div class="pricing-form-wrapper">
+			<button class="pricing-close-btn" onclick="toggleOverlay()">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
+					aria-hidden="true">
+					<path stroke="currentColor" stroke-linecap="round" d="M3 13L13 3m0 10L3 3"></path>
+				</svg>
+			</button>
+			<div class="pricing-form-content">
+				<form id="contact-form">
+					<div class="pricing-form-title">
+						<h3 class="pricing-form-title-text">Đăng ký tư vấn ngay</h3>
+						<p class="pricing-normal-text">Chúng tôi sẵn sàng tư vấn giải pháp phù hợp nhất với mô hình
+							hoạt
+							động của doanh nghiệp bạn.
+						</p>
+					</div>
+					<div class="pricing-form-input">
+						<div class="input-wrapper pricing-lap-50">
+							<div class="pricing-input-content">
+								<label class="pricing-input-label" for="name">Họ Tên</label>
+								<div class="pricing-input-detail">
+									<input type="text" id="name" name="name" data-input-stage="normal"
+										data-regex="^[A-Za-zÀ-ỹ\s]+$" data-req="true"
+										data-blank-mess="Trường này là bắt buộc" data-cons-mess="Vui lòng nhập tên"
+										data-initial="true">
+									<div class="pricing-input-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+									</div>
+									<div class="pricing-input-warning">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+										<span class="warn-text"></span>
+									</div>
+								</div>
 							</div>
-
-							<button class="pricing-gallery-btn" id="pricing-gallery-prev">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-									<path fill="currentColor"
-										d="m10.8 12l3.9 3.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-4.6-4.6q-.15-.15-.212-.325T8.425 12t.063-.375t.212-.325l4.6-4.6q.275-.275.7-.275t.7.275t.275.7t-.275.7z" />
-								</svg>
-							</button>
-							<button class="pricing-gallery-btn" id="pricing-gallery-next">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-									<path fill="currentColor"
-										d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
-								</svg>
-							</button>
+						</div>
+						<div class="input-wrapper pricing-lap-50">
+							<div class="pricing-input-content">
+								<label class="pricing-input-label" for="company">Công ty/ Doanh nghiệp</label>
+								<div class="pricing-input-detail">
+									<input type="text" id="company" name="company" data-input-stage="normal"
+										data-regex="none" data-blank-mess="Trường này là bắt buộc"
+										data-cons-mess="Sai điều kiện" data-initial="true">
+									<div class="pricing-input-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+									</div>
+									<div class="pricing-input-warning">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+										<span class="warn-text"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrapper pricing-lap-50">
+							<div class="pricing-input-content">
+								<label class="pricing-input-label" for="email">Email</label>
+								<div class="pricing-input-detail">
+									<input type="text" id="email" name="email" data-input-stage="normal"
+										data-regex="^[\w\.-]+@[\w\.-]+\.\w{2,}$" data-req="true"
+										data-blank-mess="Trường này là bắt buộc"
+										data-cons-mess="Vui lòng nhập email hợp lệ" data-initial="true">
+									<div class="pricing-input-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+									</div>
+									<div class="pricing-input-warning">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+										<span class="warn-text"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrapper pricing-lap-50">
+							<div class="pricing-input-content">
+								<label class="pricing-input-label" for="phone">SĐT</label>
+								<div class="pricing-input-detail">
+									<input type="tel" id="phone" name="phone" data-input-stage="normal"
+										data-regex="^(0\d{9}|(\+84)\d{9})$" data-req="true"
+										data-blank-mess="Trường này là bắt buộc"
+										data-cons-mess="Vui lòng nhập số điện thoại hợp lệ" data-initial="true">
+									<div class="pricing-input-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+									</div>
+									<div class="pricing-input-warning">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+										<span class="warn-text"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrapper pricing-full">
+							<div class="pricing-input-content">
+								<label class="pricing-input-label" for="message">Ghi chú</label>
+								<div class="pricing-input-detail">
+									<textarea type="text" id="message" name="message" data-input-stage="normal"
+										data-regex="^[A-Za-zÀ-ỹ\s]+$" data-req="false"
+										data-blank-mess="Trường này là bắt buộc" data-cons-mess="Vui lòng nhập tên"
+										data-initial="true"></textarea>
+									<div class="pricing-input-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+									</div>
+									<div class="pricing-input-warning">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" viewBox="0 0 16 16">
+											<path fill="currentColor" fill-rule="evenodd"
+												d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
+												clip-rule="evenodd"></path>
+										</svg>
+										<span class="warn-text"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrapper pricing-full">
+							<div class="pricing-input-content">
+								<div class="pricing-check-box-wrapper">
+									<input type="checkbox" name="agree" id="agree">
+									<label class="pricing-normal-text" for="agree">Tôi đồng ý nhận thông tin tiếp
+										thị về
+										sản
+										phẩm, dịch vụ và sự kiện của CareSoft. Tôi có thể hủy đăng ký bất cứ lúc
+										nào.</label>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrapper pricing-full">
+							<div class="pricing-input-content">
+								<div class="pricing-normal-text">
+									Khi gửi thông tin cá nhân, tôi đồng ý để CareSoft thu thập, xử lý và lưu trữ
+									dữ
+									liệu của mình theo Chính sách quyền riêng tư của CareSoft.
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="pricing-part-wrapper cta non-flex">
-						<div class="pricing-cta-wrapper">
-							<div class="pricing-cta-content pricing-custom-card pricing-bg-2">
-								<div class="pricing-cta-img">
-									<span class="pricing-img-span">
-										<img src="/wp-content/uploads/2025/08/cta-img-2.png"
-											alt="Success, Growth, goals, achievement, target, trophy, reward, award, excercise"
-											loading="lazy">
-									</span>
-								</div>
-								<div class="pricing-cta-text">
-									<h3 class="pricing-cta-title">Trải nghiệm trọn bộ tính năng của CareSoft</h3>
-								</div>
-								<div class="pricing-cta-btn">
-									<button class="pricing-primary-btn openForm">
-										<span class="pricing-btn-text-bg">
-											<span class="pricing-btn-span">
-												<span class="pricing-i-text">Trải nghiệm</span>
-												<span class="pricing-af-text">Trải nghiệm</span>
-											</span>
-										</span>
-									</button>
-									<button class="pricing-secondary-btn openForm">
-										<span class="pricing-btn-text-bg">
-											<span class="pricing-btn-span">
-												<span class="pricing-i-text">Xem Demo</span>
-												<span class="pricing-af-text">Xem Demo</span>
-											</span>
-										</span>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="pricing-faq-section pricing-c-section">
-			<div class="pricing-custom-container">
-				<div class="pricing-faq-title-wrapper">
-					<div class="pricing-text-wrapper">
-						<h2 class="pricing-main-title">Giải đáp thắc mắc thường gặp.</h2>
-					</div>
-				</div>
-				<div class="pricing-faq-wrapper">
-					<div class="pricing-ques-section">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="pricing-overlay">
-			<div class="pricing-form-wrapper">
-				<button class="pricing-close-btn" onclick="toggleOverlay()">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
-						aria-hidden="true">
-						<path stroke="currentColor" stroke-linecap="round" d="M3 13L13 3m0 10L3 3"></path>
-					</svg>
-				</button>
-				<div class="pricing-form-content">
-					<form id="contact-form">
-						<div class="pricing-form-title">
-							<h3 class="pricing-form-title-text">Đăng ký tư vấn ngay</h3>
-							<p class="pricing-normal-text">Chúng tôi sẵn sàng tư vấn giải pháp phù hợp nhất với mô hình
-								hoạt
-								động của doanh nghiệp bạn.
-							</p>
-						</div>
-						<div class="pricing-form-input">
-							<div class="input-wrapper pricing-lap-50">
-								<div class="pricing-input-content">
-									<label class="pricing-input-label" for="name">Họ Tên</label>
-									<div class="pricing-input-detail">
-										<input type="text" id="name" name="name" data-input-stage="normal"
-											data-regex="^[A-Za-zÀ-ỹ\s]+$" data-req="true"
-											data-blank-mess="Trường này là bắt buộc" data-cons-mess="Vui lòng nhập tên"
-											data-initial="true">
-										<div class="pricing-input-icon">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-										</div>
-										<div class="pricing-input-warning">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-											<span class="warn-text"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="input-wrapper pricing-lap-50">
-								<div class="pricing-input-content">
-									<label class="pricing-input-label" for="company">Công ty/ Doanh nghiệp</label>
-									<div class="pricing-input-detail">
-										<input type="text" id="company" name="company" data-input-stage="normal"
-											data-regex="none" data-blank-mess="Trường này là bắt buộc"
-											data-cons-mess="Sai điều kiện" data-initial="true">
-										<div class="pricing-input-icon">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-										</div>
-										<div class="pricing-input-warning">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-											<span class="warn-text"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="input-wrapper pricing-lap-50">
-								<div class="pricing-input-content">
-									<label class="pricing-input-label" for="email">Email</label>
-									<div class="pricing-input-detail">
-										<input type="text" id="email" name="email" data-input-stage="normal"
-											data-regex="^[\w\.-]+@[\w\.-]+\.\w{2,}$" data-req="true"
-											data-blank-mess="Trường này là bắt buộc"
-											data-cons-mess="Vui lòng nhập email hợp lệ" data-initial="true">
-										<div class="pricing-input-icon">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-										</div>
-										<div class="pricing-input-warning">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-											<span class="warn-text"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="input-wrapper pricing-lap-50">
-								<div class="pricing-input-content">
-									<label class="pricing-input-label" for="phone">SĐT</label>
-									<div class="pricing-input-detail">
-										<input type="tel" id="phone" name="phone" data-input-stage="normal"
-											data-regex="^(0\d{9}|(\+84)\d{9})$" data-req="true"
-											data-blank-mess="Trường này là bắt buộc"
-											data-cons-mess="Vui lòng nhập số điện thoại hợp lệ" data-initial="true">
-										<div class="pricing-input-icon">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-										</div>
-										<div class="pricing-input-warning">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-											<span class="warn-text"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="input-wrapper pricing-full">
-								<div class="pricing-input-content">
-									<label class="pricing-input-label" for="message">Ghi chú</label>
-									<div class="pricing-input-detail">
-										<textarea type="text" id="message" name="message" data-input-stage="normal"
-											data-regex="^[A-Za-zÀ-ỹ\s]+$" data-req="false"
-											data-blank-mess="Trường này là bắt buộc" data-cons-mess="Vui lòng nhập tên"
-											data-initial="true"></textarea>
-										<div class="pricing-input-icon">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-										</div>
-										<div class="pricing-input-warning">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-												fill="currentColor" viewBox="0 0 16 16">
-												<path fill="currentColor" fill-rule="evenodd"
-													d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 9.5a.5.5 0 0 1-.5-.5V4.5a.5.5 0 0 1 1 0V9a.5.5 0 0 1-.5.5m0 1A.75.75 0 1 1 8 12a.75.75 0 0 1 0-1.5"
-													clip-rule="evenodd"></path>
-											</svg>
-											<span class="warn-text"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="input-wrapper pricing-full">
-								<div class="pricing-input-content">
-									<div class="pricing-check-box-wrapper">
-										<input type="checkbox" name="agree" id="agree">
-										<label class="pricing-normal-text" for="agree">Tôi đồng ý nhận thông tin tiếp
-											thị về
-											sản
-											phẩm, dịch vụ và sự kiện của CareSoft. Tôi có thể hủy đăng ký bất cứ lúc
-											nào.</label>
-									</div>
-								</div>
-							</div>
-							<div class="input-wrapper pricing-full">
-								<div class="pricing-input-content">
-									<div class="pricing-normal-text">
-										Khi gửi thông tin cá nhân, tôi đồng ý để CareSoft thu thập, xử lý và lưu trữ
-										dữ
-										liệu của mình theo Chính sách quyền riêng tư của CareSoft.
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="pricing-form-submit">
-							<button class="pricing-primary-btn" type="submit" id="submitForm">
-								<span class="pricing-btn-text-bg">
-									<span class="pricing-btn-span">
-										<span class="pricing-i-text">Đăng Ký</span>
-										<span class="pricing-af-text">Đăng Ký</span>
-									</span>
+					<div class="pricing-form-submit">
+						<button class="pricing-primary-btn" type="submit" id="submitForm">
+							<span class="pricing-btn-text-bg">
+								<span class="pricing-btn-span">
+									<span class="pricing-i-text">Đăng Ký</span>
+									<span class="pricing-af-text">Đăng Ký</span>
 								</span>
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<div class="pricing-form-submited-wrapper">
-				<button class="pricing-close-btn" onclick="toggleOverlay()">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
-						aria-hidden="true">
-						<path stroke="currentColor" stroke-linecap="round" d="M3 13L13 3m0 10L3 3"></path>
-					</svg>
-				</button>
-				<div class="pricing-submited-content">
-					<div class="pricing-custom-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-							<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-								stroke-width="2">
-								<path
-									d="M3 12c0 -4.97 4.03 -9 9 -9c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9Z" />
-								<path d="M8 12l3 3l5 -5" />
-							</g>
-						</svg>
+							</span>
+						</button>
 					</div>
-					<div class="pricing-submited-text pricing-title">
-						Đã gửi thông tin thành công
-					</div>
-					<div class="pricing-submited-text">Chúng tôi đã nhận được thông tin đăng ký tư vấn của bạn.</div>
-					<div class="pricing-submited-text">Đội ngũ hỗ trợ sẽ liên hệ trong thời gian sớm nhất.</div>
-					<button class="pricing-close-submited" onclick="toggleOverlay()">Đóng</button>
-				</div>
+				</form>
 			</div>
 		</div>
-	</main>
+		<div class="pricing-form-submited-wrapper">
+			<button class="pricing-close-btn" onclick="toggleOverlay()">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
+					aria-hidden="true">
+					<path stroke="currentColor" stroke-linecap="round" d="M3 13L13 3m0 10L3 3"></path>
+				</svg>
+			</button>
+			<div class="pricing-submited-content">
+				<div class="pricing-custom-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+						<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+							stroke-width="2">
+							<path
+								d="M3 12c0 -4.97 4.03 -9 9 -9c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9Z" />
+							<path d="M8 12l3 3l5 -5" />
+						</g>
+					</svg>
+				</div>
+				<div class="pricing-submited-text pricing-title">
+					Đã gửi thông tin thành công
+				</div>
+				<div class="pricing-submited-text">Chúng tôi đã nhận được thông tin đăng ký tư vấn của bạn.</div>
+				<div class="pricing-submited-text">Đội ngũ hỗ trợ sẽ liên hệ trong thời gian sớm nhất.</div>
+				<button class="pricing-close-submited" onclick="toggleOverlay()">Đóng</button>
+			</div>
+		</div>
+	</div>
 
 	<?php get_template_part('partials/partial-support'); ?>
 </div>
@@ -2981,11 +2974,12 @@
 			]
 		}
 	];
+
 	const planSection = document.querySelector('.pricing-plans')
 	const planContainer = planSection.querySelector('.pricing-custom-container')
-
-
 	const addOnsArray = []
+
+
 	document.querySelectorAll('pricing-part-wrapper', 'pricing-add-ons').innerHTML = "";
 	add_ons.forEach((addOn, addOnIndex) => {
 		const addOnWrapper = document.createElement('div')
@@ -3187,8 +3181,8 @@
 
 	function featureMobileLayout() {
 		featuresArea.innerHTML = `
-        <div class="feature-wrapper">
-            <div class="feature-p-wrapper">
+        <div class="pricing-feature-wrapper">
+            <div class="pricing-feature-p-wrapper">
                 <div class="pricing-feature-m-content">
                 </div>
             </div>
@@ -3957,12 +3951,12 @@
 	function toggleOverlay() {
 		overlay.classList.toggle('open');
 		if (overlay.classList.contains('open')) {
-			document.body.classList.add('no-scroll');
+			document.body.classList.add('pricing-no-scroll');
 		} else {
 			Array.from(overlay.children).forEach(child => {
 				child.style.display = 'none';
 			});
-			document.body.classList.remove('no-scroll');
+			document.body.classList.remove('pricing-no-scroll');
 		}
 	}
 
