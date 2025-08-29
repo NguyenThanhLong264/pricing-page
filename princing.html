@@ -642,19 +642,6 @@
 		border: 0px;
 	}
 
-	.plan-plus-des {
-		flex: 0 0 41.6667%;
-		max-width: 41.6667%;
-	}
-
-	.plan-plus-keypoint {
-		flex: 0 0 58.3333%;
-		max-width: 58.3333%;
-		border-left: 1px solid color-mix(in srgb, rgb(235, 227, 214) 95%, black);
-		display: flex;
-		flex-direction: column;
-	}
-
 	.pricing-normal-text {
 		font-style: normal;
 		text-align: left;
@@ -676,10 +663,6 @@
 		margin-bottom: 16px;
 		padding-top: 8px;
 		margin-top: 16px;
-	}
-
-	.plan-plus-keypoint .pricing-li-features {
-		margin: 12px 0px;
 	}
 
 	.pricing-li-initial-icon-plus {
@@ -1420,12 +1403,12 @@
 		grid-column: span 2;
 	}
 
-	.input-content {
+	.pricing-input-content {
 		position: relative;
 		direction: ltr;
 	}
 
-	.input-label {
+	.pricing-input-label {
 		color: rgb(22, 20, 12);
 		font-family: 'Inter';
 		font-weight: 500;
@@ -1437,12 +1420,12 @@
 		margin-bottom: 16px;
 	}
 
-	.input-detail {
+	.pricing-input-detail {
 		margin-top: 8px;
 		position: relative;
 	}
 
-	.input-detail input {
+	.pricing-input-detail input {
 		background: rgb(246, 240, 230);
 		border-radius: 12px;
 		border: 1px solid #ccc;
@@ -1458,7 +1441,7 @@
 		transition: all 0.2s ease;
 	}
 
-	.input-detail textarea {
+	.pricing-input-detail textarea {
 		background: rgb(246, 240, 230);
 		border-radius: 12px;
 		border: 1px solid #ccc;
@@ -1473,28 +1456,28 @@
 		resize: none;
 	}
 
-	.input-detail input[data-input-stage='blank'],
-	.input-detail input[data-input-stage='cons'],
-	.input-detail textarea:invalid[data-touched="true"]:not(:focus) {
+	.pricing-input-detail input[data-input-stage='blank'],
+	.pricing-input-detail input[data-input-stage='cons'],
+	.pricing-input-detail textarea:invalid[data-touched="true"]:not(:focus) {
 		border: 1px solid rgb(184, 66, 66);
 	}
 
-	.input-detail input:hover,
-	.input-detail textarea:hover {
+	.pricing-input-detail input:hover,
+	.pricing-input-detail textarea:hover {
 		cursor: pointer;
 		background: rgb(254, 250, 242);
 		border-color: #999;
 	}
 
-	.input-detail input:focus,
-	.input-detail textarea:focus {
+	.pricing-input-detail input:focus,
+	.pricing-input-detail textarea:focus {
 		color: rgb(22, 20, 12);
 		background: rgb(254, 250, 242);
 		border: 1px solid rgb(235, 227, 214);
 		box-shadow: 0 0 0 3px rgb(235, 227, 214);
 	}
 
-	.input-icon {
+	.pricing-input-icon {
 		display: none;
 		gap: 12px;
 		position: absolute;
@@ -1504,7 +1487,7 @@
 		color: rgb(184, 66, 66);
 	}
 
-	.input-warning {
+	.pricing-input-warning {
 		display: none;
 		padding: 0;
 		font-size: 13px;
@@ -1515,7 +1498,7 @@
 		line-height: 1.14286;
 	}
 
-	.input-warning svg {
+	.pricing-input-warning svg {
 		display: inline-block;
 		vertical-align: middle;
 		height: 20px;
@@ -1523,23 +1506,23 @@
 		width: 20px;
 	}
 
-	input[data-input-stage="blank"]~.input-warning,
-	input[data-input-stage="cons"]~.input-warning {
+	input[data-input-stage="blank"]~.pricing-input-warning,
+	input[data-input-stage="cons"]~.pricing-input-warning {
 		display: block;
 	}
 
-	input[data-input-stage="blank"]~.input-icon,
-	input[data-input-stage="cons"]~.input-icon {
+	input[data-input-stage="blank"]~.pricing-input-icon,
+	input[data-input-stage="cons"]~.pricing-input-icon {
 		display: flex;
 	}
 
-	.check-box-wrapper {
+	.pricing-check-box-wrapper {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 8px;
 	}
 
-	.check-box-wrapper input {
+	.pricing-check-box-wrapper input {
 		margin: 0px;
 		top: 2px;
 		border: 1px solid rgb(235, 227, 214);
@@ -1549,12 +1532,12 @@
 		background-color: rgb(255, 255, 255);
 	}
 
-	.check-box-wrapper label {
+	.pricing-check-box-wrapper label {
 		margin-left: 6px;
 		width: fit-content;
 	}
 
-	.form-submit .pricing-primary-btn {
+	.pricing-form-submit .pricing-primary-btn {
 		width: 100%;
 	}
 
@@ -1562,7 +1545,7 @@
 		margin-bottom: 0;
 	}
 
-	.close-btn {
+	.pricing-close-btn {
 		background: none;
 		color: rgb(22, 20, 12);
 		cursor: pointer;
@@ -1577,184 +1560,47 @@
 		display: block;
 	}
 
-	.close-btn:hover,
-	.close-btn:focus {
+	.pricing-close-btn:hover,
+	.pricing-close-btn:focus {
 		background: rgb(22, 20, 12);
 		color: rgb(255, 255, 255);
 	}
 
-	.close-btn svg {
+	.pricing-close-btn svg {
 		vertical-align: middle;
 	}
 
-	.check-box-wrapper .pricing-normal-text {
+	.pricing-check-box-wrapper .pricing-normal-text {
 		margin-bottom: 0;
 	}
 
-	.desktop-header {
-		display: none;
-		position: sticky;
-		background: rgb(254, 250, 242);
-		border-bottom: 1px solid rgba(222, 215, 202, 0.85);
-		top: -23px;
-		transition-property: transform;
-		transition-duration: 0.5s;
-		z-index: 10;
-	}
-
-	.secondary-nav {
-		min-height: 22px;
-		padding: 2px 0px 0px;
-	}
-
-	.sec-nav-flex {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		position: relative;
-		gap: 14px;
-	}
-
-	.sev-nav-item {
-		display: flex;
-		align-items: stretch;
-		margin-bottom: -1px;
-		position: relative;
-		z-index: 16;
-	}
-
-	.sec-nav-item .sec-nav-text {
-		color: rgb(22, 20, 12);
-		font-size: 14px;
-		font-weight: 400;
-		cursor: pointer;
-		line-height: 1.5;
-		margin: 0;
-	}
-
-	.primary-nav {
-		background: rgb(254, 250, 242);
-		position: relative;
-		z-index: 15;
-	}
-
-	.nav-logo {
-		flex: 0 0 100px;
-		margin-right: 0px;
-		padding: 0px 0px 20px;
-	}
-
-	.nav-logo a {
-		display: block;
-		overflow: hidden;
-		text-decoration: none;
-		width: 100px;
-		transition: 0.25s;
-	}
-
-	.nav-logo img {
-		aspect-ratio: 84 / 60;
-		display: block;
-		height: auto;
-		transform-origin: left center;
-		transition: transform 0.25s cubic-bezier(0.7, 0, 0.3, 1);
-		width: 100%;
-		object-fit: contain;
-	}
-
-	.nav-head {
-		display: flex;
-		align-items: stretch;
-		align-self: stretch;
-		flex: 1 0 auto;
-		gap: clamp(0px, 20px, 3%);
-		justify-content: center;
-		margin: 0px auto;
-	}
-
-	.link-item {
-		display: flex;
-		align-items: stretch;
-		margin-bottom: -1px;
-		min-width: 1px;
-	}
-
-	.nav-link-text {
-		display: flex;
-		align-items: center;
-		border-radius: 0px;
-		cursor: default;
-		flex-shrink: 0;
-		padding: 16px;
-		position: relative;
-		font-size: 16px;
-		font-weight: 500;
-		font-stretch: expanded;
-		transition: 600ms cubic-bezier(0.7, 0, 0.3, 1);
-	}
-
-	.nav-link-text::after {
-		background: rgb(22, 20, 12);
-		bottom: 0px;
-		content: "";
-		display: block;
-		height: 3px;
-		left: 0px;
-		position: absolute;
-		transition: width 0.25s cubic-bezier(0.7, 0, 0.3, 1);
-		width: 0%;
-	}
-
-	.link-item:focus-within .nav-link-text::after,
-	.link-item:hover .nav-link-text::after {
-		width: 100%;
-	}
-
-	.mobile-header {
-		display: block;
-		background: rgb(254, 250, 242);
-		position: sticky;
-		top: -1px;
-		transition-property: transform;
-		transition-duration: 0.5s;
-		z-index: 10;
-	}
-
-	.mobile-nav {
-		border-bottom: 1px solid rgba(222, 215, 202, 0.85);
-	}
-
-	.closed {
-		display: none;
-	}
-
-	.submited-content {
+	.pricing-submited-content {
 		padding: 32px 24px;
 		text-align: center;
 		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 	}
 
-	.submited-content .pricing-custom-icon {
+	.pricing-submited-content .pricing-custom-icon {
 		color: #22c55e;
 		margin-bottom: 16px;
 		max-width: 48px;
 		max-height: 48px;
 	}
 
-	.submited-text.title {
+	.pricing-submited-text.pricing-title {
 		font-size: 20px;
 		font-weight: 600;
 		margin-bottom: 8px;
 		color: rgb(22, 20, 12);
 	}
 
-	.submited-text {
+	.pricing-submited-text {
 		font-size: 15px;
 		color: #555;
 		margin-bottom: 4px;
 	}
 
-	.close-submited {
+	.pricing-close-submited {
 		margin-top: 20px;
 		padding: 10px 20px;
 		background: #22c55e;
@@ -1767,7 +1613,7 @@
 		transition: all 0.3s ease;
 	}
 
-	.close-submited:hover {
+	.pricing-close-submited:hover {
 		background: #16a34a;
 	}
 
@@ -1837,7 +1683,7 @@
 			font-size: 18px;
 		}
 
-		.feature-content .pricing-col-title {
+		.pricing-feature-content .pricing-col-title {
 			text-align: center;
 		}
 
@@ -1912,10 +1758,6 @@
 			text-underline-offset: 4px;
 			border-bottom: 1px dotted rgb(22, 20, 12);
 		}
-
-		.nav-item-content {
-			padding: 20px 24px;
-		}
 	}
 
 	@media (min-width:1120px) {
@@ -1985,14 +1827,6 @@
 
 		.pricing-add-ons .pricing-feature-li {
 			columns: 2;
-		}
-
-		.desktop-header {
-			display: block;
-		}
-
-		.mobile-header {
-			display: none;
 		}
 
 		.pricing-cta-btn {
@@ -2106,11 +1940,11 @@
 			display: block;
 		}
 
-		.feature-content {
+		.pricing-feature-content {
 			margin: 0 -8px;
 		}
 
-		.feature-m-content {
+		.pricing-feature-m-content {
 			padding-left: 0px;
 			padding-right: 0px;
 			margin-right: auto;
@@ -2119,7 +1953,7 @@
 			overflow: hidden;
 		}
 
-		.main-card {
+		.pricing-main-card {
 			position: relative;
 			display: block;
 			box-sizing: border-box;
@@ -2127,7 +1961,7 @@
 			touch-action: pan-y;
 		}
 
-		.slick-list {
+		.pricing-slick-list {
 			position: relative;
 			margin: 0;
 			padding: 0 24px;
@@ -2141,19 +1975,18 @@
 			-webkit-overflow-scrolling: touch;
 		}
 
-		.slick-list::-webkit-scrollbar {
+		.pricing-slick-list::-webkit-scrollbar {
 			display: none;
 		}
 
-		.slick-track {
+		.pricing-slick-track {
 			opacity: 1;
 			display: flex;
-			/* padding: 0 24px; */
 			padding-top: 24px;
 			padding-right: 12px;
 		}
 
-		.feature-m-col {
+		.pricing-feature-m-col {
 			padding: 0;
 			margin: 0;
 			width: calc(100vw - 32px);
@@ -2164,11 +1997,11 @@
 			scroll-snap-stop: always;
 		}
 
-		.feature-m-col>div {
+		.pricing-feature-m-col>div {
 			height: 100%;
 		}
 
-		.tab {
+		.pricing-tab {
 			display: inline-block;
 			width: 100%;
 			height: 100%;
@@ -2178,7 +2011,7 @@
 			padding-left: 8px;
 		}
 
-		.tab-padding {
+		.pricing-tab-padding {
 			background: rgb(254, 250, 242);
 			box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
 			border-bottom: 1px solid rgb(22, 20, 12);
@@ -2189,14 +2022,14 @@
 			height: 100%;
 		}
 
-		.slide-nav {
+		.pricing-slide-nav {
 			width: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
 
-		.slide-nav-wrapper {
+		.pricing-slide-nav-wrapper {
 			display: flex;
 			margin: 24px auto 0px;
 			width: 210px;
@@ -2204,21 +2037,21 @@
 			align-items: center;
 		}
 
-		.nav-btn {
+		.pricing-nav-btn {
 			background: none;
 			border: 1px solid rgb(174, 167, 153);
 			border-radius: 100%;
 			padding: 16px;
 		}
 
-		.nav-btn .pricing-custom-icon {
+		.pricing-nav-btn .pricing-custom-icon {
 			width: 24px;
 			height: 24px;
 			margin: 0;
 			padding: 0;
 		}
 
-		.small-nav-btn {
+		.small-pricing-nav-btn {
 			border-radius: 100%;
 			cursor: pointer;
 			height: 6px;
@@ -2228,15 +2061,15 @@
 			border: 1px solid rgb(174, 167, 153);
 		}
 
-		.small-nav-btn.choosen {
+		.small-pricing-nav-btn.choosen {
 			background-color: rgb(143, 136, 122);
 		}
 
-		.feature-m-li .slick-list {
+		.pricing-feature-m-li .pricing-slick-list {
 			padding: 0 16px;
 		}
 
-		.li-wrapper {
+		.pricing-li-wrapper {
 			display: flex;
 			flex-direction: column;
 			height: auto;
@@ -2246,29 +2079,8 @@
 			padding: 24px;
 		}
 
-		.li-wrapper .pricing-col-title {
+		.pricing-li-wrapper .pricing-col-title {
 			text-align: center;
-		}
-
-		.plan-plus-keypoint {
-			display: none;
-		}
-
-		.plan-plus-des {
-			flex: 1;
-			width: 100%;
-			max-width: 100%;
-			text-align: center;
-			margin: 0px 24px;
-			padding: 24px 0px;
-		}
-
-		.plan-plus-des>* {
-			text-align: center;
-		}
-
-		.plan-plus-des> :nth-last-child(-n+2) {
-			display: none;
 		}
 
 		.plan-plus-btn-wrapper .pricing-primary-btn {
@@ -2300,7 +2112,7 @@
 			width: 100%;
 		}
 
-		.mobile-thead {
+		.pricing-mobile-thead {
 			height: 100%;
 			display: flex;
 			flex-direction: column;
@@ -2433,7 +2245,7 @@
 		<div class="pricing-plans pricing-c-section">
 			<div class="pricing-custom-container">
 				<div class="pricing-plan-content-wrapper">
-					<div class="feature-content" id="features"></div>
+					<div class="pricing-feature-content" id="features"></div>
 					<div class="pricing-feature-btn">
 						<button class="pricing-primary-btn to-detail">
 							<span class="pricing-btn-text-bg">
@@ -2566,7 +2378,7 @@
 		</div>
 		<div class="pricing-overlay">
 			<div class="pricing-form-wrapper">
-				<button class="close-btn" onclick="toggleOverlay()">
+				<button class="pricing-close-btn" onclick="toggleOverlay()">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
 						aria-hidden="true">
 						<path stroke="currentColor" stroke-linecap="round" d="M3 13L13 3m0 10L3 3"></path>
@@ -2583,14 +2395,14 @@
 						</div>
 						<div class="pricing-form-input">
 							<div class="input-wrapper pricing-lap-50">
-								<div class="input-content">
-									<label class="input-label" for="name">Họ Tên</label>
-									<div class="input-detail">
+								<div class="pricing-input-content">
+									<label class="pricing-input-label" for="name">Họ Tên</label>
+									<div class="pricing-input-detail">
 										<input type="text" id="name" name="name" data-input-stage="normal"
 											data-regex="^[A-Za-zÀ-ỹ\s]+$" data-req="true"
 											data-blank-mess="Trường này là bắt buộc" data-cons-mess="Vui lòng nhập tên"
 											data-initial="true">
-										<div class="input-icon">
+										<div class="pricing-input-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2598,7 +2410,7 @@
 													clip-rule="evenodd"></path>
 											</svg>
 										</div>
-										<div class="input-warning">
+										<div class="pricing-input-warning">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2611,13 +2423,13 @@
 								</div>
 							</div>
 							<div class="input-wrapper pricing-lap-50">
-								<div class="input-content">
-									<label class="input-label" for="company">Công ty/ Doanh nghiệp</label>
-									<div class="input-detail">
+								<div class="pricing-input-content">
+									<label class="pricing-input-label" for="company">Công ty/ Doanh nghiệp</label>
+									<div class="pricing-input-detail">
 										<input type="text" id="company" name="company" data-input-stage="normal"
 											data-regex="none" data-blank-mess="Trường này là bắt buộc"
 											data-cons-mess="Sai điều kiện" data-initial="true">
-										<div class="input-icon">
+										<div class="pricing-input-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2625,7 +2437,7 @@
 													clip-rule="evenodd"></path>
 											</svg>
 										</div>
-										<div class="input-warning">
+										<div class="pricing-input-warning">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2638,14 +2450,14 @@
 								</div>
 							</div>
 							<div class="input-wrapper pricing-lap-50">
-								<div class="input-content">
-									<label class="input-label" for="email">Email</label>
-									<div class="input-detail">
+								<div class="pricing-input-content">
+									<label class="pricing-input-label" for="email">Email</label>
+									<div class="pricing-input-detail">
 										<input type="text" id="email" name="email" data-input-stage="normal"
 											data-regex="^[\w\.-]+@[\w\.-]+\.\w{2,}$" data-req="true"
 											data-blank-mess="Trường này là bắt buộc"
 											data-cons-mess="Vui lòng nhập email hợp lệ" data-initial="true">
-										<div class="input-icon">
+										<div class="pricing-input-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2653,7 +2465,7 @@
 													clip-rule="evenodd"></path>
 											</svg>
 										</div>
-										<div class="input-warning">
+										<div class="pricing-input-warning">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2666,14 +2478,14 @@
 								</div>
 							</div>
 							<div class="input-wrapper pricing-lap-50">
-								<div class="input-content">
-									<label class="input-label" for="phone">SĐT</label>
-									<div class="input-detail">
+								<div class="pricing-input-content">
+									<label class="pricing-input-label" for="phone">SĐT</label>
+									<div class="pricing-input-detail">
 										<input type="tel" id="phone" name="phone" data-input-stage="normal"
 											data-regex="^(0\d{9}|(\+84)\d{9})$" data-req="true"
 											data-blank-mess="Trường này là bắt buộc"
 											data-cons-mess="Vui lòng nhập số điện thoại hợp lệ" data-initial="true">
-										<div class="input-icon">
+										<div class="pricing-input-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2681,7 +2493,7 @@
 													clip-rule="evenodd"></path>
 											</svg>
 										</div>
-										<div class="input-warning">
+										<div class="pricing-input-warning">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2694,14 +2506,14 @@
 								</div>
 							</div>
 							<div class="input-wrapper pricing-full">
-								<div class="input-content">
-									<label class="input-label" for="message">Ghi chú</label>
-									<div class="input-detail">
+								<div class="pricing-input-content">
+									<label class="pricing-input-label" for="message">Ghi chú</label>
+									<div class="pricing-input-detail">
 										<textarea type="text" id="message" name="message" data-input-stage="normal"
 											data-regex="^[A-Za-zÀ-ỹ\s]+$" data-req="false"
 											data-blank-mess="Trường này là bắt buộc" data-cons-mess="Vui lòng nhập tên"
 											data-initial="true"></textarea>
-										<div class="input-icon">
+										<div class="pricing-input-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2709,7 +2521,7 @@
 													clip-rule="evenodd"></path>
 											</svg>
 										</div>
-										<div class="input-warning">
+										<div class="pricing-input-warning">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" viewBox="0 0 16 16">
 												<path fill="currentColor" fill-rule="evenodd"
@@ -2722,8 +2534,8 @@
 								</div>
 							</div>
 							<div class="input-wrapper pricing-full">
-								<div class="input-content">
-									<div class="check-box-wrapper">
+								<div class="pricing-input-content">
+									<div class="pricing-check-box-wrapper">
 										<input type="checkbox" name="agree" id="agree">
 										<label class="pricing-normal-text" for="agree">Tôi đồng ý nhận thông tin tiếp
 											thị về
@@ -2734,7 +2546,7 @@
 								</div>
 							</div>
 							<div class="input-wrapper pricing-full">
-								<div class="input-content">
+								<div class="pricing-input-content">
 									<div class="pricing-normal-text">
 										Khi gửi thông tin cá nhân, tôi đồng ý để CareSoft thu thập, xử lý và lưu trữ
 										dữ
@@ -2743,7 +2555,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="form-submit">
+						<div class="pricing-form-submit">
 							<button class="pricing-primary-btn" type="submit" id="submitForm">
 								<span class="pricing-btn-text-bg">
 									<span class="pricing-btn-span">
@@ -2757,13 +2569,13 @@
 				</div>
 			</div>
 			<div class="pricing-form-submited-wrapper">
-				<button class="close-btn" onclick="toggleOverlay()">
+				<button class="pricing-close-btn" onclick="toggleOverlay()">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
 						aria-hidden="true">
 						<path stroke="currentColor" stroke-linecap="round" d="M3 13L13 3m0 10L3 3"></path>
 					</svg>
 				</button>
-				<div class="submited-content">
+				<div class="pricing-submited-content">
 					<div class="pricing-custom-icon">
 						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
 							<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -2774,12 +2586,12 @@
 							</g>
 						</svg>
 					</div>
-					<div class="submited-text title">
+					<div class="pricing-submited-text pricing-title">
 						Đã gửi thông tin thành công
 					</div>
-					<div class="submited-text">Chúng tôi đã nhận được thông tin đăng ký tư vấn của bạn.</div>
-					<div class="submited-text">Đội ngũ hỗ trợ sẽ liên hệ trong thời gian sớm nhất.</div>
-					<button class="close-submited" onclick="toggleOverlay()">Đóng</button>
+					<div class="pricing-submited-text">Chúng tôi đã nhận được thông tin đăng ký tư vấn của bạn.</div>
+					<div class="pricing-submited-text">Đội ngũ hỗ trợ sẽ liên hệ trong thời gian sớm nhất.</div>
+					<button class="pricing-close-submited" onclick="toggleOverlay()">Đóng</button>
 				</div>
 			</div>
 		</div>
@@ -3264,7 +3076,7 @@
 
 		wrapper.innerHTML = `
             <h3 class="pricing-small-title">${question.topic}</h3>
-            <div class="pricing-ques-li-wrapper">
+            <div class="pricing-ques-pricing-li-wrapper">
                 ${question.questions.map(ques => `
                     <div class="pricing-ques-li">
                         <div class="pricing-ques-heading">
@@ -3381,23 +3193,23 @@
 		featuresArea.innerHTML = `
         <div class="feature-wrapper">
             <div class="feature-p-wrapper">
-                <div class="feature-m-content">
+                <div class="pricing-feature-m-content">
                 </div>
             </div>
         </div>
         `;
 
-		const featureContent = document.querySelector('.feature-m-content');
+		const featureContent = document.querySelector('.pricing-feature-m-content');
 		featureContent.innerHTML = `
-        <div class="main-card">
-            <div class="slick-list">
-                <div class="slick-track">
+        <div class="pricing-main-card">
+            <div class="pricing-slick-list">
+                <div class="pricing-slick-track">
                 </div>
             </div>
         </div>
-        <div class="slide-nav">
-            <nav class="slide-nav-wrapper">
-                <button class="nav-btn" id='left-nav'>
+        <div class="pricing-slide-nav">
+            <nav class="pricing-slide-nav-wrapper">
+                <button class="pricing-nav-btn" id='left-nav'>
                     <div class="pricing-custom-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" viewBox="0 0 24 24">
@@ -3407,7 +3219,7 @@
                         </svg>
                     </div>
                 </button>
-                <button class="nav-btn" id='right-nav'>
+                <button class="pricing-nav-btn" id='right-nav'>
                     <div class="pricing-custom-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" viewBox="0 0 24 24">
@@ -3419,24 +3231,24 @@
                 </button>
             </nav>
         </div>
-        <div class="feature-m-li"></div>
+        <div class="pricing-feature-m-li"></div>
         `;
 
-		const card = document.querySelector('.slick-track');
+		const card = document.querySelector('.pricing-slick-track');
 		card.style.width = `${features.length * 100}%`;
-		const featureLi = document.querySelector('.feature-m-li');
+		const featureLi = document.querySelector('.pricing-feature-m-li');
 
 		const liContents = [];
-		const navArea = document.querySelector('.slide-nav-wrapper')
-		const navButtons = navArea.querySelectorAll('.nav-btn');
+		const navArea = document.querySelector('.pricing-slide-nav-wrapper')
+		const navButtons = navArea.querySelectorAll('.pricing-nav-btn');
 		const firstNavBtn = navButtons[1];
 
 		features.forEach((fea, index) => {
 			const cardContent = `
-            <div class="feature-m-col" id=${fea.title.replace(' ', '-').toLowerCase()}>
+            <div class="pricing-feature-m-col" id=${fea.title.replace(' ', '-').toLowerCase()}>
                 <div>
-                    <div class="tab">
-                        <div class="tab-padding">
+                    <div class="pricing-tab">
+                        <div class="pricing-tab-padding">
                             <div class="pricing-col-content">
                                 <div>
                                     <h4 class="pricing-col-title">${fea.title}</h4>
@@ -3476,13 +3288,13 @@
 			card.insertAdjacentHTML('beforeend', cardContent);
 
 			const dot = document.createElement('button');
-			dot.className = 'small-nav-btn';
+			dot.className = 'small-pricing-nav-btn';
 			dot.dataset.index = index;
 			firstNavBtn.insertAdjacentElement('beforebegin', dot);
 
 			liContents.push(`
-            <div class="slick-list">
-                <div class="li-wrapper pricing-custom-card">
+            <div class="pricing-slick-list">
+                <div class="pricing-li-wrapper pricing-custom-card">
                     <h4 class="pricing-col-title">${fea.title}</h4>
                     <ul class="pricing-feature-li">
                     ${fea.keys.map(f => `
@@ -3512,8 +3324,8 @@
 		let currentIndex = 0;
 		let isAutoScrolling = false;
 
-		const slickList = document.querySelector('.slick-list');
-		const dots = document.querySelectorAll('.small-nav-btn');
+		const slickList = document.querySelector('.pricing-slick-list');
+		const dots = document.querySelectorAll('.small-pricing-nav-btn');
 
 		const updateView = (index) => {
 			currentIndex = index;
@@ -3832,7 +3644,7 @@
 		const th = document.createElement('th');
 		const selectedText = mainTableRows[currentPlanIdx].title ?? 'Chọn gói';
 		th.innerHTML = `
-    <div class="mobile-thead">
+    <div class="pricing-mobile-thead">
       <h3>Plans</h3>
       <div class="pricing-custom-select" id="customSelect">
         <div class="select-trigger">
