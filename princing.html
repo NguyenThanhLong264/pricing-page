@@ -2590,7 +2590,7 @@
 </div>
 
 <script>
-	const features = [
+	const pricing_features = [
 		{
 			title: 'Call Center',
 			description: 'Giải pháp nền tảng tổng đài chuyên nghiệp với đầy đủ tính năng thiết yếu để vận hành trung tâm chăm sóc khách hàng và Telesales, hỗ trợ các kênh liên lạc truyền thống như hotline và email.',
@@ -2659,7 +2659,7 @@
 		},
 	]
 
-	const add_ons = [
+	const pricing_add_ons = [
 		{
 			isNew: 'Add-on',
 			name: 'Chat bot',
@@ -2706,13 +2706,13 @@
 		},
 	];
 
-	const mainTableRows = [
+	const pricing_mainTableRows = [
 		{ id: "callcenter", title: "Call Center" },
 		{ id: "contactcenter", title: "Contact Center" },
 		{ id: "omnichannel", title: "Omni-Channel CRM" },
 	]
 
-	const plans = [{
+	const pricing_plans = [{
 		title: 'Tích hợp các kênh tương tác với khách hàng (customer engagement)',
 		rows: [
 			['Kênh thoại (voice call)', true, true, true],
@@ -2901,7 +2901,7 @@
 	},
 	]
 
-	const questions = [
+	const pricing_faqs = [
 		{
 			topic: 'Chi phí',
 			questions: [
@@ -2975,13 +2975,29 @@
 		}
 	];
 
-	const planSection = document.querySelector('.pricing-plans')
-	const planContainer = planSection.querySelector('.pricing-custom-container')
-	const addOnsArray = []
+	const pricing_planSection = document.querySelector('.pricing-plans')
+	const pricing_planContainer = pricing_planSection.querySelector('.pricing-custom-container')
+	const pricing_overlay = document.querySelector('.pricing-overlay');
+	const pricing_logo_carousel = document.querySelector('.pricing-logo-gallery-wrapper');
+	const pricing_logo_gallery = document.getElementById('logo-slider');
+	const pricing_logo_prev_btn = document.getElementById("pricing-gallery-prev");
+	const pricing_logo_next_btn = document.getElementById("pricing-gallery-next");
 
+	const pricing_customer_logo_img_src = generateImgSrc(48);
+	const pricing_addon_arr = []
+	const pricing_gallery_queue = [];
+	const pricing_queue_start_num = 10
+
+	let pricing_logo_width = 150;
+	let pricing_gallery_click_timeout = 500
+	let pricing_currentIndex = pricing_queue_start_num;
+	let pricing_carouselInterval = null;
+	let pricing_clickAble = true;
+	let pricing_isAnimating = false;
+	let pricingLastViewMode = window.innerWidth < 768 ? 'pricing-mobileMode' : 'pricing-desktopMode';
 
 	document.querySelectorAll('pricing-part-wrapper', 'pricing-add-ons').innerHTML = "";
-	add_ons.forEach((addOn, addOnIndex) => {
+	pricing_add_ons.forEach((addOn, addOnIndex) => {
 		const addOnWrapper = document.createElement('div')
 		addOnWrapper.classList.add('pricing-add-on-wrapper')
 		const addOnCard = document.createElement('div');
@@ -3034,33 +3050,33 @@
             </span>
         </button>
 `
-		addOnsArray.push(addOnWrapper)
+		pricing_addon_arr.push(addOnWrapper)
 	})
 
-	addOnsArray.forEach((addOn, index) => {
+	pricing_addon_arr.forEach((addOn, index) => {
 		if (index % 2 === 0) {
 			const partWrapper = document.createElement('div');
 			partWrapper.classList.add('pricing-part-wrapper', 'pricing-add-ons');
 
 
-			partWrapper.appendChild(addOnsArray[index]);
+			partWrapper.appendChild(pricing_addon_arr[index]);
 
-			if (addOnsArray[index + 1]) {
-				partWrapper.appendChild(addOnsArray[index + 1]);
+			if (pricing_addon_arr[index + 1]) {
+				partWrapper.appendChild(pricing_addon_arr[index + 1]);
 			}
 
-			const lastChild = planContainer.lastElementChild;
+			const lastChild = pricing_planContainer.lastElementChild;
 
 			if (lastChild && lastChild.classList.contains('pricing-part-wrapper') && lastChild.classList.contains('cta')) {
-				planContainer.insertBefore(partWrapper, lastChild);
+				pricing_planContainer.insertBefore(partWrapper, lastChild);
 			} else {
-				planContainer.appendChild(partWrapper);
+				pricing_planContainer.appendChild(partWrapper);
 			}
 		}
 	});
 	const faqSection = document.querySelector('.pricing-ques-section')
 
-	questions.forEach((question, i) => {
+	pricing_faqs.forEach((question, i) => {
 		const wrapper = document.createElement('div');
 		wrapper.classList.add('ques-sec-wrapper');
 
@@ -3101,7 +3117,7 @@
 
 		featuresArea.appendChild(contentFlex);
 
-		features.forEach((fea) => {
+		pricing_features.forEach((fea) => {
 			const featureCol = document.createElement('div');
 			featureCol.className = 'pricing-feature-col';
 
@@ -3225,7 +3241,7 @@
         `;
 
 		const card = document.querySelector('.pricing-slick-track');
-		card.style.width = `${features.length * 100}%`;
+		card.style.width = `${pricing_features.length * 100}%`;
 		const featureLi = document.querySelector('.pricing-feature-m-li');
 
 		const liContents = [];
@@ -3233,7 +3249,7 @@
 		const navButtons = navArea.querySelectorAll('.pricing-nav-btn');
 		const firstNavBtn = navButtons[1];
 
-		features.forEach((fea, index) => {
+		pricing_features.forEach((fea, index) => {
 			const cardContent = `
             <div class="pricing-feature-m-col" id=${fea.title.replace(' ', '-').toLowerCase()}>
                 <div>
@@ -3349,7 +3365,7 @@
 		});
 
 		document.getElementById('right-nav').addEventListener('click', () => {
-			if (currentIndex < features.length - 1) {
+			if (currentIndex < pricing_features.length - 1) {
 				updateView(currentIndex + 1);
 			}
 		});
@@ -3369,19 +3385,7 @@
 				featureLi.innerHTML = liContents[index];
 			}
 		});
-	} const carousel = document.querySelector('.pricing-logo-gallery-wrapper');
-	const gallery = document.getElementById('logo-slider');
-	const prevBtn = document.getElementById("pricing-gallery-prev");
-	const nextBtn = document.getElementById("pricing-gallery-next");
-
-	const imgSrcList = generateImgSrc(48);
-	const imgQueue = [];
-	let singleImgWidth = 150;
-
-	const startIdx = 10
-	let currentIndex = startIdx;
-	let offset = 0;
-	let clickTimeOut = 500
+	}
 
 	function generateImgSrc(total) {
 		const arr = [];
@@ -3392,50 +3396,45 @@
 	}
 
 	function initialQueue() {
-		const first13 = imgSrcList.slice(0, startIdx);
-		imgQueue.push(...first13);
+		const first13 = pricing_customer_logo_img_src.slice(0, pricing_queue_start_num);
+		pricing_gallery_queue.push(...first13);
 		generateFristLoad();
 	}
 
 	function generateFristLoad() {
-		gallery.innerHTML = "";
-		imgQueue.forEach(src => {
+		pricing_logo_gallery.innerHTML = "";
+		pricing_gallery_queue.forEach(src => {
 			const img = document.createElement("img");
 			img.src = src;
 			img.alt = src;
-			img.style.width = singleImgWidth + "px";
-			gallery.appendChild(img);
+			img.style.width = pricing_logo_width + "px";
+			pricing_logo_gallery.appendChild(img);
 		});
 	}
-	let carouselInterval = null;
 
 	function startCarousel() {
-		if (carouselInterval) return;
-		carouselInterval = setInterval(() => {
-			gallery.style.animation = "scroll 1s ease 1";
-			gallery.addEventListener("animationend", () => {
-				gallery.style.animation = "none";
-				imgQueue.shift();
-				imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
-				currentIndex++;
+		if (pricing_carouselInterval) return;
+		pricing_carouselInterval = setInterval(() => {
+			pricing_logo_gallery.style.animation = "scroll 1s ease 1";
+			pricing_logo_gallery.addEventListener("animationend", () => {
+				pricing_logo_gallery.style.animation = "none";
+				pricing_gallery_queue.shift();
+				pricing_gallery_queue.push(pricing_customer_logo_img_src[pricing_currentIndex % pricing_customer_logo_img_src.length]);
+				pricing_currentIndex++;
 				generateFristLoad();
 			}, { once: true });
 		}, 1500);
 	}
 
 	function stopCarousel() {
-		if (carouselInterval) {
-			clearInterval(carouselInterval);
-			carouselInterval = null;
+		if (pricing_carouselInterval) {
+			clearInterval(pricing_carouselInterval);
+			pricing_carouselInterval = null;
 		}
 	}
 
-	carousel.addEventListener("mouseenter", stopCarousel);
-	carousel.addEventListener("mouseleave", startCarousel);
-
-	let clickAble = true;
-
-	let isAnimating = false;
+	pricing_logo_carousel.addEventListener("mouseenter", stopCarousel);
+	pricing_logo_carousel.addEventListener("mouseleave", startCarousel);
 
 	function waitAnimationEnd(element) {
 		return new Promise(resolve => {
@@ -3444,76 +3443,75 @@
 	}
 
 	async function handleNext() {
-		if (isAnimating) return;
-		isAnimating = true;
+		if (pricing_isAnimating) return;
+		pricing_isAnimating = true;
 
-		gallery.style.animation = `scrollNext ${clickTimeOut}ms ease 1`;
-		await waitAnimationEnd(gallery);
+		pricing_logo_gallery.style.animation = `scrollNext ${pricing_gallery_click_timeout}ms ease 1`;
+		await waitAnimationEnd(pricing_logo_gallery);
 
-		gallery.style.animation = "none";
-		imgQueue.shift();
-		imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
-		currentIndex++;
-		imgQueue.shift();
-		imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
-		currentIndex++;
+		pricing_logo_gallery.style.animation = "none";
+		pricing_gallery_queue.shift();
+		pricing_gallery_queue.push(pricing_customer_logo_img_src[pricing_currentIndex % pricing_customer_logo_img_src.length]);
+		pricing_currentIndex++;
+		pricing_gallery_queue.shift();
+		pricing_gallery_queue.push(pricing_customer_logo_img_src[pricing_currentIndex % pricing_customer_logo_img_src.length]);
+		pricing_currentIndex++;
 		generateFristLoad();
-
-		isAnimating = false;
+		pricing_isAnimating = false;
 	}
 
 	async function handlePrev() {
-		if (isAnimating) return;
-		isAnimating = true;
+		if (pricing_isAnimating) return;
+		pricing_isAnimating = true;
 
-		gallery.style.animation = `scrollPrev ${clickTimeOut}ms ease 1`;
-		await waitAnimationEnd(gallery);
+		pricing_logo_gallery.style.animation = `scrollPrev ${pricing_gallery_click_timeout}ms ease 1`;
+		await waitAnimationEnd(pricing_logo_gallery);
 
-		gallery.style.animation = "none";
-		imgQueue.pop();
-		imgQueue.pop();
-		currentIndex -= 2;
-		if (currentIndex < 0) currentIndex += imgSrcList.length;
-		imgQueue.unshift(imgSrcList[(currentIndex) % imgSrcList.length]);
-		imgQueue.unshift(imgSrcList[(currentIndex + 1) % imgSrcList.length]);
+		pricing_logo_gallery.style.animation = "none";
+		pricing_gallery_queue.pop();
+		pricing_gallery_queue.pop();
+		pricing_currentIndex -= 2;
+		if (pricing_currentIndex < 0) pricing_currentIndex += pricing_customer_logo_img_src.length;
+		pricing_gallery_queue.unshift(pricing_customer_logo_img_src[(pricing_currentIndex) % pricing_customer_logo_img_src.length]);
+		pricing_gallery_queue.unshift(pricing_customer_logo_img_src[(pricing_currentIndex + 1) % pricing_customer_logo_img_src.length]);
 		generateFristLoad();
 
-		isAnimating = false;
+		pricing_isAnimating = false;
 	}
 
 	function startCarousel() {
-		if (carouselInterval) return;
-		carouselInterval = setInterval(async () => {
-			if (isAnimating) return;
-			isAnimating = true;
+		if (pricing_carouselInterval) return;
+		pricing_carouselInterval = setInterval(async () => {
+			if (pricing_isAnimating) return;
+			pricing_isAnimating = true;
 
-			gallery.style.animation = "scroll 1s ease 1";
-			await waitAnimationEnd(gallery);
+			pricing_logo_gallery.style.animation = "scroll 1s ease 1";
+			await waitAnimationEnd(pricing_logo_gallery);
 
-			gallery.style.animation = "none";
-			imgQueue.shift();
-			imgQueue.push(imgSrcList[currentIndex % imgSrcList.length]);
-			currentIndex++;
+			pricing_logo_gallery.style.animation = "none";
+			pricing_gallery_queue.shift();
+			pricing_gallery_queue.push(pricing_customer_logo_img_src[pricing_currentIndex % pricing_customer_logo_img_src.length]);
+			pricing_currentIndex++;
 			generateFristLoad();
 
-			isAnimating = false;
+			pricing_isAnimating = false;
 		}, 1500);
 	}
-	nextBtn.addEventListener("click", () => {
-		if (!clickAble) return;
-		clickAble = false;
+	pricing_logo_next_btn.addEventListener("click", () => {
+		if (!pricing_clickAble) return;
+		pricing_clickAble = false;
 		handleNext();
 		setTimeout(() => {
-			clickAble = true;
-		}, clickTimeOut);
+			pricing_clickAble = true;
+		}, pricing_gallery_click_timeout);
 	});
-	prevBtn.addEventListener("click", () => {
-		if (!clickAble) return;
-		clickAble = false;
+	pricing_logo_prev_btn.addEventListener("click", () => {
+		if (!pricing_clickAble) return;
+		pricing_clickAble = false;
 		handlePrev();
 		setTimeout(() => {
-			clickAble = true;
-		}, clickTimeOut);
+			pricing_clickAble = true;
+		}, pricing_gallery_click_timeout);
 	});
 
 	initialQueue();
@@ -3532,7 +3530,7 @@
 		mainBody.innerHTML = '';
 		headRow.innerHTML = '';
 		tableHead.classList.remove('pricing-mobile');
-		mainTableRows.forEach(item => {
+		pricing_mainTableRows.forEach(item => {
 			const th = document.createElement('th');
 			th.innerHTML = `<p key=${item.id} class="pricing-head-text">${item.title}</p>`
 			headRow.appendChild(th);
@@ -3541,7 +3539,7 @@
 		tableHead.appendChild(headRow);
 		mainTable.insertBefore(tableHead, mainTable.firstChild);
 
-		const nonOpen = plans.filter(plan => plan.title === null);
+		const nonOpen = pricing_plans.filter(plan => plan.title === null);
 		const noOpenRow = document.createElement('tr')
 		noOpenRow.classList.add('pricing-main-tr', 'pricing-no-ex');
 		noOpenRow.innerHTML = ` 
@@ -3567,7 +3565,7 @@
 		});
 		mainBody.appendChild(noOpenRow);
 
-		const openPlans = plans.filter(plan => plan.title !== null);
+		const openPlans = pricing_plans.filter(plan => plan.title !== null);
 		openPlans.forEach((plan) => {
 			const smallTable = document.createElement('table');
 			smallTable.className = 'pricing-compare-table';
@@ -3632,7 +3630,7 @@
 		renderTableByIndex(currentPlanIdx + 1)
 		tableHead.classList.add('pricing-mobile');
 		const th = document.createElement('th');
-		const selectedText = mainTableRows[currentPlanIdx].title ?? 'Chọn gói';
+		const selectedText = pricing_mainTableRows[currentPlanIdx].title ?? 'Chọn gói';
 		th.innerHTML = `
     <div class="pricing-mobile-thead">
       <h3>Plans</h3>
@@ -3647,7 +3645,7 @@
 		const selectBox = th.querySelector('.pricing-custom-select');
 		const optionsDiv = document.createElement('div');
 		optionsDiv.className = 'pricing-options';
-		mainTableRows.forEach((text, index) => {
+		pricing_mainTableRows.forEach((text, index) => {
 			const option = document.createElement('div');
 			option.className = 'pricing-option';
 			option.dataset.value = index;
@@ -3688,7 +3686,7 @@
 
 	function renderTableByIndex(index) {
 		mainBody.innerHTML = '';
-		const nonOpen = plans.filter(plan => plan.title === null);
+		const nonOpen = pricing_plans.filter(plan => plan.title === null);
 		const noOpenRow = document.createElement('tr')
 		noOpenRow.classList.add('pricing-main-tr', 'pricing-no-ex');
 		noOpenRow.innerHTML = ` 
@@ -3719,7 +3717,7 @@
 		});
 		mainBody.appendChild(noOpenRow);
 
-		const openPlans = plans.filter(plan => plan.title !== null);
+		const openPlans = pricing_plans.filter(plan => plan.title !== null);
 		openPlans.forEach((plan) => {
 			const smallTable = document.createElement('table');
 			smallTable.className = 'pricing-compare-table';
@@ -3803,11 +3801,10 @@
 				p.innerHTML = iconCross;
 			}
 		});
-		// toggleTable();
 	}
 
 	function changeWidthByCols() {
-		const colWidth = `${65 / mainTableRows.length}%`;
+		const colWidth = `${65 / pricing_mainTableRows.length}%`;
 		const ths = headRow.querySelectorAll(':scope > th');
 		const tds = document.querySelectorAll('.pricing-main-td')
 
@@ -3821,12 +3818,13 @@
 		ths.forEach(th => {
 			th.style.width = colWidth;
 		});
-	} function displayForm() {
+	}
+	function displayForm() {
 		const openFormBtns = document.querySelectorAll('.openForm')
 		openFormBtns.forEach((btn) => {
 			btn.onclick = () => {
 				toggleOverlay()
-				const formWrapper = overlay.querySelector('.pricing-form-wrapper');
+				const formWrapper = pricing_overlay.querySelector('.pricing-form-wrapper');
 				if (formWrapper && formWrapper.style.display !== 'flex') {
 					formWrapper.style.display = 'flex';
 				}
@@ -3898,7 +3896,7 @@
 			return;
 		}
 
-		overlay.querySelector('.pricing-form-wrapper').style.display = 'none';
+		pricing_overlay.querySelector('.pricing-form-wrapper').style.display = 'none';
 		submitModal.style.display = 'block'
 		const data = {
 			name: form.name.value.trim(),
@@ -3911,10 +3909,8 @@
 		console.log(data);
 	})
 
-	let lastMode = window.innerWidth < 768 ? 'mobileMode' : 'desktopMode';
-
 	function applyResponsiveLayout(mode) {
-		if (mode === 'mobileMode') {
+		if (mode === 'pricing-mobileMode') {
 			featureMobileLayout();
 			mobileTable();
 		} else {
@@ -3928,32 +3924,31 @@
 	}
 
 	window.addEventListener('load', () => {
-		applyResponsiveLayout(lastMode);
+		applyResponsiveLayout(pricingLastViewMode);
 	});
 
 	window.addEventListener('resize', () => {
 		const width = window.innerWidth;
-		const mode = width < 768 ? 'mobileMode' : 'desktopMode';
+		const mode = width < 768 ? 'pricing-mobileMode' : 'pricing-desktopMode';
 
-		if (mode !== lastMode) {
-			lastMode = mode;
+		if (mode !== pricingLastViewMode) {
+			pricingLastViewMode = mode;
 			applyResponsiveLayout(mode);
 		}
 	});
-	const overlay = document.querySelector('.pricing-overlay');
 
-	overlay.addEventListener('click', (e) => {
-		if (e.target === overlay) {
+	pricing_overlay.addEventListener('click', (e) => {
+		if (e.target === pricing_overlay) {
 			toggleOverlay();
 		}
 	})
 
 	function toggleOverlay() {
-		overlay.classList.toggle('open');
-		if (overlay.classList.contains('open')) {
+		pricing_overlay.classList.toggle('open');
+		if (pricing_overlay.classList.contains('open')) {
 			document.body.classList.add('pricing-no-scroll');
 		} else {
-			Array.from(overlay.children).forEach(child => {
+			Array.from(pricing_overlay.children).forEach(child => {
 				child.style.display = 'none';
 			});
 			document.body.classList.remove('pricing-no-scroll');
