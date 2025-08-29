@@ -2217,8 +2217,8 @@
 				<div class="pricing-sub-hero-title">
 					<span class="pricing-sticker">Đa dạng</span>
 					<h3 class="pricing-small-title">Tùy chỉnh gói dịch vụ, phù hợp cho mọi doanh nghiệp</h3>
-					<div class="pricing-click-link">
-						<span class="pricing-click-link-text ">Chọn gói phù hợp cho bạn</span>
+					<div class="pricing-click-link to-feature">
+						<span class="pricing-click-link-text">Chọn gói phù hợp cho bạn</span>
 						<span class="pricing-custom-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 								viewBox="0 0 16 16" style="padding-left:6px">
@@ -2232,7 +2232,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="pricing-plans pricing-c-section">
+	<div class="pricing-plans pricing-c-section" id="pricing-features">
 		<div class="pricing-custom-container">
 			<div class="pricing-plan-content-wrapper">
 				<div class="pricing-feature-content" id="features"></div>
@@ -4032,6 +4032,20 @@
 			};
 		});
 	}
+
+	const pricing_toFeatureBtns = document.querySelectorAll(".to-feature")
+	pricing_toFeatureBtns.forEach(btn => {
+		btn.onclick = () => {
+			const targetId = "pricing-features";
+			const target = document.getElementById(targetId);
+			if (target) {
+				target.scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				});
+			}
+		}
+	})
 </script>
 
 <?php endwhile; endif; ?>
